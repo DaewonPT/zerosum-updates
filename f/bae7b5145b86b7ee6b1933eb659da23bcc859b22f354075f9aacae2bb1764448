@@ -1,0 +1,1250 @@
+{
+ "c001": {
+  "name": "Goblin Guide",
+  "text": "+4 Mult; if it is the 1st card on the board, +20 Power."
+ },
+ "c002": {
+  "name": "Ball Lightning",
+  "text": "+6 Mult; +2 extra Mult for every other cost-1 card played."
+ },
+ "c003": {
+  "name": "Mogg Fanatic",
+  "text": "×1.3 Mult if you play at least 3 Red cards."
+ },
+ "c004": {
+  "name": "Lava Rift",
+  "text": "+8 Mult; the card to the right costs 1 this turn."
+ },
+ "c005": {
+  "name": "Young Pyromancer",
+  "text": "+5 Mult per Sorcery (SP) or Instant (MG) played in the same hand."
+ },
+ "c006": {
+  "name": "Desperate Ritual",
+  "text": "×1.5 Mult if your Library has 2 or fewer cards left."
+ },
+ "c007": {
+  "name": "Crater Berserker",
+  "text": "+6 Mult if every card played this hand has cost 1."
+ },
+ "c008": {
+  "name": "Burning Peak",
+  "text": "[In Hand] ×1.3 Mult if you attack with 3+ cost-1 cards."
+ },
+ "c009": {
+  "name": "Opt for the Future",
+  "text": "+3 Mult and draw 1 extra card immediately."
+ },
+ "c010": {
+  "name": "Conjurer's Mage",
+  "text": "Retriggers the Instant (MG) or Sorcery (SP) to its left."
+ },
+ "c011": {
+  "name": "Ancestral Vision",
+  "text": "+50 Power; +4 Mult for every card in your hand right now."
+ },
+ "c012": {
+  "name": "Arcane Counterspell",
+  "text": "Ignores the Boss restriction this turn and gives ×1.5 Mult."
+ },
+ "c013": {
+  "name": "Astrolabe Sage",
+  "text": "+15 Power per Instant (MG) played this hand."
+ },
+ "c014": {
+  "name": "Time Spiral",
+  "text": "Shuffles the Graveyard into the Library and gives ×2 Mult."
+ },
+ "c015": {
+  "name": "Storm Djinn",
+  "text": "+6 Mult for every Blue card on the board."
+ },
+ "c016": {
+  "name": "Temporal Rift",
+  "text": "×2.5 Mult if this is the 4th or 5th Sorcery/Instant in the same hand."
+ },
+ "c017": {
+  "name": "Halimar Island",
+  "text": "[In Hand] +30 Power and ×1.3 Mult if you play Arcane Storm."
+ },
+ "c018": {
+  "name": "Dark Ritual",
+  "text": "+8 Mult immediately."
+ },
+ "c019": {
+  "name": "Dark Confidant",
+  "text": "+6 Mult; with 0 channels left, ×1.5 Mult."
+ },
+ "c020": {
+  "name": "Lacerating Vampire",
+  "text": "Consumes 1 channel to gain +12 Mult this turn."
+ },
+ "c021": {
+  "name": "Sign in Blood",
+  "text": "+30 Power and +5 Mult; draw 1 card."
+ },
+ "c022": {
+  "name": "Hypnotic Specter",
+  "text": "Discards 1 random card from your hand: ×1.8 Mult."
+ },
+ "c023": {
+  "name": "Demonic Tutor",
+  "text": "Copies the ability of the card to its right on the board."
+ },
+ "c024": {
+  "name": "Phyrexian Obliterator",
+  "text": "×2 Mult, but destroys 1 random card left in your hand."
+ },
+ "c025": {
+  "name": "Exsanguinate",
+  "text": "+4 Mult per Black card played this hand."
+ },
+ "c026": {
+  "name": "Lord of the Pit",
+  "text": "×2.5 Mult if you have no cards in hand after casting."
+ },
+ "c027": {
+  "name": "Cabal Swamp",
+  "text": "[In Hand] ×1.4 Mult if you play 3 or more Black cards."
+ },
+ "c028": {
+  "name": "Llanowar Elf",
+  "text": "Gains +15 permanent Power every time it is played."
+ },
+ "c029": {
+  "name": "Giant Growth",
+  "text": "+20 permanent Power to the Creature to its left and +4 Mult."
+ },
+ "c030": {
+  "name": "Paradise Druid",
+  "text": "+4 Mult; +1 permanent Mult every 2 times it is played."
+ },
+ "c031": {
+  "name": "Kalonian Hydra",
+  "text": "Doubles this card's current base Power this turn."
+ },
+ "c032": {
+  "name": "Ravenous Baloth",
+  "text": "+50 Power if there is another Green Creature on the board."
+ },
+ "c033": {
+  "name": "Regal Force",
+  "text": "+3 Mult per Creature with more than 40 Power on the board."
+ },
+ "c034": {
+  "name": "Crater Behemoth",
+  "text": "×1.5 Mult per Green Creature played this hand."
+ },
+ "c035": {
+  "name": "Aspect of Hydra",
+  "text": "+15 Power and +2 Mult per Green card on the board."
+ },
+ "c036": {
+  "name": "Fauna Shaman",
+  "text": "All Creatures in your hand gain +8 permanent Power."
+ },
+ "c037": {
+  "name": "Engulfing Wurm",
+  "text": "Gains +25 permanent Power; ×1.5 Mult."
+ },
+ "c038": {
+  "name": "Pendelhaven Forest",
+  "text": "[In Hand] Green Creatures played gain +10 permanent Power."
+ },
+ "c039": {
+  "name": "Champion of the Parish",
+  "text": "+20 Power for every other Creature played this hand."
+ },
+ "c040": {
+  "name": "Thalia's Lieutenant",
+  "text": "+3 Mult per Creature on the board."
+ },
+ "c041": {
+  "name": "Squadron Hawk",
+  "text": "If you play another cost 2, +6 Mult."
+ },
+ "c042": {
+  "name": "Honor of the Pure",
+  "text": "All White Creatures in this play give +4 extra Mult."
+ },
+ "c043": {
+  "name": "Benalish Marshal",
+  "text": "×1.3 Mult if the formation is Tribal Band or Pure Devotion."
+ },
+ "c044": {
+  "name": "Paladin of the Sword",
+  "text": "Retriggers the Creature to its left if it is White."
+ },
+ "c045": {
+  "name": "Path to Exile",
+  "text": "+8 Mult if played next to at least 3 Creatures."
+ },
+ "c046": {
+  "name": "Evil-Slaying Angel",
+  "text": "×1.5 Mult if there are 4 or more Creatures on the board."
+ },
+ "c047": {
+  "name": "Militia Leader",
+  "text": "+4 Mult; +15 Power to the adjacent cards."
+ },
+ "c048": {
+  "name": "Aegis of the Gods",
+  "text": "Blocks Boss debuffs on your White cards; +5 Mult."
+ },
+ "c049": {
+  "name": "Elspeth, Sun's Champion",
+  "text": "Counts as 2 Creatures for Tribal Band; ×1.8 Mult."
+ },
+ "c050": {
+  "name": "Serra's Plains",
+  "text": "[In Hand] ×1.3 Mult if you play 3 or more Creatures."
+ },
+ "c051": {
+  "name": "Augustin's Arbiter",
+  "text": "+4 Mult for every card kept in your hand."
+ },
+ "c052": {
+  "name": "Supreme Verdict",
+  "text": "×2 Mult if you play exactly 1 or 2 cards this hand."
+ },
+ "c053": {
+  "name": "Detention Sphere",
+  "text": "+30 Power for every card not played from your hand."
+ },
+ "c054": {
+  "name": "Reflector Mage",
+  "text": "Retriggers itself if you have 4+ cards in hand."
+ },
+ "c055": {
+  "name": "Sphinx's Revelation",
+  "text": "Draw 2 cards before scoring; +5 Mult per card in hand."
+ },
+ "c056": {
+  "name": "Lavinia of the Tenth",
+  "text": "[In Hand or Board] +5 Mult whenever it stays in hand."
+ },
+ "c057": {
+  "name": "Silence of the Law",
+  "text": "+6 Mult if you discarded no card this turn."
+ },
+ "c058": {
+  "name": "Archon of the Triumvirate",
+  "text": "×1.5 Mult per Land (LD) or Instant (MG) in your hand."
+ },
+ "c059": {
+  "name": "Absorb",
+  "text": "+40 Power and +6 Mult."
+ },
+ "c060": {
+  "name": "Senate Scribe",
+  "text": "[In Hand] +25 passive Power to any play."
+ },
+ "c061": {
+  "name": "Teferi, Traveler",
+  "text": "Retriggers every [In Hand] effect you have this turn."
+ },
+ "c062": {
+  "name": "Hallowed Fountain",
+  "text": "[In Hand] ×1.5 Mult if you play White or Blue cards."
+ },
+ "c063": {
+  "name": "Celestial Colonnade",
+  "text": "[In Hand] +8 Mult; can also be played on the board as a Creature!"
+ },
+ "c064": {
+  "name": "Jace's Phantasm",
+  "text": "+10 Power and +1 Mult for every card in the Graveyard."
+ },
+ "c065": {
+  "name": "Glimpse the Unthinkable",
+  "text": "Sends the top 4 cards of the Library to the Graveyard; +8 Mult."
+ },
+ "c066": {
+  "name": "Thief of Sanity",
+  "text": "Sends 2 cards from the Library to the Graveyard and triggers the 1st one's ability."
+ },
+ "c067": {
+  "name": "Hedron Crab",
+  "text": "Sends 3 cards from the Library to the Graveyard; +30 Power."
+ },
+ "c068": {
+  "name": "Drown in the Loch",
+  "text": "×1.8 Mult if you have 8 or more cards in the Graveyard."
+ },
+ "c069": {
+  "name": "Lazav, Multifarious Mind",
+  "text": "Copies the best Creature in your Graveyard."
+ },
+ "c070": {
+  "name": "Crypt Incursion",
+  "text": "+3 Mult per Creature in your Graveyard."
+ },
+ "c071": {
+  "name": "Balustrade Spy",
+  "text": "Sends 3 cards to the Graveyard; +6 Mult."
+ },
+ "c072": {
+  "name": "Traumatize",
+  "text": "Sends half your Library to the Graveyard; ×2 Mult."
+ },
+ "c073": {
+  "name": "Death's Shadow",
+  "text": "×2.5 Mult if your Library has fewer than 5 cards."
+ },
+ "c074": {
+  "name": "Night's Whisper",
+  "text": "Draw 1 card and send 2 from the Library to the Graveyard; +5 Mult."
+ },
+ "c075": {
+  "name": "Consuming Aberration",
+  "text": "×1.5 Mult; +15 Power for every card in the Graveyard."
+ },
+ "c076": {
+  "name": "Watery Grave",
+  "text": "[In Hand] Sends 1 card from the Library to the Graveyard each turn and gives ×1.5 Mult."
+ },
+ "c077": {
+  "name": "Drowned Catacomb",
+  "text": "[In Hand] +2 Mult per 3 cards in the Graveyard."
+ },
+ "c078": {
+  "name": "Carnage Acrobat",
+  "text": "Destroys the card to its right on the board to gain ×2.2 Mult!"
+ },
+ "c079": {
+  "name": "Stage Fright",
+  "text": "+6 Mult; with 1 or 0 cards in hand, +14 Mult."
+ },
+ "c080": {
+  "name": "Judith, the Scourge Diva",
+  "text": "Whenever a card is destroyed or discarded, +8 Mult."
+ },
+ "c081": {
+  "name": "Rift Bolt",
+  "text": "Destroys 1 random card in your hand and gives ×1.8 Mult."
+ },
+ "c082": {
+  "name": "Rakdos Hellhound",
+  "text": "+40 Power if your hand is empty."
+ },
+ "c083": {
+  "name": "Blade Juggler",
+  "text": "+6 Mult; +25 Power if you already Channelled this turn."
+ },
+ "c084": {
+  "name": "Terminate",
+  "text": "Destroys the card to the left on the board (removed from the game) and gives ×2.5 Mult."
+ },
+ "c085": {
+  "name": "Kroxa, Titan of Hunger",
+  "text": "Discards 1 card from hand when attacking; ×2 Mult."
+ },
+ "c086": {
+  "name": "Flame of the Inquisition",
+  "text": "+10 Mult if you play exactly 5 cards on the board."
+ },
+ "c087": {
+  "name": "Demon of Slaughter",
+  "text": "×2 Mult; +10 Mult if you destroyed a card this turn."
+ },
+ "c088": {
+  "name": "Bloodcinder Phoenix",
+  "text": "If destroyed on the board by another card, it still scores ×1.5 Mult!"
+ },
+ "c089": {
+  "name": "Kolaghan's Command",
+  "text": "Returns 1 card from the Graveyard to hand and gives +7 Mult."
+ },
+ "c090": {
+  "name": "Avatar of Discord",
+  "text": "Discards 2 cards from hand: ×2.5 Mult."
+ },
+ "c091": {
+  "name": "Blood Crypt",
+  "text": "[In Hand] ×1.5 Mult; if it is the only card in your hand, ×2.5 Mult!"
+ },
+ "c092": {
+  "name": "Sulfurous Gorge",
+  "text": "[In Hand] +8 Mult for Black and Red cards."
+ },
+ "c093": {
+  "name": "Bloodbraid Elf",
+  "text": "Automatically triggers the effect of the top card of your Library!"
+ },
+ "c094": {
+  "name": "Gruul Spellbreaker",
+  "text": "+5 Mult; immune to Boss rules during your turn."
+ },
+ "c095": {
+  "name": "Domri's Fury",
+  "text": "The Creature to the right adds its Power to the Mult (10 Power = +1 Mult)."
+ },
+ "c096": {
+  "name": "Crater Dragon",
+  "text": "+8 Mult; ×1.5 Mult if there is another cost-5 card on the board."
+ },
+ "c097": {
+  "name": "Kazandu Mammoth",
+  "text": "Doubles its Power (+45) if you have a Land (LD) in hand."
+ },
+ "c098": {
+  "name": "Battering Blow",
+  "text": "×1.8 Mult if you control a Creature with 50+ Power."
+ },
+ "c099": {
+  "name": "Ilharg's Boar",
+  "text": "Pulls 1 Creature from your hand to score for free alongside the board!"
+ },
+ "c100": {
+  "name": "Burning Clan Shaman",
+  "text": "+25 Power to every cost-4 or cost-5 card on the board."
+ },
+ "c101": {
+  "name": "Atarka, Sovereign",
+  "text": "Every Creature in this play triggers its base Power twice!"
+ },
+ "c102": {
+  "name": "Rhythm of the Wild",
+  "text": "Creatures played this hand gain +20 Power and +4 Mult."
+ },
+ "c103": {
+  "name": "Bonecrusher Giant",
+  "text": "+6 Mult; ignores Power reductions."
+ },
+ "c104": {
+  "name": "Gruul Ravenous Hydra",
+  "text": "×1.6 Mult if the formation is Dual Pact or Cost Triad."
+ },
+ "c105": {
+  "name": "Wild Flame",
+  "text": "+5 Mult; +10 Mult if played next to a cost-5 card."
+ },
+ "c106": {
+  "name": "Inferno Titan",
+  "text": "+6 Mult for every cost-4 or cost-5 card played."
+ },
+ "c107": {
+  "name": "Trampled Ground",
+  "text": "[In Hand] ×1.5 Mult if you play a cost-4 or cost-5 card."
+ },
+ "c108": {
+  "name": "Karplusan Valley",
+  "text": "[In Hand] +40 Power to all your plays."
+ },
+ "c109": {
+  "name": "Voice of Resurgence",
+  "text": "If the hand holds a Dual Pact (Pair), ×2 Mult."
+ },
+ "c110": {
+  "name": "Knight of the Reliquary",
+  "text": "+30 Power and +4 Mult per Land (LD) in hand or Graveyard."
+ },
+ "c111": {
+  "name": "Trostani, Selesnya's Voice",
+  "text": "Doubles the base values of the Arcane Formation played!"
+ },
+ "c112": {
+  "name": "Call of the Conclave",
+  "text": "Counts as 2 cost-2 cards for Pairs or Triads."
+ },
+ "c113": {
+  "name": "Noble Hierarch",
+  "text": "If you play only 1 or 2 cards (Exalted), ×2.2 Mult."
+ },
+ "c114": {
+  "name": "Advent of the Wurm",
+  "text": "+6 Mult; counts as a Creature and an Instant at once."
+ },
+ "c115": {
+  "name": "Abrupt Decay",
+  "text": "+5 Mult; if it pairs with another cost-2 card, ×1.5 Mult."
+ },
+ "c116": {
+  "name": "Venerated Loxodon",
+  "text": "+15 permanent Power to every other card played this hand."
+ },
+ "c117": {
+  "name": "March of the Multitudes",
+  "text": "+4 Mult for every Creature and every Sorcery on the board."
+ },
+ "c118": {
+  "name": "Dryad of the Grove",
+  "text": "All your Lands in hand trigger for any colour!"
+ },
+ "c119": {
+  "name": "Angel of Grace",
+  "text": "If your Turns reach 0 and the Boss survives, +1 extra Turn!"
+ },
+ "c120": {
+  "name": "Selesnya Charm",
+  "text": "+6 Mult and +20 Power."
+ },
+ "c121": {
+  "name": "Centaur Healer",
+  "text": "+5 Mult; +1 channel (Discard) if it forms a Pair."
+ },
+ "c122": {
+  "name": "Tolsimir, Friend to Wolves",
+  "text": "Retriggers every cost-2 or cost-3 card on the board."
+ },
+ "c123": {
+  "name": "Sage of Evolution",
+  "text": "Raises the played Formation's level by +20 Power and +2 Mult."
+ },
+ "c124": {
+  "name": "Temple Garden",
+  "text": "[In Hand] ×1.5 Mult if you play Green or White."
+ },
+ "c125": {
+  "name": "Sunpetal Grove",
+  "text": "[In Hand] +8 Mult whenever you play a Dual Pact (Pair)."
+ },
+ "c126": {
+  "name": "Tithe Collector",
+  "text": "Gains +1 🪙 when played; +1 Mult per 2 🪙 you hold."
+ },
+ "c127": {
+  "name": "Kaya, Usurper",
+  "text": "+2 🪙; ×1.5 Mult if you hold 10 or more 🪙."
+ },
+ "c128": {
+  "name": "Cartel Aristocrat",
+  "text": "Destroys the Creature to the left: +3 🪙 and +8 Mult."
+ },
+ "c129": {
+  "name": "Lingering Souls",
+  "text": "Triggers twice on the board; in the Graveyard, +2 passive Mult."
+ },
+ "c130": {
+  "name": "Blood Artist",
+  "text": "+5 Mult for every other Creature on the board; +1 🪙."
+ },
+ "c131": {
+  "name": "Teysa Karlov",
+  "text": "All Orzhov Creature abilities trigger a 2nd time!"
+ },
+ "c132": {
+  "name": "Anguished Unmaking",
+  "text": "×1.8 Mult; costs 1 🪙 when played (if you have gold)."
+ },
+ "c133": {
+  "name": "Death Baron",
+  "text": "+30 Power and +4 Mult to every Black card on the board."
+ },
+ "c134": {
+  "name": "Smothering Tithe",
+  "text": "Gains +4 🪙 immediately and gives +6 Mult."
+ },
+ "c135": {
+  "name": "Seraph of the Scales",
+  "text": "×1.5 Mult; if discarded to the Graveyard, +2 🪙."
+ },
+ "c136": {
+  "name": "Orzhov Pontiff",
+  "text": "+3 Mult to every card played this hand."
+ },
+ "c137": {
+  "name": "Debt to the Deathless",
+  "text": "Converts all your Gold into Mult (+3 Mult per 1 🪙 you hold!)."
+ },
+ "c138": {
+  "name": "Zulaport Cutthroat",
+  "text": "+6 Mult and +1 🪙."
+ },
+ "c139": {
+  "name": "Knight of Obligation",
+  "text": "+50 Power if you hold more than 8 🪙."
+ },
+ "c140": {
+  "name": "Gray Merchant",
+  "text": "+20 Power and +4 Mult per Black or White card on the board."
+ },
+ "c141": {
+  "name": "Cruel Edict",
+  "text": "+7 Mult."
+ },
+ "c142": {
+  "name": "Godless Shrine",
+  "text": "[In Hand] +1 🪙 at the end of the turn and ×1.5 Mult."
+ },
+ "c143": {
+  "name": "Orzhova Basilica",
+  "text": "[In Hand] +1 Mult per 2 🪙 you hold."
+ },
+ "c144": {
+  "name": "Niv-Mizzet, Parun",
+  "text": "Whenever an Instant or Sorcery triggers on the board, +8 extra Mult!"
+ },
+ "c145": {
+  "name": "Goblin Electromancer",
+  "text": "All Instants and Sorceries in this play give +40 extra Power."
+ },
+ "c146": {
+  "name": "Crackling Drake",
+  "text": "+15 Power per Sorcery/Instant on the board AND in the Graveyard."
+ },
+ "c147": {
+  "name": "Chain Lightning",
+  "text": "+5 Mult; if there is another Sorcery to the right, retriggers it!"
+ },
+ "c148": {
+  "name": "Ral, Storm Conduit",
+  "text": "×1.5 Mult per 2 Sorceries/Instants played this hand."
+ },
+ "c149": {
+  "name": "Nivix Cyclops",
+  "text": "+40 Power and +6 Mult if you play at least 2 Sorceries this hand."
+ },
+ "c150": {
+  "name": "Expansion // Explosion",
+  "text": "Copies the multiplier of the card to its left."
+ },
+ "c151": {
+  "name": "Serum Visions",
+  "text": "+4 Mult and improves the next card in line by +20 Power."
+ },
+ "c152": {
+  "name": "Magma Jet",
+  "text": "+6 Mult."
+ },
+ "c153": {
+  "name": "Adept of the Key",
+  "text": "Counts as a Creature and a Sorcery for Arcane Storm."
+ },
+ "c154": {
+  "name": "Thousand-Year Storm",
+  "text": "Each Sorcery/Instant this hand triggers +1 time per earlier Sorcery!"
+ },
+ "c155": {
+  "name": "Arclight Phoenix",
+  "text": "If you play 3 Sorceries/Instants, ×2.2 Mult!"
+ },
+ "c156": {
+  "name": "Ponder",
+  "text": "+4 Mult; draw 1 card."
+ },
+ "c157": {
+  "name": "Izzet's Fury",
+  "text": "+8 Mult if the hand holds Blue and Red."
+ },
+ "c158": {
+  "name": "Izzet Guildmage",
+  "text": "Retriggers any cost-1 or cost-2 Sorcery on the board."
+ },
+ "c159": {
+  "name": "Alrund's Epiphany",
+  "text": "+1 extra Turn this battle (max 1 per Boss) and +5 Mult!"
+ },
+ "c160": {
+  "name": "Fire Vortex",
+  "text": "×1.6 Mult."
+ },
+ "c161": {
+  "name": "Steam Vents",
+  "text": "[In Hand] ×1.5 Mult if you play Arcane Storm."
+ },
+ "c162": {
+  "name": "Sulfur Falls",
+  "text": "[In Hand] +4 Mult per Instant (MG) played on the board."
+ },
+ "c163": {
+  "name": "Lotleth Troll",
+  "text": "Gains +15 permanent Power whenever you discard a Creature."
+ },
+ "c164": {
+  "name": "Tarmogoyf",
+  "text": "+20 Power and +3 Mult per different card Type in the Graveyard."
+ },
+ "c165": {
+  "name": "Vraska, Golgari Queen",
+  "text": "Destroys 1 card in hand for ×2 Mult and +1 channel."
+ },
+ "c166": {
+  "name": "Stinkweed Imp",
+  "text": "When discarded (Channel), sends 3 more Library cards to the Graveyard."
+ },
+ "c167": {
+  "name": "Grave Crawler",
+  "text": "If discarded, +10 permanent Power to every card in hand."
+ },
+ "c168": {
+  "name": "Assassin's Trophy",
+  "text": "×1.5 Mult; removes the Boss rule for 1 turn."
+ },
+ "c169": {
+  "name": "Knight of Autumn Night",
+  "text": "+6 Mult if you have a Land in the Graveyard."
+ },
+ "c170": {
+  "name": "Jarad, Lich Lord",
+  "text": "+2 Mult per Creature in your Graveyard."
+ },
+ "c171": {
+  "name": "Life from the Loam",
+  "text": "Returns up to 2 cards from the Graveyard to your hand; +4 Mult."
+ },
+ "c172": {
+  "name": "Nissa's Shadow",
+  "text": "+40 Power if the Graveyard has 5+ cards."
+ },
+ "c173": {
+  "name": "Meren of Clan Nel Toth",
+  "text": "The last Creature sent to the Graveyard triggers its effect alongside Meren!"
+ },
+ "c174": {
+  "name": "Putrefy",
+  "text": "+8 Mult."
+ },
+ "c175": {
+  "name": "Hogaak, Arisen Necropolis",
+  "text": "×2.5 Mult if your Graveyard has 10 or more cards!"
+ },
+ "c176": {
+  "name": "Satyr Wayfinder",
+  "text": "Sends 2 cards from the Library to the Graveyard; +5 Mult."
+ },
+ "c177": {
+  "name": "Deathrite Shaman",
+  "text": "+6 Mult and +20 Power if there are Sorceries AND Creatures in the Graveyard."
+ },
+ "c178": {
+  "name": "Midnight Reaper",
+  "text": "Draw 1 card whenever you discard; +5 Mult."
+ },
+ "c179": {
+  "name": "Golgari Grave-Troll",
+  "text": "+15 Power for every card in the Graveyard."
+ },
+ "c180": {
+  "name": "Grisly Salvage",
+  "text": "×1.8 Mult."
+ },
+ "c181": {
+  "name": "Overgrown Tomb",
+  "text": "[In Hand] ×1.5 Mult; if discarded, +1 Turn against this Boss!"
+ },
+ "c182": {
+  "name": "Woodland Cemetery",
+  "text": "[In Hand] +1 Mult per 2 cards in the Graveyard."
+ },
+ "c183": {
+  "name": "Aurelia, Exemplar of Justice",
+  "text": "In Position 1 or 5 of the board, retriggers the whole hand (×2 Mult)!"
+ },
+ "c184": {
+  "name": "Lightning Helix",
+  "text": "+6 Mult; if played between two Creatures, triggers twice!"
+ },
+ "c185": {
+  "name": "Tajic, Blade of the Legion",
+  "text": "If it attacks with 2 more Creatures, +10 Mult."
+ },
+ "c186": {
+  "name": "Spear Rusher",
+  "text": "In Position 1 (left), +6 Mult."
+ },
+ "c187": {
+  "name": "Vanguard Scout",
+  "text": "In Position 5 (right), ×1.8 Mult."
+ },
+ "c188": {
+  "name": "Boros Charm",
+  "text": "The card to its left triggers twice (*Double Strike*)."
+ },
+ "c189": {
+  "name": "Legionnaire of the Tenth",
+  "text": "Gains +15 permanent Power whenever it is targeted by a Sorcery/Instant."
+ },
+ "c190": {
+  "name": "Feather, the Redeemed",
+  "text": "Returns 1 Instant (MG) played this hand back to your hand!"
+ },
+ "c191": {
+  "name": "Deafening Clarion",
+  "text": "All Creatures on the board gain +25 Power and +3 Mult."
+ },
+ "c192": {
+  "name": "Knight of Grace",
+  "text": "+5 Mult if a Red card is next to it."
+ },
+ "c193": {
+  "name": "Knight of Malice",
+  "text": "+5 Mult if a White card is next to it."
+ },
+ "c194": {
+  "name": "Gisela, Blade of Goldnight",
+  "text": "Doubles (×2) the play's Final Multiplier!"
+ },
+ "c195": {
+  "name": "Intimidate",
+  "text": "+30 Power to the Creature to the right and +4 Mult."
+ },
+ "c196": {
+  "name": "Mentor of the Meek",
+  "text": "+4 Mult per cost-1 or cost-2 card on the board."
+ },
+ "c197": {
+  "name": "War Phoenix",
+  "text": "+8 Mult."
+ },
+ "c198": {
+  "name": "Heroic Judgment",
+  "text": "×1.6 Mult if the board has exactly 5 cards."
+ },
+ "c199": {
+  "name": "Guard Recruiter",
+  "text": "Pulls 1 Creature with Power ≤ 25 from the Library to hand."
+ },
+ "c200": {
+  "name": "Avatar of the Burning Sun",
+  "text": "+10 Mult."
+ },
+ "c201": {
+  "name": "Sacred Foundry",
+  "text": "[In Hand] ×1.5 Mult if you play Red and White in the same hand."
+ },
+ "c202": {
+  "name": "Clifftop Fort",
+  "text": "[In Hand] Retriggers the card in Position 1 of the board!"
+ },
+ "c203": {
+  "name": "Garrison Barracks",
+  "text": "[In Hand] +40 Power to Tribal Band formations."
+ },
+ "c204": {
+  "name": "Hydroid Krasis",
+  "text": "Draw 1 card, +6 Mult, and counts as any cost for Mana Curve!"
+ },
+ "c205": {
+  "name": "Uro, Titan of Nature's Wrath",
+  "text": "+40 Power, +5 Mult and draw 1 card."
+ },
+ "c206": {
+  "name": "Growth Spiral",
+  "text": "+5 Mult; triggers every Land in your hand twice."
+ },
+ "c207": {
+  "name": "Coiling Oracle",
+  "text": "+30 Power; if the card to the right costs 3, ×1.5 Mult."
+ },
+ "c208": {
+  "name": "Master Biomancer",
+  "text": "Every other Creature on the board gains +30 permanent Power!"
+ },
+ "c209": {
+  "name": "Oko, Thief of Crowns",
+  "text": "Turns the card to the left into a 3/3 Elk with +50 Power and ×1.5 Mult."
+ },
+ "c210": {
+  "name": "Mystic Shark",
+  "text": "Cancels the Boss ability this turn and gives +7 Mult."
+ },
+ "c211": {
+  "name": "Genetic Mutation",
+  "text": "Counts as cost 1 or cost 5 (whichever is better for your hand); +5 Mult."
+ },
+ "c212": {
+  "name": "Vorel of the Hull Clade",
+  "text": "Doubles the permanent Power bonuses of one card on the board!"
+ },
+ "c213": {
+  "name": "Kiora, Tamer of Waves",
+  "text": "×2 Mult if you play a Mana Curve (1-2-3-4-5)."
+ },
+ "c214": {
+  "name": "Zegana, Primal Speaker",
+  "text": "+1 Mult per 10 Power of the biggest Creature on the board."
+ },
+ "c215": {
+  "name": "Crab Hybrid",
+  "text": "+15 Power if there is a cost-2 card on the board."
+ },
+ "c216": {
+  "name": "Adaptive Frog-Lizard",
+  "text": "+5 Mult if there is a cost-3 card on the board."
+ },
+ "c217": {
+  "name": "Horizon Chimera",
+  "text": "+6 Mult; +20 Power per card drawn this turn."
+ },
+ "c218": {
+  "name": "Incubation // Incongruity",
+  "text": "+5 Mult; adjusts the cost of the card to the right by +1 or -1."
+ },
+ "c219": {
+  "name": "Polukranos, Devourer",
+  "text": "+6 Mult."
+ },
+ "c220": {
+  "name": "Nexus of Fate",
+  "text": "Returns to the Library instead of the Graveyard; ×2 Mult!"
+ },
+ "c221": {
+  "name": "Biovisionary",
+  "text": "If you form a Dual Pact or Cost-3 Triad, ×2.5 Mult!"
+ },
+ "c222": {
+  "name": "Spin Sage",
+  "text": "+4 Mult."
+ },
+ "c223": {
+  "name": "Breeding Pool",
+  "text": "[In Hand] ×1.5 Mult; fills 1 missing cost for Mana Curve!"
+ },
+ "c224": {
+  "name": "Hinterland Harbor",
+  "text": "[In Hand] +8 Mult if you play Green and Blue."
+ },
+ "c225": {
+  "name": "Riptide Laboratory",
+  "text": "[In Hand] Returns the 1st Creature played back to your hand after scoring!"
+ },
+ "c226": {
+  "name": "Nicol Bolas, God-Pharaoh",
+  "text": "×3 Mult if the hand holds at least one U, one B and one R card!"
+ },
+ "c227": {
+  "name": "Cruel Ultimatum",
+  "text": "+15 Mult, draw 2 cards and gain +3 🪙."
+ },
+ "c228": {
+  "name": "Kess, Dissident Mage",
+  "text": "When attacking, also triggers 1 random Sorcery from your Graveyard!"
+ },
+ "c229": {
+  "name": "Sedris's Specter",
+  "text": "+6 Mult; +6 extra Mult if the Boss is below 50% HP."
+ },
+ "c230": {
+  "name": "Dark Kolaghan's Command",
+  "text": "+7 Mult and destroys 1 weak card in hand to gain +30 Power."
+ },
+ "c231": {
+  "name": "Cryptic Command",
+  "text": "Silences the Boss, draw 1 card and ×1.6 Mult."
+ },
+ "c232": {
+  "name": "Inquisition of Kozilek",
+  "text": "+6 Mult; reduces the Boss's max HP by 5% immediately!"
+ },
+ "c233": {
+  "name": "Captured Thought",
+  "text": "+8 Mult."
+ },
+ "c234": {
+  "name": "Gurmag Angler",
+  "text": "Counts as cost 1 OR cost 5; +6 Mult."
+ },
+ "c235": {
+  "name": "Young Abyssal Pyromancer",
+  "text": "+5 Mult per Sorcery played."
+ },
+ "c236": {
+  "name": "Grixis Charm",
+  "text": "×1.5 Mult; +30 Power to every card on the board."
+ },
+ "c237": {
+  "name": "Rune Demon",
+  "text": "Pulls the strongest card of your Library to hand; +8 Mult."
+ },
+ "c238": {
+  "name": "Dark Snap Mage",
+  "text": "Retriggers the Sorcery to its left."
+ },
+ "c239": {
+  "name": "Searing Bolt",
+  "text": "+7 Mult; if the Boss is below 50% HP, ×1.8 Mult."
+ },
+ "c240": {
+  "name": "Lord of the Undead",
+  "text": "+5 Mult per Creature in the Graveyard."
+ },
+ "c241": {
+  "name": "Visions of Beyond",
+  "text": "Draw 2 cards if the Graveyard has 6+ cards; +4 Mult."
+ },
+ "c242": {
+  "name": "Bolas's Dragon",
+  "text": "×1.8 Mult."
+ },
+ "c243": {
+  "name": "Soul Enslaver",
+  "text": "+8 Mult."
+ },
+ "c244": {
+  "name": "Curse of Chains",
+  "text": "Makes the Boss take ×1.3 extra damage on ALL remaining turns!"
+ },
+ "c245": {
+  "name": "Mind Rot",
+  "text": "+6 Mult."
+ },
+ "c246": {
+  "name": "Cruel Pyromancy",
+  "text": "+10 Mult."
+ },
+ "c247": {
+  "name": "Crumbling Necropolis",
+  "text": "[In Hand] ×1.6 Mult for U, B or R cards."
+ },
+ "c248": {
+  "name": "Command Tower",
+  "text": "[In Hand] +50 Power and +5 Mult on any play."
+ },
+ "c249": {
+  "name": "Polluted Swamp",
+  "text": "[In Hand] ×1.5 Mult if your Graveyard has 4+ cards."
+ },
+ "c250": {
+  "name": "Karn, the Great Creator",
+  "text": "Retriggers all your Artifacts on the top shelf a 2nd time!"
+ },
+ "c251": {
+  "name": "Ugin, the Spirit Dragon",
+  "text": "×2 Mult if there is no coloured card on the board!"
+ },
+ "c252": {
+  "name": "Arcbound Ravager",
+  "text": "Destroys the card to the left and absorbs its Power and Mult permanently!"
+ },
+ "c253": {
+  "name": "Ornithopter",
+  "text": "+6 Mult if played with at least 3 Colourless (CL) cards."
+ },
+ "c254": {
+  "name": "Master of Etherium",
+  "text": "+20 Power and +3 Mult per Colourless card on the board and in hand."
+ },
+ "c255": {
+  "name": "Etched Champion",
+  "text": "×1.5 Mult and immune to all Boss rules."
+ },
+ "c256": {
+  "name": "Walking Ballista",
+  "text": "Fires +4 Mult per Artifact slot filled at the top of the screen!"
+ },
+ "c257": {
+  "name": "Spiral Engine",
+  "text": "×2 Mult; if discarded, leaves +30 passive Power in the Graveyard."
+ },
+ "c258": {
+  "name": "Chromatic Sphere",
+  "text": "Draw 1 card and +5 Mult."
+ },
+ "c259": {
+  "name": "Expedition Map",
+  "text": "Pulls 1 Urza Land (LD) straight from the Library to your hand!"
+ },
+ "c260": {
+  "name": "Oblivion Stone",
+  "text": "×1.8 Mult."
+ },
+ "c261": {
+  "name": "Platinum Emperion",
+  "text": "+10 Mult."
+ },
+ "c262": {
+  "name": "Blightsteel Colossus",
+  "text": "×2 Mult if you have at least 2 Lands in hand!"
+ },
+ "c263": {
+  "name": "Steel Overseer",
+  "text": "+10 permanent Power to every Colourless card on the board."
+ },
+ "c264": {
+  "name": "Signal Pest",
+  "text": "+4 Mult to every attacking card."
+ },
+ "c265": {
+  "name": "Memnite",
+  "text": "+5 Mult."
+ },
+ "c266": {
+  "name": "Cranial Plating",
+  "text": "+5 Mult per Artifact on top and per Colourless card on the board."
+ },
+ "c267": {
+  "name": "Mystic Forge",
+  "text": "Draw 2 cards if your hand holds only Colourless cards; +8 Mult."
+ },
+ "c268": {
+  "name": "Lodestone Golem",
+  "text": "+8 Mult."
+ },
+ "c269": {
+  "name": "All Is Dust",
+  "text": "×1.8 Mult."
+ },
+ "c270": {
+  "name": "Urza's Mine",
+  "text": "[In Hand] +30 Power; with Power Plant and Tower in hand, ×1.5 Mult!"
+ },
+ "c271": {
+  "name": "Urza's Power Plant",
+  "text": "[In Hand] +5 Mult; with Mine and Tower in hand, ×1.5 Mult!"
+ },
+ "c272": {
+  "name": "Urza's Tower",
+  "text": "[In Hand] ×1.5 Mult; with Mine and Power Plant in hand, ×2 Mult!"
+ },
+ "c273": {
+  "name": "Blackened Steel Citadel",
+  "text": "[In Hand] Counts as an Artifact and gives ×1.5 Mult to Colourless cards."
+ },
+ "c274": {
+  "name": "Mishra's Workshop",
+  "text": "[In Hand] All Colourless Creatures gain +40 extra Power."
+ },
+ "c275": {
+  "name": "Niv-Mizzet Reborn",
+  "text": "Counts as any missing Colour to complete WUBRG Convergence; ×2 Mult!"
+ },
+ "c276": {
+  "name": "Golos, Tireless Pilgrim",
+  "text": "Pulls 1 Land from the Library to hand; if you play 5 colours, ×2.5 Mult!"
+ },
+ "c277": {
+  "name": "Kenrith, the Returned King",
+  "text": "+20 Power, +5 Mult, +1 🪙 and draw 1 card, all at once!"
+ },
+ "c278": {
+  "name": "Progenitus, Soul of the World",
+  "text": "Has absolute protection; ×3 Mult if played in a WUBRG Convergence!"
+ },
+ "c279": {
+  "name": "Jodah, Archmage Eternal",
+  "text": "Turns any 5-card hand into an automatic WUBRG Convergence!"
+ },
+ "c280": {
+  "name": "Morophon, the Boundless",
+  "text": "Counts as all 5 Colours and all Types; ×2 Mult."
+ },
+ "c281": {
+  "name": "Esika, God of the Tree",
+  "text": "+4 Mult per different Colour on the board."
+ },
+ "c282": {
+  "name": "Prismatic Bridge",
+  "text": "Pulls the biggest Creature of your Library and triggers it for free; ×1.8 Mult."
+ },
+ "c283": {
+  "name": "Lotus Cobra",
+  "text": "+2 🪙 and +6 Mult if you have a Land in hand."
+ },
+ "c284": {
+  "name": "Tribal Flames",
+  "text": "+3 Mult per different Colour played this hand (up to +15 Mult)."
+ },
+ "c285": {
+  "name": "Knight of the Planar Reliquary",
+  "text": "+6 Mult."
+ },
+ "c286": {
+  "name": "Bring to Light",
+  "text": "Copies the ability of any card on the board; +6 Mult."
+ },
+ "c287": {
+  "name": "Omnath, Locus of Creation",
+  "text": "+40 Power, +8 Mult and +2 🪙 if 4 or more colours are in the play."
+ },
+ "c288": {
+  "name": "Legion Angel",
+  "text": "+6 Mult and draw 1 card."
+ },
+ "c289": {
+  "name": "Maelstrom Vortex",
+  "text": "Cascades 1 extra card from the top of the Library!"
+ },
+ "c290": {
+  "name": "Dragonlord Ojutai",
+  "text": "Draw 1 card and ×1.6 Mult."
+ },
+ "c291": {
+  "name": "Dragonlord Silumgar",
+  "text": "Steals 10% of the Boss's HP as extra base Power!"
+ },
+ "c292": {
+  "name": "Dragonlord Kolaghan",
+  "text": "+10 Mult."
+ },
+ "c293": {
+  "name": "Dragonlord Dromoka",
+  "text": "Stops the Boss from cancelling effects this turn; ×1.6 Mult."
+ },
+ "c294": {
+  "name": "Mystic Confluence",
+  "text": "+8 Mult."
+ },
+ "c295": {
+  "name": "Planar Last Resort",
+  "text": "×1.8 Mult."
+ },
+ "c296": {
+  "name": "Mana Rift",
+  "text": "Changes the colour of the card to the right to whichever colour is missing for WUBRG!"
+ },
+ "c297": {
+  "name": "Lotus Garden",
+  "text": "[In Hand] Counts as any Colour missing on the board and gives ×1.5 Mult."
+ },
+ "c298": {
+  "name": "City of Brass",
+  "text": "[In Hand] ×1.6 Mult if the board has 3 or more different colours."
+ },
+ "c299": {
+  "name": "Mana Confluence",
+  "text": "[In Hand] +3 Mult per different Colour played on the board."
+ },
+ "c300": {
+  "name": "World Tree",
+  "text": "[In Hand] If you attack with WUBRG Convergence, doubles the Final Damage (×2)!"
+ },
+ "c301": {
+  "name": "Infiltrated Candidate",
+  "text": "Mission: channel 3 cards with this in hand or on the board. Flips into Double Agent: 50 Power, ×3 Mult; creatures to its right gain +15 Power.",
+  "back_name": "Double Agent",
+  "back_text": "×3 Mult. When it flips, the creatures to its right gain +15 Power."
+ },
+ "c302": {
+  "name": "Pyromancer Apprentice",
+  "text": "Mission: cast 3 spells with this in hand or on the board. Flips into Master of Flames: 35 Power, +3 Mult per spell cast this turn.",
+  "back_name": "Master of Flames",
+  "back_text": "+3 Mult per spell cast this turn."
+ },
+ "c303": {
+  "name": "Lone Wolf",
+  "text": "Mission: play 3 other creatures with this in hand or on the board. Flips into Pack Alpha: 45 Power, +10 Power per attacking creature and ×1.5 Mult.",
+  "back_name": "Pack Alpha",
+  "back_text": "+10 Power per attacking creature; ×1.5 Mult."
+ },
+ "c304": {
+  "name": "Thraben Novice",
+  "text": "Mission: survive 2 attacks on the board. Flips into Veteran Inquisitor: 40 Power, +5 Mult and retriggers the creature to its left.",
+  "back_name": "Veteran Inquisitor",
+  "back_text": "+5 Mult; retriggers the creature to its left."
+ },
+ "c305": {
+  "name": "Tide Scribe",
+  "text": "Mission: stay 2 turns in hand. Flips into Tide Oracle: 30 Power, ×2 Mult with 4+ cards in hand; draws 1 when it flips.",
+  "back_name": "Tide Oracle",
+  "back_text": "×2 Mult if you have 4+ cards in hand. When it flips, draw 1 card."
+ },
+ "c306": {
+  "name": "Sealed Reliquary",
+  "text": "Mission: hold 10 or more gold with this in hand. Flips into Open Reliquary: 40 Power, +6 Mult and +2 gold.",
+  "back_name": "Open Reliquary",
+  "back_text": "+6 Mult; +2 gold."
+ },
+ "c307": {
+  "name": "Draconic Egg",
+  "text": "Mission: survive 3 attacks on the board. Flips into Newborn Dragon: 80 Power and ×2 Mult.",
+  "back_name": "Newborn Dragon",
+  "back_text": "×2 Mult."
+ },
+ "c308": {
+  "name": "Void Cultist",
+  "text": "Mission: channel 2 cards with this in hand. Flips into Rite of the Void: 20 Power, ×2.5 Mult and draw 1 card.",
+  "back_name": "Rite of the Void",
+  "back_text": "×2.5 Mult; draw 1 card."
+ }
+}

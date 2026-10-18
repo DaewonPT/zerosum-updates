@@ -1,0 +1,150 @@
+[
+ {
+  "id": "pw_red",
+  "name": "Ísaura, Atiçadora de Chamas",
+  "color": "red",
+  "loyalty": 2,
+  "max_loyalty": 6,
+  "price": 10,
+  "text": "Ganha 1 lealdade por cada carta Vermelha jogada. Uma habilidade por turno.",
+  "skills": [
+   {
+    "cost": 1,
+    "action": "buff_hand_color",
+    "value": 10,
+    "text": "+1: +10 Poder a todas as cartas Vermelhas na mão (esta batalha)."
+   },
+   {
+    "cost": -2,
+    "action": "mult_add",
+    "value": 10,
+    "text": "−2: +10 Mult ao ataque deste turno."
+   },
+   {
+    "cost": -6,
+    "action": "cheap_hand",
+    "value": 20,
+    "text": "−6: Este turno, todas as cartas na mão custam 1 e ganham +20 Poder."
+   }
+  ]
+ },
+ {
+  "id": "pw_blue",
+  "name": "Teodoro, Arquivista das Marés",
+  "color": "blue",
+  "loyalty": 2,
+  "max_loyalty": 6,
+  "price": 10,
+  "text": "Ganha 1 lealdade por cada carta Azul jogada. Uma habilidade por turno.",
+  "skills": [
+   {
+    "cost": 1,
+    "action": "draw",
+    "value": 1,
+    "text": "+1: Compra 1 carta."
+   },
+   {
+    "cost": -2,
+    "action": "channel_draw",
+    "value": 2,
+    "text": "−2: +1 canalização e compra 2 cartas."
+   },
+   {
+    "cost": -6,
+    "action": "extra_turn_mult",
+    "value": 1.5,
+    "text": "−6: Turno extra e ×1.5 Mult este turno."
+   }
+  ]
+ },
+ {
+  "id": "pw_black",
+  "name": "Morgana, Senhora das Cinzas",
+  "color": "black",
+  "loyalty": 2,
+  "max_loyalty": 6,
+  "price": 10,
+  "text": "Ganha 1 lealdade por cada carta Preta jogada. Uma habilidade por turno.",
+  "skills": [
+   {
+    "cost": 1,
+    "action": "buff_strongest",
+    "value": 15,
+    "text": "+1: +15 Poder à criatura mais forte na Arena (esta batalha)."
+   },
+   {
+    "cost": -2,
+    "action": "enemy_max_hp_pct",
+    "value": 8,
+    "text": "−2: O inimigo perde 8% da vida máxima."
+   },
+   {
+    "cost": -6,
+    "action": "mult_mul_pay_life",
+    "value": 3.0,
+    "life": 3,
+    "text": "−6: ×3 Mult este turno; perdes 3 de vida."
+   }
+  ]
+ },
+ {
+  "id": "pw_green",
+  "name": "Brígida, Guardiã da Selva",
+  "color": "green",
+  "loyalty": 2,
+  "max_loyalty": 6,
+  "price": 10,
+  "text": "Ganha 1 lealdade por cada carta Verde jogada. Uma habilidade por turno.",
+  "skills": [
+   {
+    "cost": 1,
+    "action": "grow_random_board",
+    "value": 10,
+    "text": "+1: +10 Poder permanente a uma criatura ao acaso na Arena."
+   },
+   {
+    "cost": -2,
+    "action": "buff_board_mult",
+    "value": 15,
+    "mult": 2,
+    "text": "−2: +15 Poder a todas as criaturas na Arena e +2 Mult este turno."
+   },
+   {
+    "cost": -6,
+    "action": "mult_mul_grow",
+    "value": 2.0,
+    "grow": 20,
+    "text": "−6: ×2 Mult este turno; todas as criaturas na Arena crescem +20 permanente."
+   }
+  ]
+ },
+ {
+  "id": "pw_white",
+  "name": "Aurélio, Paladino do Alvor",
+  "color": "white",
+  "loyalty": 2,
+  "max_loyalty": 6,
+  "price": 10,
+  "text": "Ganha 1 lealdade por cada carta Branca jogada. Uma habilidade por turno.",
+  "skills": [
+   {
+    "cost": 1,
+    "action": "heal",
+    "value": 2,
+    "text": "+1: Curas 2 de vida."
+   },
+   {
+    "cost": -2,
+    "action": "mult_per_attacker",
+    "value": 3,
+    "text": "−2: +3 Mult por criatura atacante este turno."
+   },
+   {
+    "cost": -6,
+    "action": "mult_mul_shield",
+    "value": 2.5,
+    "text": "−6: ×2.5 Mult este turno e o inimigo não contra-ataca."
+   }
+  ]
+ }
+]

@@ -1,0 +1,8923 @@
+[
+ {
+  "id": "c001",
+  "num": 1,
+  "name": "Goblin Guia",
+  "deck": 1,
+  "colors": [
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 1,
+  "power": 15,
+  "toughness": 2,
+  "rarity": "common",
+  "price": 4,
+  "text": "+4 Mult; se for a 1ª carta da Arena, +20 Pod.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_add",
+    "value": 4
+   },
+   {
+    "trigger": "on_attack",
+    "action": "power_add",
+    "value": 20,
+    "cond": {
+     "position": "first"
+    }
+   }
+  ]
+ },
+ {
+  "id": "c002",
+  "num": 2,
+  "name": "Raio Globular",
+  "deck": 1,
+  "colors": [
+   "red"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 1,
+  "power": 10,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 4,
+  "text": "+6 Mult; ganha +2 Mult extra por cada outra carta de Custo 1 jogada.",
+  "effects": [
+   {
+    "trigger": "on_cast",
+    "action": "mult_add",
+    "value": 6
+   },
+   {
+    "trigger": "on_cast",
+    "action": "mult_add",
+    "value": 2,
+    "per": "played",
+    "filter": {
+     "cost": 1
+    },
+    "exclude_self": true
+   }
+  ],
+  "flashback": true
+ },
+ {
+  "id": "c003",
+  "num": 3,
+  "name": "Fanático de Mogg",
+  "deck": 1,
+  "colors": [
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 1,
+  "power": 20,
+  "toughness": 2,
+  "rarity": "common",
+  "price": 4,
+  "text": "×1.3 Mult se jogares pelo menos 3 cartas Vermelhas.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_mul",
+    "value": 1.3,
+    "cond": {
+     "count": {
+      "of": "played",
+      "filter": {
+       "color": "red"
+      },
+      "min": 3
+     }
+    }
+   }
+  ]
+ },
+ {
+  "id": "c004",
+  "num": 4,
+  "name": "Fenda de Lava",
+  "deck": 1,
+  "colors": [
+   "red"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 1,
+  "power": 15,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 4,
+  "text": "+8 Mult; converte o Custo da carta à direita para 1 neste turno.",
+  "effects": [
+   {
+    "trigger": "on_cast",
+    "action": "mult_add",
+    "value": 8
+   }
+  ]
+ },
+ {
+  "id": "c005",
+  "num": 5,
+  "name": "Piromante Jovem",
+  "deck": 1,
+  "colors": [
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 25,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "+5 Mult por cada Feitiço (SP) ou Mágica (MG) jogada na mesma mão.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_add",
+    "value": 5,
+    "per": "spell"
+   }
+  ]
+ },
+ {
+  "id": "c006",
+  "num": 6,
+  "name": "Ritual Desesperado",
+  "deck": 1,
+  "colors": [
+   "red"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 1,
+  "power": 5,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 4,
+  "text": "×1.5 Mult se o teu Grimório tiver 2 ou menos cartas restantes.",
+  "effects": [
+   {
+    "trigger": "on_cast",
+    "action": "mult_mul",
+    "value": 1.5,
+    "cond": {
+     "library_max": 2
+    }
+   }
+  ]
+ },
+ {
+  "id": "c007",
+  "num": 7,
+  "name": "Berserker da Cratera",
+  "deck": 1,
+  "colors": [
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 1,
+  "power": 30,
+  "toughness": 2,
+  "rarity": "common",
+  "price": 4,
+  "text": "+6 Mult se todas as cartas jogadas na mão tiverem Custo 1.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_add",
+    "value": 6,
+    "cond": {
+     "all_cost": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "c008",
+  "num": 8,
+  "name": "Pico Ardente",
+  "deck": 1,
+  "colors": [
+   "red"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] Dá ×1.3 Mult se atacares com 3+ cartas de Custo 1.",
+  "effects": [
+   {
+    "trigger": "in_hand",
+    "action": "mult_mul",
+    "value": 1.3,
+    "cond": {
+     "count": {
+      "of": "played",
+      "filter": {
+       "cost": 1
+      },
+      "min": 3
+     }
+    }
+   }
+  ]
+ },
+ {
+  "id": "c009",
+  "num": 9,
+  "name": "Optar pelo Futuro",
+  "deck": 2,
+  "colors": [
+   "blue"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 1,
+  "power": 15,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 4,
+  "text": "+3 Mult e compra 1 carta extra para a mão imediatamente.",
+  "effects": [
+   {
+    "trigger": "on_cast",
+    "action": "mult_add",
+    "value": 3
+   },
+   {
+    "trigger": "on_cast",
+    "action": "draw",
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "c010",
+  "num": 10,
+  "name": "Mago da Conjuradora",
+  "deck": 2,
+  "colors": [
+   "blue"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 20,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "Reativa (Retrigger) a Mágica (MG) ou Feitiço (SP) à sua esquerda.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "retrigger",
+    "value": "last_spell"
+   }
+  ]
+ },
+ {
+  "id": "c011",
+  "num": 11,
+  "name": "Visão Ancestral",
+  "deck": 2,
+  "colors": [
+   "blue"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 1,
+  "power": 30,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 4,
+  "text": "+50 Pod; dá +4 Mult por cada carta que tens na mão neste momento.",
+  "effects": [
+   {
+    "trigger": "on_cast",
+    "action": "power_add",
+    "value": 50
+   },
+   {
+    "trigger": "on_cast",
+    "action": "mult_add",
+    "value": 4,
+    "per": "hand"
+   }
+  ],
+  "flashback": true
+ },
+ {
+  "id": "c012",
+  "num": 12,
+  "name": "Contramágica Arcana",
+  "deck": 2,
+  "colors": [
+   "blue"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 2,
+  "power": 25,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "Ignora a restrição do Boss neste turno e dá ×1.5 Mult.",
+  "effects": [
+   {
+    "trigger": "on_cast",
+    "action": "silence_enemy",
+    "value": 1
+   },
+   {
+    "trigger": "on_cast",
+    "action": "mult_mul",
+    "value": 1.5
+   }
+  ]
+ },
+ {
+  "id": "c013",
+  "num": 13,
+  "name": "Sábio do Astrolábio",
+  "deck": 2,
+  "colors": [
+   "blue"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 30,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "+15 Pod por cada Mágica (MG) jogada nesta mão.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "power_add",
+    "value": 15,
+    "per": "spell",
+    "filter": {
+     "subtype": "instant"
+    }
+   }
+  ]
+ },
+ {
+  "id": "c014",
+  "num": 14,
+  "name": "Espiral do Tempo",
+  "deck": 2,
+  "colors": [
+   "blue"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 4,
+  "power": 40,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "Baralha o Cemitério no Grimório e dá ×2 Mult.",
+  "effects": [
+   {
+    "trigger": "on_cast",
+    "action": "shuffle_graveyard",
+    "value": 1
+   },
+   {
+    "trigger": "on_cast",
+    "action": "mult_mul",
+    "value": 2
+   }
+  ]
+ },
+ {
+  "id": "c015",
+  "num": 15,
+  "name": "Djinn da Tempestade",
+  "deck": 2,
+  "colors": [
+   "blue"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 45,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "Ganha +6 Mult por cada carta Azul na Arena.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_add",
+    "value": 6,
+    "per": "played",
+    "filter": {
+     "color": "blue"
+    }
+   }
+  ]
+ },
+ {
+  "id": "c016",
+  "num": 16,
+  "name": "Fenda Temporal",
+  "deck": 2,
+  "colors": [
+   "blue"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 5,
+  "power": 20,
+  "toughness": 0,
+  "rarity": "rare",
+  "price": 10,
+  "text": "×2.5 Mult se esta for a 4ª ou 5ª carta de Feitiço/Mágica na mesma mão.",
+  "effects": [
+   {
+    "trigger": "on_cast",
+    "action": "mult_mul",
+    "value": 2.5,
+    "cond": {
+     "count": {
+      "of": "spell",
+      "min": 4
+     }
+    }
+   }
+  ]
+ },
+ {
+  "id": "c017",
+  "num": 17,
+  "name": "Ilha de Halimar",
+  "deck": 2,
+  "colors": [
+   "blue"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] +30 Pod e ×1.3 Mult se jogares Tempestade Arcana.",
+  "effects": [
+   {
+    "trigger": "in_hand",
+    "action": "power_add",
+    "value": 30,
+    "cond": {
+     "formation": [
+      "storm"
+     ]
+    }
+   },
+   {
+    "trigger": "in_hand",
+    "action": "mult_mul",
+    "value": 1.3,
+    "cond": {
+     "formation": [
+      "storm"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "c018",
+  "num": 18,
+  "name": "Ritual Sombrio",
+  "deck": 3,
+  "colors": [
+   "black"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 1,
+  "power": 10,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 4,
+  "text": "+8 Mult imediatos.",
+  "effects": [
+   {
+    "trigger": "on_cast",
+    "action": "mult_add",
+    "value": 8
+   }
+  ],
+  "flashback": true
+ },
+ {
+  "id": "c019",
+  "num": 19,
+  "name": "Confidente Obscuro",
+  "deck": 3,
+  "colors": [
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 25,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "+6 Mult; se tiveres 0 Canalizações restantes, dá ×1.5 Mult.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_add",
+    "value": 6
+   },
+   {
+    "trigger": "on_attack",
+    "action": "mult_mul",
+    "value": 1.5,
+    "cond": {
+     "discards_max": 0
+    }
+   }
+  ]
+ },
+ {
+  "id": "c020",
+  "num": 20,
+  "name": "Vampiro Lacerador",
+  "deck": 3,
+  "colors": [
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 1,
+  "power": 20,
+  "toughness": 2,
+  "rarity": "common",
+  "price": 4,
+  "text": "Consome 1 Canalização para ganhar +12 Mult neste turno.",
+  "effects": [
+   {
+    "trigger": "on_play",
+    "action": "consume_discard",
+    "value": 1
+   },
+   {
+    "trigger": "on_attack",
+    "action": "mult_add",
+    "value": 12,
+    "cond": {
+     "consumed": true
+    }
+   }
+  ]
+ },
+ {
+  "id": "c021",
+  "num": 21,
+  "name": "Assinar com Sangue",
+  "deck": 3,
+  "colors": [
+   "black"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 2,
+  "power": 15,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "+30 Pod e +5 Mult; compra 1 carta.",
+  "effects": [
+   {
+    "trigger": "on_cast",
+    "action": "power_add",
+    "value": 30
+   },
+   {
+    "trigger": "on_cast",
+    "action": "mult_add",
+    "value": 5
+   },
+   {
+    "trigger": "on_cast",
+    "action": "draw",
+    "value": 1
+   }
+  ],
+  "flashback": true
+ },
+ {
+  "id": "c022",
+  "num": 22,
+  "name": "Espectro Hipnótico",
+  "deck": 3,
+  "colors": [
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 35,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "Descarta 1 carta aleatória da tua mão: ganha ×1.8 Mult.",
+  "effects": [
+   {
+    "trigger": "on_play",
+    "action": "discard_random",
+    "value": 1
+   },
+   {
+    "trigger": "on_attack",
+    "action": "mult_mul",
+    "value": 1.8
+   }
+  ]
+ },
+ {
+  "id": "c023",
+  "num": 23,
+  "name": "Tutor Demoníaco",
+  "deck": 3,
+  "colors": [
+   "black"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 2,
+  "power": 10,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "Copia a habilidade da carta que estiver à sua direita na Arena.",
+  "effects": [
+   {
+    "trigger": "on_cast",
+    "action": "retrigger",
+    "value": "last_creature"
+   }
+  ]
+ },
+ {
+  "id": "c024",
+  "num": 24,
+  "name": "Obliterador Phyrexiano",
+  "deck": 3,
+  "colors": [
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 55,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "×2 Mult, mas destrói 1 carta aleatória que ficou na tua mão.",
+  "effects": [
+   {
+    "trigger": "on_play",
+    "action": "discard_random",
+    "value": 1
+   },
+   {
+    "trigger": "on_attack",
+    "action": "mult_mul",
+    "value": 2
+   }
+  ]
+ },
+ {
+  "id": "c025",
+  "num": 25,
+  "name": "Exsanguinar",
+  "deck": 3,
+  "colors": [
+   "black"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 4,
+  "power": 30,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "+4 Mult por cada carta Preta jogada nesta mão.",
+  "effects": [
+   {
+    "trigger": "on_cast",
+    "action": "mult_add",
+    "value": 4,
+    "per": "played",
+    "filter": {
+     "color": "black"
+    }
+   }
+  ]
+ },
+ {
+  "id": "c026",
+  "num": 26,
+  "name": "Senhor do Abismo",
+  "deck": 3,
+  "colors": [
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 60,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "×2.5 Mult se não tiveres nenhuma carta na mão após conjurar.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_mul",
+    "value": 2.5,
+    "cond": {
+     "hand_max": 0
+    }
+   }
+  ]
+ },
+ {
+  "id": "c027",
+  "num": 27,
+  "name": "Pântano de Cabal",
+  "deck": 3,
+  "colors": [
+   "black"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] ×1.4 Mult se jogares 3 ou mais cartas Pretas.",
+  "effects": [
+   {
+    "trigger": "in_hand",
+    "action": "mult_mul",
+    "value": 1.4,
+    "cond": {
+     "count": {
+      "of": "played",
+      "filter": {
+       "color": "black"
+      },
+      "min": 3
+     }
+    }
+   }
+  ]
+ },
+ {
+  "id": "c028",
+  "num": 28,
+  "name": "Elfo de Llanowar",
+  "deck": 4,
+  "colors": [
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 1,
+  "power": 15,
+  "toughness": 2,
+  "rarity": "common",
+  "price": 4,
+  "text": "Ganha +15 Pod permanentemente sempre que é jogado.",
+  "effects": [
+   {
+    "trigger": "on_play",
+    "action": "grow_self",
+    "value": 15
+   }
+  ]
+ },
+ {
+  "id": "c029",
+  "num": 29,
+  "name": "Crescimento Gigante",
+  "deck": 4,
+  "colors": [
+   "green"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 1,
+  "power": 20,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 4,
+  "text": "Dá +20 Pod permanente à Criatura à sua esquerda e +4 Mult.",
+  "effects": [
+   {
+    "trigger": "on_cast",
+    "action": "grow_left",
+    "value": 20
+   },
+   {
+    "trigger": "on_cast",
+    "action": "mult_add",
+    "value": 4
+   }
+  ],
+  "flashback": true
+ },
+ {
+  "id": "c030",
+  "num": 30,
+  "name": "Druida do Paraíso",
+  "deck": 4,
+  "colors": [
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 25,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "+4 Mult; ganha +1 Mult permanente a cada 2 vezes que é jogada.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_add",
+    "value": 4
+   },
+   {
+    "trigger": "on_play",
+    "action": "grow_mult_self",
+    "value": 0.5
+   }
+  ]
+ },
+ {
+  "id": "c031",
+  "num": 31,
+  "name": "Hidra de Kalonian",
+  "deck": 4,
+  "colors": [
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 40,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "Duplica o Poder Base atual desta carta durante este turno.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "power_double_self",
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "c032",
+  "num": 32,
+  "name": "Baloth Voraz",
+  "deck": 4,
+  "colors": [
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 35,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "+50 Pod se houver outra Criatura Verde na Arena.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "power_add",
+    "value": 50,
+    "cond": {
+     "count": {
+      "of": "attacker",
+      "filter": {
+       "color": "green"
+      },
+      "min": 2
+     }
+    }
+   }
+  ]
+ },
+ {
+  "id": "c033",
+  "num": 33,
+  "name": "Força Régia",
+  "deck": 4,
+  "colors": [
+   "green"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 3,
+  "power": 20,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 6,
+  "text": "+3 Mult por cada Criatura com mais de 40 de Poder na Arena.",
+  "effects": [
+   {
+    "trigger": "on_cast",
+    "action": "mult_add",
+    "value": 3,
+    "per": "attacker",
+    "filter": {
+     "power_min": 41
+    }
+   }
+  ]
+ },
+ {
+  "id": "c034",
+  "num": 34,
+  "name": "BehemothCratera",
+  "deck": 4,
+  "colors": [
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 60,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "Dá ×1.5 Mult por cada Criatura Verde jogada nesta mão.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_mul",
+    "value": 1.5,
+    "per": "attacker",
+    "filter": {
+     "color": "green"
+    }
+   }
+  ]
+ },
+ {
+  "id": "c035",
+  "num": 35,
+  "name": "Aspecto da Hidra",
+  "deck": 4,
+  "colors": [
+   "green"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 1,
+  "power": 10,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 4,
+  "text": "+15 Pod e +2 Mult por cada carta Verde na Arena.",
+  "effects": [
+   {
+    "trigger": "on_cast",
+    "action": "power_add",
+    "value": 15
+   },
+   {
+    "trigger": "on_cast",
+    "action": "mult_add",
+    "value": 2,
+    "per": "played",
+    "filter": {
+     "color": "green"
+    }
+   }
+  ]
+ },
+ {
+  "id": "c036",
+  "num": 36,
+  "name": "Xamã da Fauna",
+  "deck": 4,
+  "colors": [
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 25,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "Todas as Criaturas na tua mão ganham +8 Pod permanente.",
+  "effects": [
+   {
+    "trigger": "on_play",
+    "action": "grow_hand",
+    "value": 8
+   }
+  ]
+ },
+ {
+  "id": "c037",
+  "num": 37,
+  "name": "Wurm da Engolidora",
+  "deck": 4,
+  "colors": [
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 70,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "Ganha +25 Pod permanente; ×1.5 Mult.",
+  "effects": [
+   {
+    "trigger": "on_play",
+    "action": "grow_self",
+    "value": 25
+   },
+   {
+    "trigger": "on_attack",
+    "action": "mult_mul",
+    "value": 1.5
+   }
+  ]
+ },
+ {
+  "id": "c038",
+  "num": 38,
+  "name": "Floresta de Pendelhaven",
+  "deck": 4,
+  "colors": [
+   "green"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] Criaturas Verdes jogadas ganham +10 Pod permanente.",
+  "effects": [
+   {
+    "trigger": "in_hand_on_play",
+    "action": "grow_played",
+    "value": 10,
+    "filter": {
+     "color": "green"
+    }
+   }
+  ]
+ },
+ {
+  "id": "c039",
+  "num": 39,
+  "name": "Campeão da Paróquia",
+  "deck": 5,
+  "colors": [
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 1,
+  "power": 20,
+  "toughness": 2,
+  "rarity": "common",
+  "price": 4,
+  "text": "+20 Pod por cada outra Criatura jogada nesta mão.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "power_add",
+    "value": 20,
+    "per": "attacker",
+    "exclude_self": true
+   }
+  ]
+ },
+ {
+  "id": "c040",
+  "num": 40,
+  "name": "Tenente de Thalia",
+  "deck": 5,
+  "colors": [
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 25,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "+3 Mult por cada Criatura na Arena.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_add",
+    "value": 3,
+    "per": "attacker"
+   }
+  ]
+ },
+ {
+  "id": "c041",
+  "num": 41,
+  "name": "Falcão do Esquadrão",
+  "deck": 5,
+  "colors": [
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 15,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "Se jogares outro Custo 2, ganha +6 Mult.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_add",
+    "value": 6,
+    "cond": {
+     "count": {
+      "of": "played",
+      "filter": {
+       "cost": 2
+      },
+      "min": 2
+     }
+    }
+   }
+  ]
+ },
+ {
+  "id": "c042",
+  "num": 42,
+  "name": "Honra dos Puros",
+  "deck": 5,
+  "colors": [
+   "white"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 2,
+  "power": 10,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "Todas as Criaturas Brancas nesta jogada dão +4 Mult extra.",
+  "effects": [
+   {
+    "trigger": "on_cast",
+    "action": "mult_add",
+    "value": 4,
+    "per": "attacker",
+    "filter": {
+     "color": "white"
+    }
+   }
+  ],
+  "flashback": true
+ },
+ {
+  "id": "c043",
+  "num": 43,
+  "name": "Marechal de Benalia",
+  "deck": 5,
+  "colors": [
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 35,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "×1.3 Mult se a formação for Bando Tribal ou Devoção Pura.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_mul",
+    "value": 1.3,
+    "cond": {
+     "formation": [
+      "band",
+      "devotion"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "c044",
+  "num": 44,
+  "name": "Paladino da Espada",
+  "deck": 5,
+  "colors": [
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 30,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "Reativa a Criatura à sua esquerda se for Branca.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "retrigger",
+    "value": "left",
+    "filter": {
+     "color": "white"
+    }
+   }
+  ]
+ },
+ {
+  "id": "c045",
+  "num": 45,
+  "name": "Caminho para o Exílio",
+  "deck": 5,
+  "colors": [
+   "white"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 1,
+  "power": 15,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 4,
+  "text": "+8 Mult se jogada ao lado de pelo menos 3 Criaturas.",
+  "effects": [
+   {
+    "trigger": "on_cast",
+    "action": "mult_add",
+    "value": 8,
+    "cond": {
+     "count": {
+      "of": "attacker",
+      "min": 3
+     }
+    }
+   }
+  ]
+ },
+ {
+  "id": "c046",
+  "num": 46,
+  "name": "Anjo Matador deMal",
+  "deck": 5,
+  "colors": [
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 55,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "×1.5 Mult se houver 4 ou mais Criaturas na Arena.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_mul",
+    "value": 1.5,
+    "cond": {
+     "count": {
+      "of": "attacker",
+      "min": 4
+     }
+    }
+   }
+  ]
+ },
+ {
+  "id": "c047",
+  "num": 47,
+  "name": "Líder da Milícia",
+  "deck": 5,
+  "colors": [
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 1,
+  "power": 20,
+  "toughness": 2,
+  "rarity": "common",
+  "price": 4,
+  "text": "+4 Mult; dá +15 Pod às cartas adjacentes.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_add",
+    "value": 4
+   },
+   {
+    "trigger": "on_attack",
+    "action": "power_add",
+    "value": 15,
+    "per": "neighbors"
+   }
+  ]
+ },
+ {
+  "id": "c048",
+  "num": 48,
+  "name": "Égide dos Deuses",
+  "deck": 5,
+  "colors": [
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 25,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "Impede debuffs do Boss nas tuas cartas Brancas; +5 Mult.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_add",
+    "value": 5
+   },
+   {
+    "trigger": "on_play",
+    "action": "silence_enemy",
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "c049",
+  "num": 49,
+  "name": "Elspeth, Campeã Solar",
+  "deck": 5,
+  "colors": [
+   "white"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 4,
+  "power": 40,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "Conta como 2 Criaturas para ativar Bando Tribal; ×1.8 Mult.",
+  "effects": [
+   {
+    "trigger": "on_cast",
+    "action": "mult_mul",
+    "value": 1.8
+   }
+  ],
+  "counts_as_two": true
+ },
+ {
+  "id": "c050",
+  "num": 50,
+  "name": "Planície de Serra",
+  "deck": 5,
+  "colors": [
+   "white"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] ×1.3 Mult se jogares 3 ou mais Criaturas.",
+  "effects": [
+   {
+    "trigger": "in_hand",
+    "action": "mult_mul",
+    "value": 1.3,
+    "cond": {
+     "count": {
+      "of": "attacker",
+      "min": 3
+     }
+    }
+   }
+  ]
+ },
+ {
+  "id": "c051",
+  "num": 51,
+  "name": "Árbitro de Augustin",
+  "deck": 6,
+  "colors": [
+   "white",
+   "blue"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 30,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "+4 Mult por cada carta que ficou retida na tua mão.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 4,
+    "per": "hand",
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c052",
+  "num": 52,
+  "name": "Veredito Supremo",
+  "deck": 6,
+  "colors": [
+   "white",
+   "blue"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 4,
+  "power": 50,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "×2 Mult se jogares exatamente 1 ou 2 cartas nesta mão.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 2.0,
+    "cond": {
+     "count": {
+      "of": "played",
+      "max": 2
+     }
+    },
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c053",
+  "num": 53,
+  "name": "Detenção Esférica",
+  "deck": 6,
+  "colors": [
+   "white",
+   "blue"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 2,
+  "power": 20,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "+30 Pod por cada carta não jogada na mão.",
+  "effects": [
+   {
+    "action": "power_add",
+    "value": 30,
+    "per": "hand",
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c054",
+  "num": 54,
+  "name": "Maga Reflectora",
+  "deck": 6,
+  "colors": [
+   "white",
+   "blue"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 25,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "Reativa a si mesma se tiveres 4+ cartas na mão.",
+  "effects": [
+   {
+    "action": "retrigger",
+    "value": "self",
+    "cond": {
+     "count": {
+      "of": "played",
+      "min": 4
+     }
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c055",
+  "num": 55,
+  "name": "Revelação da Esfinge",
+  "deck": 6,
+  "colors": [
+   "white",
+   "blue"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 5,
+  "power": 40,
+  "toughness": 0,
+  "rarity": "rare",
+  "price": 10,
+  "text": "Compra 2 cartas antes de pontuar; +5 Mult por carta na mão.",
+  "effects": [
+   {
+    "action": "draw",
+    "value": 2.0,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "mult_add",
+    "value": 5,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c056",
+  "num": 56,
+  "name": "Lavinia do Décimo",
+  "deck": 6,
+  "colors": [
+   "white",
+   "blue"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 25,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "[Na Mão ou Arena] Dá +5 Mult sempre que fica retida na mão.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 5,
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c057",
+  "num": 57,
+  "name": "Silêncio da Lei",
+  "deck": 6,
+  "colors": [
+   "white"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 1,
+  "power": 15,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 4,
+  "text": "+6 Mult se não descartaste nenhuma carta neste turno.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 6,
+    "cond": {
+     "discarded_max": 0
+    },
+    "trigger": "on_cast"
+   }
+  ],
+  "flashback": true
+ },
+ {
+  "id": "c058",
+  "num": 58,
+  "name": "Arconte da Tríade",
+  "deck": 6,
+  "colors": [
+   "white",
+   "blue"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 45,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "×1.5 Mult por cada Terreno (LD) ou Mágica (MG) na tua mão.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.5,
+    "per": "spell",
+    "filter": {
+     "subtype": "instant"
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c059",
+  "num": 59,
+  "name": "Absorver",
+  "deck": 6,
+  "colors": [
+   "white",
+   "blue"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 3,
+  "power": 30,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 6,
+  "text": "+40 Pod e +6 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 6,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "power_add",
+    "value": 40,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c060",
+  "num": 60,
+  "name": "Escriba do Senado",
+  "deck": 6,
+  "colors": [
+   "blue"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 1,
+  "power": 15,
+  "toughness": 2,
+  "rarity": "common",
+  "price": 4,
+  "text": "[Na Mão] Dá +25 Pod passivo a qualquer jogada.",
+  "effects": [
+   {
+    "action": "power_add",
+    "value": 25,
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c061",
+  "num": 61,
+  "name": "Teferi, Viajante",
+  "deck": 6,
+  "colors": [
+   "white",
+   "blue"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 3,
+  "power": 35,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 6,
+  "text": "Reativa todos os efeitos [Na Mão] que possuas neste turno.",
+  "effects": [
+   {
+    "action": "retrigger",
+    "value": "hand",
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c062",
+  "num": 62,
+  "name": "Fonte Hallowed",
+  "deck": 6,
+  "colors": [
+   "white",
+   "blue"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] ×1.5 Mult se jogares cartas Brancas ou Azuis.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.5,
+    "cond": {
+     "colors_any": [
+      "white",
+      "blue"
+     ]
+    },
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c063",
+  "num": 63,
+  "name": "Colunata Celestial",
+  "deck": 6,
+  "colors": [
+   "white",
+   "blue"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 2,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] Dá +8 Mult; também pode ser jogada na Arena como Criatura!",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 8,
+    "trigger": "in_hand"
+   }
+  ],
+  "approx": true,
+  "approx_notes": [
+   "também pode ser jogada na Arena como Criatura"
+  ]
+ },
+ {
+  "id": "c064",
+  "num": 64,
+  "name": "Fantasma de Jace",
+  "deck": 7,
+  "colors": [
+   "blue",
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 1,
+  "power": 15,
+  "toughness": 2,
+  "rarity": "common",
+  "price": 4,
+  "text": "Ganha +10 Pod e +1 Mult por cada carta no Cemitério.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 1,
+    "per": "graveyard",
+    "trigger": "on_attack"
+   },
+   {
+    "action": "power_add",
+    "value": 10,
+    "per": "graveyard",
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c065",
+  "num": 65,
+  "name": "Vislumbre do Inimaginável",
+  "deck": 7,
+  "colors": [
+   "blue",
+   "black"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 2,
+  "power": 10,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "Envia as 4 cartas do topo do Grimório para o Cemitério; +8 Mult.",
+  "effects": [
+   {
+    "action": "mill",
+    "value": 4.0,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "mult_add",
+    "value": 8,
+    "trigger": "on_cast"
+   }
+  ],
+  "flashback": true
+ },
+ {
+  "id": "c066",
+  "num": 66,
+  "name": "Ladra de Sanidade",
+  "deck": 7,
+  "colors": [
+   "blue",
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 30,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "Envia 2 cartas do Grimório ao Cemitério e ativa a habilidade da 1ª.",
+  "effects": [
+   {
+    "action": "mill",
+    "value": 2.0,
+    "trigger": "on_play"
+   }
+  ]
+ },
+ {
+  "id": "c067",
+  "num": 67,
+  "name": "Caranguejo de Hedron",
+  "deck": 7,
+  "colors": [
+   "blue"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 1,
+  "power": 15,
+  "toughness": 2,
+  "rarity": "common",
+  "price": 4,
+  "text": "Envia 3 cartas do Grimório ao Cemitério; +30 Pod.",
+  "effects": [
+   {
+    "action": "mill",
+    "value": 3.0,
+    "trigger": "on_play"
+   },
+   {
+    "action": "power_add",
+    "value": 30,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c068",
+  "num": 68,
+  "name": "Afogar noLago",
+  "deck": 7,
+  "colors": [
+   "blue",
+   "black"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 2,
+  "power": 20,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "×1.8 Mult se tiveres 8 ou mais cartas no Cemitério.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.8,
+    "cond": {
+     "count": {
+      "of": "graveyard",
+      "min": 8
+     }
+    },
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c069",
+  "num": 69,
+  "name": "Lazav, Mente Multifacetada",
+  "deck": 7,
+  "colors": [
+   "blue",
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 40,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "Copia a melhor Criatura que estiver no teu Cemitério.",
+  "effects": [],
+  "approx": true,
+  "approx_notes": [
+   "Copia a melhor Criatura que estiver no teu Cemitério"
+  ]
+ },
+ {
+  "id": "c070",
+  "num": 70,
+  "name": "Incursão na Cripta",
+  "deck": 7,
+  "colors": [
+   "black"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 3,
+  "power": 25,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 6,
+  "text": "+3 Mult por cada Criatura no teu Cemitério.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 3,
+    "per": "graveyard",
+    "filter": {
+     "type": "creature"
+    },
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c071",
+  "num": 71,
+  "name": "Espião da Balaustrada",
+  "deck": 7,
+  "colors": [
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 35,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "Envia 3 cartas ao Cemitério; +6 Mult.",
+  "effects": [
+   {
+    "action": "mill",
+    "value": 3.0,
+    "trigger": "on_play"
+   },
+   {
+    "action": "mult_add",
+    "value": 6,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c072",
+  "num": 72,
+  "name": "Traumatizar",
+  "deck": 7,
+  "colors": [
+   "blue"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 5,
+  "power": 20,
+  "toughness": 0,
+  "rarity": "rare",
+  "price": 10,
+  "text": "Envia metade do teu Grimório para o Cemitério; ×2 Mult.",
+  "effects": [
+   {
+    "action": "mill_half",
+    "value": 1,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "mult_mul",
+    "value": 2.0,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c073",
+  "num": 73,
+  "name": "Sombra da Morte",
+  "deck": 7,
+  "colors": [
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 1,
+  "power": 50,
+  "toughness": 2,
+  "rarity": "common",
+  "price": 4,
+  "text": "×2.5 Mult se o teu Grimório tiver menos de 5 cartas.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 2.5,
+    "cond": {
+     "library_max": 4
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c074",
+  "num": 74,
+  "name": "Sussurros Noturnos",
+  "deck": 7,
+  "colors": [
+   "black"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 2,
+  "power": 20,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "Compra 1 carta e envia 2 do Grimório ao Cemitério; +5 Mult.",
+  "effects": [
+   {
+    "action": "mill",
+    "value": 2.0,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "draw",
+    "value": 1.0,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "mult_add",
+    "value": 5,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c075",
+  "num": 75,
+  "name": "Aberração Consumidora",
+  "deck": 7,
+  "colors": [
+   "blue",
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 55,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "×1.5 Mult; ganha +15 Pod por cada carta no Cemitério.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.5,
+    "trigger": "on_attack"
+   },
+   {
+    "action": "power_add",
+    "value": 15,
+    "per": "graveyard",
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c076",
+  "num": 76,
+  "name": "Túmulo Aquático",
+  "deck": 7,
+  "colors": [
+   "blue",
+   "black"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] Envia 1 carta do Grimório ao Cemitério por turno e dá ×1.5 Mult.",
+  "effects": [
+   {
+    "action": "mill",
+    "value": 1.0,
+    "trigger": "in_hand"
+   },
+   {
+    "action": "mult_mul",
+    "value": 1.5,
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c077",
+  "num": 77,
+  "name": "Catacumbas Submersas",
+  "deck": 7,
+  "colors": [
+   "blue",
+   "black"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] +2 Mult por cada 3 cartas no Cemitério.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 2,
+    "per": "graveyard",
+    "per_div": 3,
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c078",
+  "num": 78,
+  "name": "Acrobata da Carnificina",
+  "deck": 8,
+  "colors": [
+   "black",
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 1,
+  "power": 20,
+  "toughness": 2,
+  "rarity": "common",
+  "price": 4,
+  "text": "Destrói a carta à sua direita na Arena para ganhar ×2.2 Mult!",
+  "effects": [
+   {
+    "action": "destroy_right",
+    "value": 1,
+    "trigger": "on_play"
+   },
+   {
+    "action": "mult_mul",
+    "value": 2.2,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c079",
+  "num": 79,
+  "name": "Pavor do Palco",
+  "deck": 8,
+  "colors": [
+   "black",
+   "red"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 1,
+  "power": 15,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 4,
+  "text": "+6 Mult; se tiveres 1 ou 0 cartas na mão, dá +14 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 6,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "mult_add",
+    "value": 14,
+    "cond": {
+     "hand_max": 1
+    },
+    "trigger": "on_cast"
+   }
+  ],
+  "flashback": true
+ },
+ {
+  "id": "c080",
+  "num": 80,
+  "name": "Judith, Diva do Flagelo",
+  "deck": 8,
+  "colors": [
+   "black",
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 35,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "Sempre que uma carta é destruída ou descartada, ganha +8 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 8,
+    "per": "discards_used",
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c081",
+  "num": 81,
+  "name": "Raio da Fenda",
+  "deck": 8,
+  "colors": [
+   "red"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 2,
+  "power": 25,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "Destrói 1 carta aleatória na tua mão e dá ×1.8 Mult.",
+  "effects": [
+   {
+    "action": "discard_random",
+    "value": 1,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "mult_mul",
+    "value": 1.8,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c082",
+  "num": 82,
+  "name": "Cão do Inferno Rakdos",
+  "deck": 8,
+  "colors": [
+   "black",
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 30,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "+40 Pod se a tua mão estiver vazia.",
+  "effects": [
+   {
+    "action": "power_add",
+    "value": 40,
+    "cond": {
+     "hand_max": 0
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c083",
+  "num": 83,
+  "name": "Malabarista de Lâminas",
+  "deck": 8,
+  "colors": [
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 25,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "+6 Mult; +25 Pod se já usaste Canalizar neste turno.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 6,
+    "trigger": "on_attack"
+   },
+   {
+    "action": "power_add",
+    "value": 25,
+    "cond": {
+     "discarded_min": 1
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c084",
+  "num": 84,
+  "name": "Terminar",
+  "deck": 8,
+  "colors": [
+   "black",
+   "red"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 2,
+  "power": 20,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "Destrói a carta à esquerda na Arena (remove-a da partida) e dá ×2.5 Mult.",
+  "effects": [
+   {
+    "action": "destroy_left",
+    "value": 1,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "mult_mul",
+    "value": 2.5,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c085",
+  "num": 85,
+  "name": "Kroxa, Titã da Fome",
+  "deck": 8,
+  "colors": [
+   "black",
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 45,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "Descarta 1 carta da mão ao atacar; dá ×2 Mult.",
+  "effects": [
+   {
+    "action": "discard_random",
+    "value": 1.0,
+    "trigger": "on_play"
+   },
+   {
+    "action": "mult_mul",
+    "value": 2.0,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c086",
+  "num": 86,
+  "name": "Chama da Inquisição",
+  "deck": 8,
+  "colors": [
+   "red"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 1,
+  "power": 15,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 4,
+  "text": "+10 Mult se jogares exatamente 5 cartas na Arena.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 10,
+    "cond": {
+     "count": {
+      "of": "attacker",
+      "min": 5
+     }
+    },
+    "trigger": "on_cast"
+   }
+  ],
+  "flashback": true
+ },
+ {
+  "id": "c087",
+  "num": 87,
+  "name": "Demónio do Massacre",
+  "deck": 8,
+  "colors": [
+   "black",
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 65,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "×2 Mult; ganha +10 Mult se destruíste uma carta neste turno.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 2.0,
+    "trigger": "on_attack"
+   },
+   {
+    "action": "mult_add",
+    "value": 10,
+    "cond": {
+     "discarded_min": 1
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c088",
+  "num": 88,
+  "name": "Fênix da Cinza Sanguinária",
+  "deck": 8,
+  "colors": [
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 30,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "Se for destruída na Arena por outra carta, ainda pontua ×1.5 Mult!",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.5,
+    "trigger": "on_discard"
+   }
+  ]
+ },
+ {
+  "id": "c089",
+  "num": 89,
+  "name": "Comando de Kolaghan",
+  "deck": 8,
+  "colors": [
+   "black",
+   "red"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 3,
+  "power": 25,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 6,
+  "text": "Devolve 1 carta do Cemitério à mão e dá +7 Mult.",
+  "effects": [
+   {
+    "action": "recover",
+    "value": 1.0,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "mult_add",
+    "value": 7,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c090",
+  "num": 90,
+  "name": "Avatar da Discordia",
+  "deck": 8,
+  "colors": [
+   "black",
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 50,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "Descarta 2 cartas da mão: ×2.5 Mult.",
+  "effects": [
+   {
+    "action": "discard_random",
+    "value": 2.0,
+    "trigger": "on_play"
+   },
+   {
+    "action": "mult_mul",
+    "value": 2.5,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c091",
+  "num": 91,
+  "name": "Cripta de Sangue",
+  "deck": 8,
+  "colors": [
+   "black",
+   "red"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] ×1.5 Mult; se for a única carta na tua mão, dá ×2.5 Mult!",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.5,
+    "trigger": "in_hand"
+   },
+   {
+    "action": "mult_mul",
+    "value": 2.5,
+    "cond": {
+     "hand_max": 1
+    },
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c092",
+  "num": 92,
+  "name": "Desfiladeiro de Sulfureto",
+  "deck": 8,
+  "colors": [
+   "black",
+   "red"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] +8 Mult para cartas Pretas e Vermelhas.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 8,
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c093",
+  "num": 93,
+  "name": "Elfo das Tranças Sangrentas",
+  "deck": 9,
+  "colors": [
+   "red",
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 35,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "Ativa automaticamente o efeito da carta no topo do teu Grimório!",
+  "effects": [
+   {
+    "action": "cascade_library",
+    "value": "top",
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c094",
+  "num": 94,
+  "name": "Quebra-Feitiços Gruul",
+  "deck": 9,
+  "colors": [
+   "red",
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 40,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "+5 Mult; imune a regras de Boss durante o teu turno.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 5,
+    "trigger": "on_attack"
+   },
+   {
+    "action": "silence_enemy",
+    "value": 1,
+    "trigger": "on_play"
+   }
+  ]
+ },
+ {
+  "id": "c095",
+  "num": 95,
+  "name": "Fúria de Domri",
+  "deck": 9,
+  "colors": [
+   "red",
+   "green"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 2,
+  "power": 20,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "A Criatura à direita soma o seu Poder ao Mult (10 Pod = +1 Mult).",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 1,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c096",
+  "num": 96,
+  "name": "Dragão da Cratera",
+  "deck": 9,
+  "colors": [
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 65,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "+8 Mult; ×1.5 Mult se houver outra carta de Custo 5 na Arena.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 8,
+    "trigger": "on_attack"
+   },
+   {
+    "action": "mult_mul",
+    "value": 1.5,
+    "cond": {
+     "count": {
+      "of": "attacker",
+      "filter": {
+       "cost": 5
+      },
+      "min": 2
+     }
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c097",
+  "num": 97,
+  "name": "Mamute de Kazandu",
+  "deck": 9,
+  "colors": [
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 45,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "Duplica o seu Poder (+45) se tiveres um Terreno (LD) na mão.",
+  "effects": [
+   {
+    "action": "power_double_self",
+    "value": null,
+    "cond": {
+     "count": {
+      "of": "land_hand",
+      "min": 1
+     }
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c098",
+  "num": 98,
+  "name": "Golpe de Aríete",
+  "deck": 9,
+  "colors": [
+   "red",
+   "green"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 2,
+  "power": 15,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "Dá ×1.8 Mult se controlares uma Criatura com 50+ de Poder.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.8,
+    "cond": {
+     "count": {
+      "of": "attacker",
+      "filter": {
+       "power_min": 50
+      },
+      "min": 1
+     }
+    },
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c099",
+  "num": 99,
+  "name": "Javali de Ilharg",
+  "deck": 9,
+  "colors": [
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 60,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "Puxa 1 Criatura da tua mão para pontuar grátis junto com a Arena!",
+  "effects": [],
+  "approx": true,
+  "approx_notes": [
+   "Puxa 1 Criatura da tua mão para pontuar grátis junto com a Arena"
+  ]
+ },
+ {
+  "id": "c100",
+  "num": 100,
+  "name": "Xamã do Clã Ardente",
+  "deck": 9,
+  "colors": [
+   "red",
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 30,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "+25 Pod a todas as cartas de Custo 4 ou 5 na Arena.",
+  "effects": [
+   {
+    "action": "power_add",
+    "value": 25,
+    "per": "attacker",
+    "filter": {
+     "cost_min": 4
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c101",
+  "num": 101,
+  "name": "Atarka, Soberana",
+  "deck": 9,
+  "colors": [
+   "red",
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 70,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "Todas as Criaturas nesta jogada ativam o seu Poder Base 2 vezes!",
+  "effects": [
+   {
+    "action": "retrigger",
+    "value": "all",
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c102",
+  "num": 102,
+  "name": "Ritmo dos Selvagens",
+  "deck": 9,
+  "colors": [
+   "red",
+   "green"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 3,
+  "power": 20,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 6,
+  "text": "Criaturas jogadas nesta mão ganham +20 Pod e +4 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 4,
+    "per": "attacker",
+    "trigger": "on_cast"
+   },
+   {
+    "action": "power_add",
+    "value": 20,
+    "per": "attacker",
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c103",
+  "num": 103,
+  "name": "Gigante Esmaga-Ossos",
+  "deck": 9,
+  "colors": [
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 45,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "+6 Mult; ignora reduções de Poder.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 6,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c104",
+  "num": 104,
+  "name": "Hidra Voraz Gruul",
+  "deck": 9,
+  "colors": [
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 50,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "×1.6 Mult se a formação for Pacto Dual ou Tríade de Custo.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.6,
+    "cond": {
+     "formation": [
+      "pair",
+      "trips"
+     ]
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c105",
+  "num": 105,
+  "name": "Chama Selvagem",
+  "deck": 9,
+  "colors": [
+   "red",
+   "green"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 1,
+  "power": 25,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 4,
+  "text": "+5 Mult; +10 Mult se jogada ao lado de uma carta de Custo 5.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 5,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "mult_add",
+    "value": 10,
+    "cond": {
+     "neighbor_cost": 5
+    },
+    "trigger": "on_cast"
+   }
+  ],
+  "flashback": true
+ },
+ {
+  "id": "c106",
+  "num": 106,
+  "name": "Titã do Inferno",
+  "deck": 9,
+  "colors": [
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 65,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "+6 Mult por cada carta de Custo 4 ou 5 jogada.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 6,
+    "per": "played",
+    "filter": {
+     "cost_min": 4,
+     "cost_max": 5
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c107",
+  "num": 107,
+  "name": "Terreno Pisoteado",
+  "deck": 9,
+  "colors": [
+   "red",
+   "green"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] ×1.5 Mult se jogares uma carta de Custo 4 ou 5.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.5,
+    "cond": {
+     "count": {
+      "of": "played",
+      "filter": {
+       "cost_min": 4
+      },
+      "min": 1
+     }
+    },
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c108",
+  "num": 108,
+  "name": "Vale de Karplusan",
+  "deck": 9,
+  "colors": [
+   "red",
+   "green"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] Dá +40 Pod a todas as tuas jogadas.",
+  "effects": [
+   {
+    "action": "power_add",
+    "value": 40,
+    "per": "played",
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c109",
+  "num": 109,
+  "name": "Voz do Ressurgimento",
+  "deck": 10,
+  "colors": [
+   "green",
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 25,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "Se a mão contiver um Pacto Dual (Par), dá ×2 Mult.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 2.0,
+    "cond": {
+     "formation": [
+      "pair"
+     ]
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c110",
+  "num": 110,
+  "name": "Cavaleira do Relicário",
+  "deck": 10,
+  "colors": [
+   "green",
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 30,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "+30 Pod e +4 Mult por cada Terreno (LD) na mão ou Cemitério.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 4,
+    "per": "graveyard",
+    "filter": {
+     "type": "land"
+    },
+    "trigger": "on_attack"
+   },
+   {
+    "action": "power_add",
+    "value": 30,
+    "per": "graveyard",
+    "filter": {
+     "type": "land"
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c111",
+  "num": 111,
+  "name": "Trostani, Voz de Selesnya",
+  "deck": 10,
+  "colors": [
+   "green",
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 40,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "Duplica os valores base da Formação Arcana jogada!",
+  "effects": [
+   {
+    "action": "retrigger",
+    "value": "formations",
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c112",
+  "num": 112,
+  "name": "Chamado do Conclave",
+  "deck": 10,
+  "colors": [
+   "green",
+   "white"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 2,
+  "power": 35,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "Conta como 2 cartas de Custo 2 para formar Pares ou Tríades.",
+  "effects": []
+ },
+ {
+  "id": "c113",
+  "num": 113,
+  "name": "Hierarca Nobre",
+  "deck": 10,
+  "colors": [
+   "green",
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 1,
+  "power": 15,
+  "toughness": 2,
+  "rarity": "common",
+  "price": 4,
+  "text": "Se jogares apenas 1 ou 2 cartas (Exaltado), dá ×2.2 Mult.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 2.2,
+    "cond": {
+     "count": {
+      "of": "played",
+      "max": 2
+     }
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c114",
+  "num": 114,
+  "name": "Advento do Wurm",
+  "deck": 10,
+  "colors": [
+   "green",
+   "white"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 4,
+  "power": 55,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "+6 Mult; conta como Criatura e como Mágica simultaneamente.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 6,
+    "trigger": "on_cast"
+   }
+  ],
+  "counts_as": [
+   "creature",
+   "spell"
+  ]
+ },
+ {
+  "id": "c115",
+  "num": 115,
+  "name": "Deterioração Súbita",
+  "deck": 10,
+  "colors": [
+   "green",
+   "white"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 2,
+  "power": 25,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "+5 Mult; se formar Par com outra carta de Custo 2, dá ×1.5 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 5,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "mult_mul",
+    "value": 1.5,
+    "cond": {
+     "formation": [
+      "pair"
+     ]
+    },
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c116",
+  "num": 116,
+  "name": "Loxodonte Venerado",
+  "deck": 10,
+  "colors": [
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 50,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "Dá +15 Pod permanente a todas as outras cartas jogadas nesta mão.",
+  "effects": [
+   {
+    "action": "grow_board",
+    "value": 15,
+    "exclude_self": true,
+    "trigger": "on_play"
+   }
+  ]
+ },
+ {
+  "id": "c117",
+  "num": 117,
+  "name": "Marcha das Multidões",
+  "deck": 10,
+  "colors": [
+   "green",
+   "white"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 3,
+  "power": 30,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 6,
+  "text": "+4 Mult por cada Criatura e cada Feitiço na Arena.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 4,
+    "per": "spell",
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c118",
+  "num": 118,
+  "name": "Dríade do Bosque",
+  "deck": 10,
+  "colors": [
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 30,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "Todos os teus Terrenos na mão ativam para qualquer cor!",
+  "effects": []
+ },
+ {
+  "id": "c119",
+  "num": 119,
+  "name": "Anjo da Graça",
+  "deck": 10,
+  "colors": [
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 45,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "Se os teus Turnos chegarem a 0 e o Boss sobreviver, dá +1 Turno extra!",
+  "effects": [
+   {
+    "action": "extra_turn",
+    "value": 1,
+    "trigger": "on_play"
+   }
+  ],
+  "approx": true,
+  "approx_notes": [
+   "cond? os teus turnos chegarem a 0 e o boss sobreviver"
+  ]
+ },
+ {
+  "id": "c120",
+  "num": 120,
+  "name": "Amuleto de Selesnya",
+  "deck": 10,
+  "colors": [
+   "green",
+   "white"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 2,
+  "power": 20,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "+6 Mult e +20 Pod.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 6,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "power_add",
+    "value": 20,
+    "trigger": "on_cast"
+   }
+  ],
+  "flashback": true
+ },
+ {
+  "id": "c121",
+  "num": 121,
+  "name": "Centauro Curandeiro",
+  "deck": 10,
+  "colors": [
+   "green",
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 35,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "+5 Mult; +1 Canalização (Descarte) se formar um Par.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 5,
+    "trigger": "on_attack"
+   },
+   {
+    "action": "discard_plus",
+    "value": 1,
+    "cond": {
+     "formation": [
+      "pair"
+     ]
+    },
+    "trigger": "on_play"
+   }
+  ]
+ },
+ {
+  "id": "c122",
+  "num": 122,
+  "name": "Tolsimir, Amigo dos Lobos",
+  "deck": 10,
+  "colors": [
+   "green",
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 50,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "Reativa todas as cartas de Custo 2 ou 3 na Arena.",
+  "effects": [
+   {
+    "action": "retrigger",
+    "value": "all",
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c123",
+  "num": 123,
+  "name": "Sábia da Evolução",
+  "deck": 10,
+  "colors": [
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 25,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "Aumenta em +20 Pod e +2 Mult o nível da Formação jogada.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 2,
+    "trigger": "on_attack"
+   },
+   {
+    "action": "power_add",
+    "value": 20,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c124",
+  "num": 124,
+  "name": "Jardim do Templo",
+  "deck": 10,
+  "colors": [
+   "green",
+   "white"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] ×1.5 Mult se jogares Verde ou Branco.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.5,
+    "cond": {
+     "colors_any": [
+      "green",
+      "white"
+     ]
+    },
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c125",
+  "num": 125,
+  "name": "Bosque de Sunpetal",
+  "deck": 10,
+  "colors": [
+   "green",
+   "white"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] Dá +8 Mult sempre que jogas um Pacto Dual (Par).",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 8,
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c126",
+  "num": 126,
+  "name": "Cobrador de Dízimos",
+  "deck": 11,
+  "colors": [
+   "white",
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 20,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "Ganha +1 🪙 ao ser jogado; dá +1 Mult por cada 2 🪙 que tenhas.",
+  "effects": [
+   {
+    "action": "gold",
+    "value": 1.0,
+    "trigger": "on_play"
+   },
+   {
+    "action": "mult_add",
+    "value": 1,
+    "per": "gold",
+    "per_div": 2,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c127",
+  "num": 127,
+  "name": "Kaya, Usurpadora",
+  "deck": 11,
+  "colors": [
+   "white",
+   "black"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 3,
+  "power": 30,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 6,
+  "text": "+2 🪙; dá ×1.5 Mult se tiveres 10 ou mais 🪙.",
+  "effects": [
+   {
+    "action": "gold",
+    "value": 2.0,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "mult_mul",
+    "value": 1.5,
+    "cond": {
+     "gold_min": 10
+    },
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c128",
+  "num": 128,
+  "name": "Aristocrata do Cartel",
+  "deck": 11,
+  "colors": [
+   "white",
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 25,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "Destrói a Criatura à esquerda: ganha +3 🪙 e +8 Mult.",
+  "effects": [
+   {
+    "action": "destroy_left",
+    "value": 1,
+    "trigger": "on_play"
+   },
+   {
+    "action": "gold",
+    "value": 3.0,
+    "trigger": "on_play"
+   },
+   {
+    "action": "mult_add",
+    "value": 8,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c129",
+  "num": 129,
+  "name": "Almas Penadas",
+  "deck": 11,
+  "colors": [
+   "white",
+   "black"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 3,
+  "power": 25,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 6,
+  "text": "Ativa 2 vezes na Arena; se estiver no Cemitério, dá +2 Mult passivo.",
+  "effects": [
+   {
+    "action": "retrigger",
+    "value": "self",
+    "trigger": "on_cast"
+   },
+   {
+    "action": "mult_add",
+    "value": 2,
+    "trigger": "on_cast"
+   }
+  ],
+  "approx": true,
+  "approx_notes": [
+   "cond? estiver no cemitério"
+  ]
+ },
+ {
+  "id": "c130",
+  "num": 130,
+  "name": "Artista do Sangue",
+  "deck": 11,
+  "colors": [
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 15,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "+5 Mult por cada outra Criatura na Arena; ganha +1 🪙.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 5,
+    "per": "attacker",
+    "exclude_self": true,
+    "trigger": "on_attack"
+   },
+   {
+    "action": "gold",
+    "value": 1.0,
+    "trigger": "on_play"
+   }
+  ]
+ },
+ {
+  "id": "c131",
+  "num": 131,
+  "name": "Teysa Karlov",
+  "deck": 11,
+  "colors": [
+   "white",
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 35,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "Todas as habilidades de Criaturas Orzhov ativam uma 2ª vez!",
+  "effects": [
+   {
+    "action": "retrigger",
+    "value": "all",
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c132",
+  "num": 132,
+  "name": "Desfazer Angustiante",
+  "deck": 11,
+  "colors": [
+   "white",
+   "black"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 3,
+  "power": 30,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 6,
+  "text": "×1.8 Mult; custa 1 🪙 ao ser jogada (se tiveres ouro).",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.8,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "gold",
+    "value": -1,
+    "cond": {
+     "gold_min": 1
+    },
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c133",
+  "num": 133,
+  "name": "Barão da Morte",
+  "deck": 11,
+  "colors": [
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 30,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "+30 Pod e +4 Mult a todas as cartas Pretas na Arena.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 4,
+    "per": "played",
+    "filter": {
+     "color": "black"
+    },
+    "trigger": "on_attack"
+   },
+   {
+    "action": "power_add",
+    "value": 30,
+    "per": "played",
+    "filter": {
+     "color": "black"
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c134",
+  "num": 134,
+  "name": "Smothering Tithe (Dízimo)",
+  "deck": 11,
+  "colors": [
+   "white"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 4,
+  "power": 20,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "Ganha +4 🪙 imediatamente e dá +6 Mult.",
+  "effects": [
+   {
+    "action": "gold",
+    "value": 4.0,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "mult_add",
+    "value": 6,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c135",
+  "num": 135,
+  "name": "Serafim da Balança",
+  "deck": 11,
+  "colors": [
+   "white",
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 40,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "×1.5 Mult; se for descartada para o Cemitério, ganha +2 🪙.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.5,
+    "trigger": "on_attack"
+   },
+   {
+    "action": "gold",
+    "value": 2.0,
+    "trigger": "on_discard"
+   }
+  ]
+ },
+ {
+  "id": "c136",
+  "num": 136,
+  "name": "Pontífice Orzhov",
+  "deck": 11,
+  "colors": [
+   "white",
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 25,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "+3 Mult a todas as cartas jogadas nesta mão.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 3,
+    "per": "played",
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c137",
+  "num": 137,
+  "name": "Dívida aos Imortais",
+  "deck": 11,
+  "colors": [
+   "white",
+   "black"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 5,
+  "power": 50,
+  "toughness": 0,
+  "rarity": "rare",
+  "price": 10,
+  "text": "Converte todo o teu Ouro em Mult (+3 Mult por cada 1 🪙 que tenhas!).",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 3,
+    "per": "gold",
+    "per_div": 1,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c138",
+  "num": 138,
+  "name": "Degolador de Zulaport",
+  "deck": 11,
+  "colors": [
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 20,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "+6 Mult e +1 🪙.",
+  "effects": [
+   {
+    "action": "gold",
+    "value": 1.0,
+    "trigger": "on_play"
+   },
+   {
+    "action": "mult_add",
+    "value": 6,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c139",
+  "num": 139,
+  "name": "Cavaleiro da Obrigação",
+  "deck": 11,
+  "colors": [
+   "white",
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 35,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "+50 Pod se tiveres mais de 8 🪙.",
+  "effects": [
+   {
+    "action": "power_add",
+    "value": 50,
+    "cond": {
+     "gold_min": 9
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c140",
+  "num": 140,
+  "name": "Mercador Cinzento",
+  "deck": 11,
+  "colors": [
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 40,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "+20 Pod e +4 Mult por cada carta Preta ou Branca na Arena.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 4,
+    "per": "played",
+    "filter": {
+     "color": "black"
+    },
+    "trigger": "on_attack"
+   },
+   {
+    "action": "power_add",
+    "value": 20,
+    "per": "played",
+    "filter": {
+     "color": "black"
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c141",
+  "num": 141,
+  "name": "Édito Cruel",
+  "deck": 11,
+  "colors": [
+   "black"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 2,
+  "power": 25,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "+7 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 7,
+    "trigger": "on_cast"
+   }
+  ],
+  "flashback": true
+ },
+ {
+  "id": "c142",
+  "num": 142,
+  "name": "Santuário Sem Deus",
+  "deck": 11,
+  "colors": [
+   "white",
+   "black"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] Ganha +1 🪙 no fim do turno e dá ×1.5 Mult.",
+  "effects": [
+   {
+    "action": "gold",
+    "value": 1.0,
+    "trigger": "in_hand"
+   },
+   {
+    "action": "mult_mul",
+    "value": 1.5,
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c143",
+  "num": 143,
+  "name": "Basílica de Orzhova",
+  "deck": 11,
+  "colors": [
+   "white",
+   "black"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] Dá +1 Mult por cada 2 🪙 que possuas.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 1,
+    "per": "gold",
+    "per_div": 2,
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c144",
+  "num": 144,
+  "name": "Niv-Mizzet, Parun",
+  "deck": 12,
+  "colors": [
+   "blue",
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 55,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "Sempre que uma Mágica ou Feitiço ativa na Arena, dá +8 Mult extra!",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_add",
+    "value": 8,
+    "per": "spell"
+   }
+  ]
+ },
+ {
+  "id": "c145",
+  "num": 145,
+  "name": "Eletromante Goblin",
+  "deck": 12,
+  "colors": [
+   "blue",
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 20,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "Todas as Mágicas e Feitiços nesta jogada dão +40 Pod extra.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "power_add",
+    "value": 40,
+    "per": "spell"
+   }
+  ]
+ },
+ {
+  "id": "c146",
+  "num": 146,
+  "name": "Dracossauro Crepitante",
+  "deck": 12,
+  "colors": [
+   "blue",
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 40,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "Ganha +15 Pod por cada Feitiço/Mágica na Arena E no Cemitério.",
+  "effects": [
+   {
+    "action": "power_add",
+    "value": 15,
+    "per": "graveyard",
+    "filter": {
+     "type": "spell"
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c147",
+  "num": 147,
+  "name": "Relâmpago em Série",
+  "deck": 12,
+  "colors": [
+   "blue",
+   "red"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 2,
+  "power": 20,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "+5 Mult; se houver outro Feitiço à direita, reativa esse Feitiço!",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 5,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "retrigger",
+    "value": "last_spell",
+    "cond": {
+     "has_right": true
+    },
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c148",
+  "num": 148,
+  "name": "Ral, Vice-Rei das Tempestades",
+  "deck": 12,
+  "colors": [
+   "blue",
+   "red"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 4,
+  "power": 35,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "×1.5 Mult por cada 2 Feitiços/Mágicas jogados nesta mão.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.5,
+    "per": "spell",
+    "per_div": 2,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c149",
+  "num": 149,
+  "name": "Ciclope de Nivix",
+  "deck": 12,
+  "colors": [
+   "blue",
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 30,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "Ganha +40 Pod e +6 Mult se jogares pelo menos 2 Feitiços nesta mão.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "power_add",
+    "value": 40,
+    "cond": {
+     "count": {
+      "of": "spell",
+      "min": 2
+     }
+    }
+   },
+   {
+    "trigger": "on_attack",
+    "action": "mult_add",
+    "value": 6,
+    "cond": {
+     "count": {
+      "of": "spell",
+      "min": 2
+     }
+    }
+   }
+  ]
+ },
+ {
+  "id": "c150",
+  "num": 150,
+  "name": "Expansão // Explosão",
+  "deck": 12,
+  "colors": [
+   "blue",
+   "red"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 3,
+  "power": 25,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 6,
+  "text": "Copia o multiplicador da carta à sua esquerda.",
+  "effects": [
+   {
+    "action": "retrigger",
+    "value": "left",
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c151",
+  "num": 151,
+  "name": "Soro das Visões",
+  "deck": 12,
+  "colors": [
+   "blue"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 1,
+  "power": 15,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 4,
+  "text": "+4 Mult e melhora a próxima carta da fila em +20 Pod.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 4,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "power_add",
+    "value": 20,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c152",
+  "num": 152,
+  "name": "Jorro de Magma",
+  "deck": 12,
+  "colors": [
+   "red"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 2,
+  "power": 25,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "+6 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 6,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c153",
+  "num": 153,
+  "name": "Adepto da Chave",
+  "deck": 12,
+  "colors": [
+   "blue",
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 25,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "Conta como Criatura e como Feitiço para formar Tempestade Arcana.",
+  "effects": [],
+  "counts_as": [
+   "creature",
+   "spell"
+  ]
+ },
+ {
+  "id": "c154",
+  "num": 154,
+  "name": "Mil Anos de Tempestade",
+  "deck": 12,
+  "colors": [
+   "blue",
+   "red"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 5,
+  "power": 30,
+  "toughness": 0,
+  "rarity": "rare",
+  "price": 10,
+  "text": "Cada Feitiço/Mágica nesta mão ativa +1 vez por cada Feitiço anterior!",
+  "effects": [
+   {
+    "action": "retrigger",
+    "value": "spells",
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c155",
+  "num": 155,
+  "name": "Fênix de Arclight",
+  "deck": 12,
+  "colors": [
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 35,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "Se jogares 3 Feitiços/Mágicas, dá ×2.2 Mult!",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 2.2,
+    "cond": {
+     "count": {
+      "of": "spell",
+      "min": 3
+     }
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c156",
+  "num": 156,
+  "name": "Ponderar",
+  "deck": 12,
+  "colors": [
+   "blue"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 1,
+  "power": 20,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 4,
+  "text": "+4 Mult; compra 1 carta.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 4,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "draw",
+    "value": 1.0,
+    "trigger": "on_cast"
+   }
+  ],
+  "flashback": true
+ },
+ {
+  "id": "c157",
+  "num": 157,
+  "name": "Fúria de Izzet",
+  "deck": 12,
+  "colors": [
+   "blue",
+   "red"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 1,
+  "power": 15,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 4,
+  "text": "+8 Mult se a mão conter Azul e Vermelho.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 8,
+    "cond": {
+     "colors_all": [
+      "blue",
+      "red"
+     ]
+    },
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c158",
+  "num": 158,
+  "name": "Mago da Guilda Izzet",
+  "deck": 12,
+  "colors": [
+   "blue",
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 20,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "Reativa qualquer Feitiço de Custo 1 ou 2 na Arena.",
+  "effects": [
+   {
+    "action": "retrigger",
+    "value": "last_spell",
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c159",
+  "num": 159,
+  "name": "Epifania de Alrund",
+  "deck": 12,
+  "colors": [
+   "blue"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 5,
+  "power": 45,
+  "toughness": 0,
+  "rarity": "rare",
+  "price": 10,
+  "text": "+1 Turno extra neste combate (máx 1 vez por Boss) e +5 Mult!",
+  "effects": [
+   {
+    "action": "extra_turn",
+    "value": 1,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "mult_add",
+    "value": 5,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c160",
+  "num": 160,
+  "name": "Vórtice de Fogo",
+  "deck": 12,
+  "colors": [
+   "red"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 3,
+  "power": 30,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 6,
+  "text": "×1.6 Mult.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.6,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c161",
+  "num": 161,
+  "name": "Respiradouros de Vapor",
+  "deck": 12,
+  "colors": [
+   "blue",
+   "red"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] ×1.5 Mult se jogares Tempestade Arcana.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.5,
+    "cond": {
+     "formation": [
+      "storm"
+     ]
+    },
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c162",
+  "num": 162,
+  "name": "Cataratas de Enxofre",
+  "deck": 12,
+  "colors": [
+   "blue",
+   "red"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] +4 Mult por cada Mágica (MG) jogada na Arena.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 4,
+    "per": "spell",
+    "filter": {
+     "subtype": "instant"
+    },
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c163",
+  "num": 163,
+  "name": "Troll da Lotleth",
+  "deck": 13,
+  "colors": [
+   "black",
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 25,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "Ganha +15 Pod permanente sempre que descartas uma Criatura.",
+  "effects": [
+   {
+    "action": "grow_self",
+    "value": 15,
+    "trigger": "on_play"
+   }
+  ]
+ },
+ {
+  "id": "c164",
+  "num": 164,
+  "name": "Tarmogoyf",
+  "deck": 13,
+  "colors": [
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 20,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "+20 Pod e +3 Mult por cada Tipo diferente de carta no Cemitério.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 3,
+    "per": "graveyard_types",
+    "trigger": "on_attack"
+   },
+   {
+    "action": "power_add",
+    "value": 20,
+    "per": "graveyard_types",
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c165",
+  "num": 165,
+  "name": "Vraska, Rainha Golgari",
+  "deck": 13,
+  "colors": [
+   "black",
+   "green"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 4,
+  "power": 40,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "Destrói 1 carta na mão para dar ×2 Mult e +1 Canalização.",
+  "effects": [
+   {
+    "action": "discard_plus",
+    "value": 1,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "mult_mul",
+    "value": 2.0,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c166",
+  "num": 166,
+  "name": "Diabrete daErva Fétida",
+  "deck": 13,
+  "colors": [
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 20,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "Quando descartado (Canalizar), envia +3 cartas do Grimório ao Cemitério.",
+  "effects": [
+   {
+    "action": "mill",
+    "value": 3.0,
+    "trigger": "on_play"
+   }
+  ]
+ },
+ {
+  "id": "c167",
+  "num": 167,
+  "name": "Rastejador do Túmulo",
+  "deck": 13,
+  "colors": [
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 1,
+  "power": 25,
+  "toughness": 2,
+  "rarity": "common",
+  "price": 4,
+  "text": "Se for descartado, dá +10 Pod permanente a todas as cartas na mão.",
+  "effects": [
+   {
+    "action": "grow_hand",
+    "value": 10,
+    "trigger": "on_discard"
+   }
+  ]
+ },
+ {
+  "id": "c168",
+  "num": 168,
+  "name": "Troféu da Assassina",
+  "deck": 13,
+  "colors": [
+   "black",
+   "green"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 2,
+  "power": 25,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "×1.5 Mult; remove a regra do Boss por 1 turno.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.5,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "silence_enemy",
+    "value": 1,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c169",
+  "num": 169,
+  "name": "Cavaleiro da Noite Outonal",
+  "deck": 13,
+  "colors": [
+   "black",
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 35,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "+6 Mult se tiveres um Terreno no Cemitério.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 6,
+    "cond": {
+     "count": {
+      "of": "graveyard",
+      "filter": {
+       "type": "land"
+      },
+      "min": 1
+     }
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c170",
+  "num": 170,
+  "name": "Jarad, Senhor Lich",
+  "deck": 13,
+  "colors": [
+   "black",
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 40,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "+2 Mult por cada Criatura no teu Cemitério.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 2,
+    "per": "graveyard",
+    "filter": {
+     "type": "creature"
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c171",
+  "num": 171,
+  "name": "Vida do Barro",
+  "deck": 13,
+  "colors": [
+   "green"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 2,
+  "power": 15,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "Devolve até 2 cartas do Cemitério para a tua mão; +4 Mult.",
+  "effects": [
+   {
+    "action": "recover",
+    "value": 2.0,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "mult_add",
+    "value": 4,
+    "trigger": "on_cast"
+   }
+  ],
+  "flashback": true
+ },
+ {
+  "id": "c172",
+  "num": 172,
+  "name": "Sombra de Nissa",
+  "deck": 13,
+  "colors": [
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 30,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "+40 Pod se o Cemitério tiver 5+ cartas.",
+  "effects": [
+   {
+    "action": "power_add",
+    "value": 40,
+    "cond": {
+     "count": {
+      "of": "graveyard",
+      "min": 5
+     }
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c173",
+  "num": 173,
+  "name": "Meren do Clã Nel Toth",
+  "deck": 13,
+  "colors": [
+   "black",
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 35,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "A última Criatura enviada ao Cemitério ativa o seu efeito junto com Meren!",
+  "effects": [],
+  "approx": true,
+  "approx_notes": [
+   "A última Criatura enviada ao Cemitério ativa o seu efeito junto com Meren"
+  ]
+ },
+ {
+  "id": "c174",
+  "num": 174,
+  "name": "Putrefazer",
+  "deck": 13,
+  "colors": [
+   "black",
+   "green"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 3,
+  "power": 30,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 6,
+  "text": "+8 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 8,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c175",
+  "num": 175,
+  "name": "Hogaak, Necrópole Erguida",
+  "deck": 13,
+  "colors": [
+   "black",
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 80,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "×2.5 Mult se o teu Cemitério tiver 10 ou mais cartas!",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 2.5,
+    "cond": {
+     "count": {
+      "of": "graveyard",
+      "min": 10
+     }
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c176",
+  "num": 176,
+  "name": "Sátiro do Caminho",
+  "deck": 13,
+  "colors": [
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 20,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "Envia 2 cartas do Grimório ao Cemitério; +5 Mult.",
+  "effects": [
+   {
+    "action": "mill",
+    "value": 2.0,
+    "trigger": "on_play"
+   },
+   {
+    "action": "mult_add",
+    "value": 5,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c177",
+  "num": 177,
+  "name": "Xamã do Ritual Mortal",
+  "deck": 13,
+  "colors": [
+   "black",
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 1,
+  "power": 20,
+  "toughness": 2,
+  "rarity": "common",
+  "price": 4,
+  "text": "+6 Mult e +20 Pod se houver Feitiços E Criaturas no Cemitério.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 6,
+    "cond": {
+     "count": {
+      "of": "graveyard",
+      "min": 2
+     }
+    },
+    "trigger": "on_attack"
+   },
+   {
+    "action": "power_add",
+    "value": 20,
+    "cond": {
+     "count": {
+      "of": "graveyard",
+      "min": 2
+     }
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c178",
+  "num": 178,
+  "name": "Ceifador da Meia-Noite",
+  "deck": 13,
+  "colors": [
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 30,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "Compra 1 carta sempre que descartas; +5 Mult.",
+  "effects": [
+   {
+    "action": "draw",
+    "value": 1.0,
+    "trigger": "on_play"
+   },
+   {
+    "action": "mult_add",
+    "value": 5,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c179",
+  "num": 179,
+  "name": "Golgari Grave-Troll",
+  "deck": 13,
+  "colors": [
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 50,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "+15 Pod por cada carta no Cemitério.",
+  "effects": [
+   {
+    "action": "power_add",
+    "value": 15,
+    "per": "graveyard",
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c180",
+  "num": 180,
+  "name": "Achado Macabro",
+  "deck": 13,
+  "colors": [
+   "black",
+   "green"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 4,
+  "power": 30,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "×1.8 Mult.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.8,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c181",
+  "num": 181,
+  "name": "Túmulo Coberto de Mato",
+  "deck": 13,
+  "colors": [
+   "black",
+   "green"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] ×1.5 Mult; se for descartado, dá +1 Turno neste Boss!",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.5,
+    "trigger": "in_hand"
+   },
+   {
+    "action": "extra_turn",
+    "value": 1,
+    "trigger": "on_discard"
+   }
+  ]
+ },
+ {
+  "id": "c182",
+  "num": 182,
+  "name": "Cemitério da Floresta",
+  "deck": 13,
+  "colors": [
+   "black",
+   "green"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] +1 Mult por cada 2 cartas no Cemitério.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 1,
+    "per": "graveyard",
+    "per_div": 2,
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c183",
+  "num": 183,
+  "name": "Aurelia, Exemplar da Justiça",
+  "deck": 14,
+  "colors": [
+   "red",
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 45,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "Se estiver na Posição 1 ou 5 da Arena, reativa toda a mão (×2 Mult)!",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "retrigger",
+    "value": "all",
+    "cond": {
+     "position": "edge"
+    }
+   }
+  ]
+ },
+ {
+  "id": "c184",
+  "num": 184,
+  "name": "Hélice de Raios",
+  "deck": 14,
+  "colors": [
+   "red",
+   "white"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 2,
+  "power": 30,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "+6 Mult; se jogada entre duas Criaturas, ativa 2 vezes!",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 6,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "retrigger",
+    "value": "self",
+    "cond": {
+     "neighbors_min": 2
+    },
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c185",
+  "num": 185,
+  "name": "Tajic, Lâmina da Legião",
+  "deck": 14,
+  "colors": [
+   "red",
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 35,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "Se atacar com mais 2 Criaturas, dá +10 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 10,
+    "cond": {
+     "count": {
+      "of": "attacker",
+      "min": 3
+     }
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c186",
+  "num": 186,
+  "name": "Rápido da Lança",
+  "deck": 14,
+  "colors": [
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 1,
+  "power": 20,
+  "toughness": 2,
+  "rarity": "common",
+  "price": 4,
+  "text": "Se estiver na Posição 1 (esquerda), dá +6 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 6,
+    "cond": {
+     "position": "first"
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c187",
+  "num": 187,
+  "name": "Batedor da Vanguarda",
+  "deck": 14,
+  "colors": [
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 1,
+  "power": 20,
+  "toughness": 2,
+  "rarity": "common",
+  "price": 4,
+  "text": "Se estiver na Posição 5 (direita), dá ×1.8 Mult.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.8,
+    "cond": {
+     "position": "last"
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c188",
+  "num": 188,
+  "name": "Amuleto de Boros",
+  "deck": 14,
+  "colors": [
+   "red",
+   "white"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 2,
+  "power": 20,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "A carta à sua esquerda ativa 2 vezes (*Golpe Duplo*).",
+  "effects": [
+   {
+    "action": "retrigger",
+    "value": "left",
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c189",
+  "num": 189,
+  "name": "Legionário do Décimo",
+  "deck": 14,
+  "colors": [
+   "red",
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 25,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "Ganha +15 Pod permanente sempre que é alvo de um Feitiço/Mágica.",
+  "effects": [
+   {
+    "action": "grow_self",
+    "value": 15,
+    "trigger": "on_play"
+   }
+  ]
+ },
+ {
+  "id": "c190",
+  "num": 190,
+  "name": "Pena, a Redimida",
+  "deck": 14,
+  "colors": [
+   "red",
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 35,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "Devolve 1 Mágica (MG) jogada nesta mão de volta para a tua mão!",
+  "effects": [
+   {
+    "action": "recover",
+    "value": 1,
+    "trigger": "on_play"
+   }
+  ]
+ },
+ {
+  "id": "c191",
+  "num": 191,
+  "name": "Clarim Ensurdecedor",
+  "deck": 14,
+  "colors": [
+   "red",
+   "white"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 3,
+  "power": 30,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 6,
+  "text": "Todas as Criaturas na Arena ganham +25 Pod e +3 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 3,
+    "per": "attacker",
+    "trigger": "on_cast"
+   },
+   {
+    "action": "power_add",
+    "value": 25,
+    "per": "attacker",
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c192",
+  "num": 192,
+  "name": "Cavaleiro da Graça",
+  "deck": 14,
+  "colors": [
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 30,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "+5 Mult se houver uma carta Vermelha ao lado.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 5,
+    "cond": {
+     "neighbor_color": "red"
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c193",
+  "num": 193,
+  "name": "Cavaleiro da Malícia",
+  "deck": 14,
+  "colors": [
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 30,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "+5 Mult se houver uma carta Branca ao lado.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 5,
+    "cond": {
+     "neighbor_color": "white"
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c194",
+  "num": 194,
+  "name": "Gisela, Lâmina da Noite Dourada",
+  "deck": 14,
+  "colors": [
+   "red",
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 60,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "Duplica (×2) o Multiplicador Final da jogada!",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 2.0,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c195",
+  "num": 195,
+  "name": "Intimidar",
+  "deck": 14,
+  "colors": [
+   "red",
+   "white"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 1,
+  "power": 15,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 4,
+  "text": "+30 Pod à Criatura à direita e +4 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 4,
+    "cond": {
+     "has_right": true
+    },
+    "trigger": "on_cast"
+   },
+   {
+    "action": "power_add",
+    "value": 30,
+    "cond": {
+     "has_right": true
+    },
+    "trigger": "on_cast"
+   }
+  ],
+  "flashback": true
+ },
+ {
+  "id": "c196",
+  "num": 196,
+  "name": "Mentor dos Humildes",
+  "deck": 14,
+  "colors": [
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 25,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "+4 Mult por cada carta de Custo 1 ou 2 na Arena.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 4,
+    "per": "played",
+    "filter": {
+     "cost_min": 1,
+     "cost_max": 2
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c197",
+  "num": 197,
+  "name": "Fênix da Guerra",
+  "deck": 14,
+  "colors": [
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 40,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "+8 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 8,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c198",
+  "num": 198,
+  "name": "Julgamento Heroico",
+  "deck": 14,
+  "colors": [
+   "red",
+   "white"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 4,
+  "power": 45,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "×1.6 Mult se a Arena tiver exatamente 5 cartas.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.6,
+    "cond": {
+     "count": {
+      "of": "attacker",
+      "min": 5
+     }
+    },
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c199",
+  "num": 199,
+  "name": "Recrutador da Guarda",
+  "deck": 14,
+  "colors": [
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 20,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "Puxa 1 Criatura de Poder ≤ 25 do Grimório para a mão.",
+  "effects": [
+   {
+    "action": "tutor_creature",
+    "value": 1,
+    "trigger": "on_play"
+   }
+  ]
+ },
+ {
+  "id": "c200",
+  "num": 200,
+  "name": "Avatar do Sol Ardente",
+  "deck": 14,
+  "colors": [
+   "red",
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 55,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "+10 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 10,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c201",
+  "num": 201,
+  "name": "Fundição Sagrada",
+  "deck": 14,
+  "colors": [
+   "red",
+   "white"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] ×1.5 Mult se jogares Vermelho e Branco na mesma mão.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.5,
+    "cond": {
+     "colors_all": [
+      "red",
+      "white"
+     ]
+    },
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c202",
+  "num": 202,
+  "name": "Forte de Clifftop",
+  "deck": 14,
+  "colors": [
+   "red",
+   "white"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] Reativa a carta que estiver na Posição 1 da Arena!",
+  "effects": [
+   {
+    "action": "retrigger",
+    "value": "first",
+    "cond": {
+     "position": "first"
+    },
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c203",
+  "num": 203,
+  "name": "Quartel daGuarnição",
+  "deck": 14,
+  "colors": [
+   "red",
+   "white"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] +40 Pod a formações de Bando Tribal.",
+  "effects": [
+   {
+    "action": "power_add",
+    "value": 40,
+    "cond": {
+     "formation": [
+      "band"
+     ]
+    },
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c204",
+  "num": 204,
+  "name": "Krasis Hidróide",
+  "deck": 15,
+  "colors": [
+   "green",
+   "blue"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 45,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "Compra 1 carta, dá +6 Mult e conta como qualquer Custo para Curva de Mana!",
+  "effects": [
+   {
+    "action": "draw",
+    "value": 1.0,
+    "trigger": "on_play"
+   },
+   {
+    "action": "mult_add",
+    "value": 6,
+    "trigger": "on_attack"
+   }
+  ],
+  "wild_cost": true
+ },
+ {
+  "id": "c205",
+  "num": 205,
+  "name": "Uro, Titã da Ira da Natureza",
+  "deck": 15,
+  "colors": [
+   "green",
+   "blue"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 50,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "+40 Pod, +5 Mult e compra 1 carta.",
+  "effects": [
+   {
+    "action": "draw",
+    "value": 1.0,
+    "trigger": "on_play"
+   },
+   {
+    "action": "mult_add",
+    "value": 5,
+    "trigger": "on_attack"
+   },
+   {
+    "action": "power_add",
+    "value": 40,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c206",
+  "num": 206,
+  "name": "Espiral de Crescimento",
+  "deck": 15,
+  "colors": [
+   "green",
+   "blue"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 2,
+  "power": 20,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "+5 Mult; ativa todos os Terrenos na tua mão 2 vezes.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 5,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "retrigger",
+    "value": "hand",
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c207",
+  "num": 207,
+  "name": "Oráculo de Coiling",
+  "deck": 15,
+  "colors": [
+   "green",
+   "blue"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 20,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "+30 Pod; se a carta à direita tiver Custo 3, dá ×1.5 Mult.",
+  "effects": [
+   {
+    "action": "power_add",
+    "value": 30,
+    "trigger": "on_attack"
+   },
+   {
+    "action": "mult_mul",
+    "value": 1.5,
+    "cond": {
+     "right_cost": 3
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c208",
+  "num": 208,
+  "name": "Biomante Mestre",
+  "deck": 15,
+  "colors": [
+   "green",
+   "blue"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 35,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "Todas as outras Criaturas na Arena ganham +30 Pod permanente!",
+  "effects": [
+   {
+    "action": "grow_board",
+    "value": 30,
+    "exclude_self": true,
+    "trigger": "on_play"
+   }
+  ]
+ },
+ {
+  "id": "c209",
+  "num": 209,
+  "name": "Oko, Ladrão de Coroas",
+  "deck": 15,
+  "colors": [
+   "green",
+   "blue"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 3,
+  "power": 35,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 6,
+  "text": "Transforma a carta à esquerda num Alce 3/3 com +50 Pod e ×1.5 Mult.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.5,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "power_add",
+    "value": 50,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c210",
+  "num": 210,
+  "name": "Tubarão Místico",
+  "deck": 15,
+  "colors": [
+   "green",
+   "blue"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 40,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "Anula a habilidade do Boss neste turno e dá +7 Mult.",
+  "effects": [
+   {
+    "action": "silence_enemy",
+    "value": 1,
+    "trigger": "on_play"
+   },
+   {
+    "action": "mult_add",
+    "value": 7,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c211",
+  "num": 211,
+  "name": "Mutação Genética",
+  "deck": 15,
+  "colors": [
+   "green",
+   "blue"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 1,
+  "power": 15,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 4,
+  "text": "Conta como Custo 1 ou Custo 5 (o que for melhor para a tua mão); +5 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 5,
+    "trigger": "on_cast"
+   }
+  ],
+  "wild_cost": true,
+  "flashback": true
+ },
+ {
+  "id": "c212",
+  "num": 212,
+  "name": "Vorel do Clã da Carapaça",
+  "deck": 15,
+  "colors": [
+   "green",
+   "blue"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 30,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "Duplica os bónus de Poder permanente de uma carta na Arena!",
+  "effects": [],
+  "approx": true,
+  "approx_notes": [
+   "Duplica os bónus de Poder permanente de uma carta na Arena"
+  ]
+ },
+ {
+  "id": "c213",
+  "num": 213,
+  "name": "Kiora, Domadora das Ondas",
+  "deck": 15,
+  "colors": [
+   "green",
+   "blue"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 4,
+  "power": 35,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "×2 Mult se jogares uma Curva de Mana (1-2-3-4-5).",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 2.0,
+    "cond": {
+     "formation": [
+      "curve"
+     ]
+    },
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c214",
+  "num": 214,
+  "name": "Zegana, Oradora Primeva",
+  "deck": 15,
+  "colors": [
+   "green",
+   "blue"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 55,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "+1 Mult por cada 10 de Poder da maior Criatura na Arena.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 1,
+    "per": "max_power",
+    "per_div": 10,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c215",
+  "num": 215,
+  "name": "Híbrido de Caranguejo",
+  "deck": 15,
+  "colors": [
+   "green",
+   "blue"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 1,
+  "power": 25,
+  "toughness": 2,
+  "rarity": "common",
+  "price": 4,
+  "text": "Ganha +15 Pod se houver uma carta de Custo 2 na Arena.",
+  "effects": [
+   {
+    "action": "power_add",
+    "value": 15,
+    "cond": {
+     "count": {
+      "of": "attacker",
+      "filter": {
+       "cost": 2
+      },
+      "min": 1
+     }
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c216",
+  "num": 216,
+  "name": "Sapo-Lagarto Adaptável",
+  "deck": 15,
+  "colors": [
+   "green",
+   "blue"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 30,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "Ganha +5 Mult se houver uma carta de Custo 3 na Arena.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 5,
+    "cond": {
+     "count": {
+      "of": "attacker",
+      "filter": {
+       "cost": 3
+      },
+      "min": 1
+     }
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c217",
+  "num": 217,
+  "name": "Quimera do Horizonte",
+  "deck": 15,
+  "colors": [
+   "green",
+   "blue"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 35,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "+6 Mult; +20 Pod por cada carta comprada neste turno.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 6,
+    "trigger": "on_attack"
+   },
+   {
+    "action": "power_add",
+    "value": 20,
+    "per": "drawn_this_turn",
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c218",
+  "num": 218,
+  "name": "Incubação // Incongruência",
+  "deck": 15,
+  "colors": [
+   "green",
+   "blue"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 1,
+  "power": 20,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 4,
+  "text": "+5 Mult; ajusta o Custo da carta à direita em +1 ou -1.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 5,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c219",
+  "num": 219,
+  "name": "Polukranos, Devorador",
+  "deck": 15,
+  "colors": [
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 55,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "+6 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 6,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c220",
+  "num": 220,
+  "name": "Nexo do Destino",
+  "deck": 15,
+  "colors": [
+   "blue"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 5,
+  "power": 30,
+  "toughness": 0,
+  "rarity": "rare",
+  "price": 10,
+  "text": "Volta para o Grimório em vez do Cemitério; dá ×2 Mult!",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 2.0,
+    "trigger": "on_cast"
+   }
+  ],
+  "return_to_library": true
+ },
+ {
+  "id": "c221",
+  "num": 221,
+  "name": "Biovisionário",
+  "deck": 15,
+  "colors": [
+   "green",
+   "blue"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 30,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "Se formares Pacto Dual ou Tríade de Custo 3, dá ×2.5 Mult!",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 2.5,
+    "cond": {
+     "formation": [
+      "pair",
+      "trips"
+     ]
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c222",
+  "num": 222,
+  "name": "Sábio do Giro",
+  "deck": 15,
+  "colors": [
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 25,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "+4 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 4,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c223",
+  "num": 223,
+  "name": "Poça Procriadora",
+  "deck": 15,
+  "colors": [
+   "green",
+   "blue"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] ×1.5 Mult; preenche 1 Custo em falta para Curva de Mana!",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.5,
+    "trigger": "in_hand"
+   }
+  ],
+  "wild_cost": true
+ },
+ {
+  "id": "c224",
+  "num": 224,
+  "name": "Porto do Interior",
+  "deck": 15,
+  "colors": [
+   "green",
+   "blue"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] +8 Mult se jogares Verde e Azul.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 8,
+    "cond": {
+     "colors_all": [
+      "green",
+      "blue"
+     ]
+    },
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c225",
+  "num": 225,
+  "name": "Laboratório de Riptide",
+  "deck": 15,
+  "colors": [
+   "blue"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] Devolve a 1ª Criatura jogada de volta para a tua mão após pontuar!",
+  "effects": [],
+  "approx": true,
+  "approx_notes": [
+   "Devolve a 1ª Criatura jogada de volta para a tua mão após pontuar"
+  ]
+ },
+ {
+  "id": "c226",
+  "num": 226,
+  "name": "Nicol Bolas, Deus-Faraó",
+  "deck": 16,
+  "colors": [
+   "blue",
+   "black",
+   "red"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 5,
+  "power": 70,
+  "toughness": 0,
+  "rarity": "rare",
+  "price": 10,
+  "text": "×3 Mult se a mão conter pelo menos uma carta U, uma B e uma R!",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 3.0,
+    "cond": {
+     "colors_all": [
+      "blue",
+      "black",
+      "red"
+     ]
+    },
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c227",
+  "num": 227,
+  "name": "Ultimato Cruel",
+  "deck": 16,
+  "colors": [
+   "blue",
+   "black",
+   "red"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 5,
+  "power": 60,
+  "toughness": 0,
+  "rarity": "rare",
+  "price": 10,
+  "text": "+15 Mult, compra 2 cartas e ganha +3 🪙.",
+  "effects": [
+   {
+    "action": "draw",
+    "value": 2.0,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "gold",
+    "value": 3.0,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "mult_add",
+    "value": 15,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c228",
+  "num": 228,
+  "name": "Kess, Maga Dissidente",
+  "deck": 16,
+  "colors": [
+   "blue",
+   "black",
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 40,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "Ao atacar, ativa também 1 Feitiço aleatório que esteja no teu Cemitério!",
+  "effects": [
+   {
+    "action": "cascade_library",
+    "value": "graveyard_spell",
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c229",
+  "num": 229,
+  "name": "Espectro de Sedris",
+  "deck": 16,
+  "colors": [
+   "blue",
+   "black",
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 35,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "+6 Mult; +6 Mult extra se o Boss estiver com menos de 50% de HP.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 6,
+    "trigger": "on_attack"
+   },
+   {
+    "action": "mult_add",
+    "value": 6,
+    "cond": {
+     "enemy_hp_below_pct": 50
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c230",
+  "num": 230,
+  "name": "Comando de Kolaghan Sombrio",
+  "deck": 16,
+  "colors": [
+   "black",
+   "red"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 3,
+  "power": 30,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 6,
+  "text": "+7 Mult e destrói 1 carta fraca da mão para ganhar +30 Pod.",
+  "effects": [
+   {
+    "action": "discard_random",
+    "value": 1,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "mult_add",
+    "value": 7,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "power_add",
+    "value": 30,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c231",
+  "num": 231,
+  "name": "Comando Críptico",
+  "deck": 16,
+  "colors": [
+   "blue"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 4,
+  "power": 35,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "Silencia o Boss, compra 1 carta e dá ×1.6 Mult.",
+  "effects": [
+   {
+    "action": "silence_enemy",
+    "value": 1,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "draw",
+    "value": 1.0,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "mult_mul",
+    "value": 1.6,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c232",
+  "num": 232,
+  "name": "Inquisição de Kozilek",
+  "deck": 16,
+  "colors": [
+   "black"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 1,
+  "power": 20,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 4,
+  "text": "+6 Mult; reduz o HP máximo do Boss em 5% imediatamente!",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 6,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "enemy_max_hp_pct",
+    "value": 5.0,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c233",
+  "num": 233,
+  "name": "Pensamento Capturado",
+  "deck": 16,
+  "colors": [
+   "black"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 1,
+  "power": 15,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 4,
+  "text": "+8 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 8,
+    "trigger": "on_cast"
+   }
+  ],
+  "flashback": true
+ },
+ {
+  "id": "c234",
+  "num": 234,
+  "name": "Pescador de Gurmag",
+  "deck": 16,
+  "colors": [
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 55,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "Conta como Custo 1 OU Custo 5; dá +6 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 6,
+    "trigger": "on_attack"
+   }
+  ],
+  "wild_cost": true
+ },
+ {
+  "id": "c235",
+  "num": 235,
+  "name": "Jovem Piromante Abissal",
+  "deck": 16,
+  "colors": [
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 25,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "+5 Mult por cada Feitiço jogado.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 5,
+    "per": "spell",
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c236",
+  "num": 236,
+  "name": "Amuleto de Grixis",
+  "deck": 16,
+  "colors": [
+   "blue",
+   "black",
+   "red"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 2,
+  "power": 25,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "×1.5 Mult; +30 Pod a todas as cartas na Arena.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.5,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "power_add",
+    "value": 30,
+    "per": "played",
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c237",
+  "num": 237,
+  "name": "Demónio das Runas",
+  "deck": 16,
+  "colors": [
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 60,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "Puxa a carta mais forte do teu Grimório para a mão; +8 Mult.",
+  "effects": [
+   {
+    "action": "tutor_strongest",
+    "value": 1,
+    "trigger": "on_play"
+   },
+   {
+    "action": "mult_add",
+    "value": 8,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c238",
+  "num": 238,
+  "name": "Maga do Estalo Sombrio",
+  "deck": 16,
+  "colors": [
+   "blue"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 25,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "Reativa o Feitiço à sua esquerda.",
+  "effects": [
+   {
+    "action": "retrigger",
+    "value": "left",
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c239",
+  "num": 239,
+  "name": "Raio Fulgurante",
+  "deck": 16,
+  "colors": [
+   "black",
+   "red"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 2,
+  "power": 30,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "+7 Mult; se o Boss tiver < 50% HP, dá ×1.8 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 7,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "mult_mul",
+    "value": 1.8,
+    "cond": {
+     "enemy_hp_below_pct": 50
+    },
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c240",
+  "num": 240,
+  "name": "Senhor dos Mortos-Vivos",
+  "deck": 16,
+  "colors": [
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 35,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "+5 Mult por cada Criatura no Cemitério.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 5,
+    "per": "graveyard",
+    "filter": {
+     "type": "creature"
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c241",
+  "num": 241,
+  "name": "Visões do Além",
+  "deck": 16,
+  "colors": [
+   "blue"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 1,
+  "power": 20,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 4,
+  "text": "Compra 2 cartas se o Cemitério tiver 6+ cartas; +4 Mult.",
+  "effects": [
+   {
+    "action": "draw",
+    "value": 2.0,
+    "cond": {
+     "count": {
+      "of": "graveyard",
+      "min": 6
+     }
+    },
+    "trigger": "on_cast"
+   },
+   {
+    "action": "mult_add",
+    "value": 4,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c242",
+  "num": 242,
+  "name": "Dragão de Bolas",
+  "deck": 16,
+  "colors": [
+   "blue",
+   "black",
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 50,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "×1.8 Mult.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.8,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c243",
+  "num": 243,
+  "name": "Escravizador de Almas",
+  "deck": 16,
+  "colors": [
+   "black",
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 35,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "+8 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 8,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c244",
+  "num": 244,
+  "name": "Maldição das Correntes",
+  "deck": 16,
+  "colors": [
+   "blue",
+   "black"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 3,
+  "power": 25,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 6,
+  "text": "Faz o Boss receber ×1.3 de dano extra em TODOS os turnos restantes!",
+  "effects": [
+   {
+    "action": "enemy_vulnerable",
+    "value": 1.3,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c245",
+  "num": 245,
+  "name": "Rasgar a Mente",
+  "deck": 16,
+  "colors": [
+   "black"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 2,
+  "power": 20,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "+6 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 6,
+    "trigger": "on_cast"
+   }
+  ],
+  "flashback": true
+ },
+ {
+  "id": "c246",
+  "num": 246,
+  "name": "Piromancia Cruel",
+  "deck": 16,
+  "colors": [
+   "red"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 4,
+  "power": 45,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "+10 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 10,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c247",
+  "num": 247,
+  "name": "Necrópole Desmoronada",
+  "deck": 16,
+  "colors": [
+   "blue",
+   "black",
+   "red"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] ×1.6 Mult para cartas U, B ou R.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.6,
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c248",
+  "num": 248,
+  "name": "Torre de Comando",
+  "deck": 16,
+  "colors": [
+   "blue",
+   "black",
+   "red"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] +50 Pod e +5 Mult em qualquer jogada.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 5,
+    "trigger": "in_hand"
+   },
+   {
+    "action": "power_add",
+    "value": 50,
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c249",
+  "num": 249,
+  "name": "Pântano Poluído",
+  "deck": 16,
+  "colors": [
+   "blue",
+   "black"
+  ],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] ×1.5 Mult se o teu Cemitério tiver 4+ cartas.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.5,
+    "cond": {
+     "count": {
+      "of": "graveyard",
+      "min": 4
+     }
+    },
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c250",
+  "num": 250,
+  "name": "Karn, o Grande Criador",
+  "deck": 17,
+  "colors": [],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 4,
+  "power": 45,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "Reativa todos os teus Artefactos da prateleira superior uma 2ª vez!",
+  "effects": [
+   {
+    "action": "retrigger",
+    "value": "relics",
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c251",
+  "num": 251,
+  "name": "Ugin, o Dragão Espírito",
+  "deck": 17,
+  "colors": [],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 5,
+  "power": 70,
+  "toughness": 0,
+  "rarity": "rare",
+  "price": 10,
+  "text": "×2 Mult se não houver nenhuma carta colorida na Arena!",
+  "effects": [
+   {
+    "trigger": "on_cast",
+    "action": "mult_mul",
+    "value": 2.0,
+    "cond": {
+     "count": {
+      "of": "attacker",
+      "filter": {
+       "colored": true
+      },
+      "max": 0
+     }
+    }
+   }
+  ]
+ },
+ {
+  "id": "c252",
+  "num": 252,
+  "name": "Devastador Arcbound",
+  "deck": 17,
+  "colors": [],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 20,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "Destrói a carta à esquerda e absorve o Poder e o Mult dela permanentemente!",
+  "effects": [
+   {
+    "action": "destroy_left",
+    "value": 1,
+    "trigger": "on_play"
+   }
+  ]
+ },
+ {
+  "id": "c253",
+  "num": 253,
+  "name": "Ornitóptero",
+  "deck": 17,
+  "colors": [],
+  "type": "creature",
+  "subtype": "",
+  "cost": 1,
+  "power": 10,
+  "toughness": 2,
+  "rarity": "common",
+  "price": 4,
+  "text": "+6 Mult se jogado junto com pelo menos 3 cartas Incolores (CL).",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 6,
+    "cond": {
+     "count": {
+      "of": "played",
+      "filter": {
+       "colorless": true
+      },
+      "min": 3
+     }
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c254",
+  "num": 254,
+  "name": "Mestre do Éter",
+  "deck": 17,
+  "colors": [],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 30,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "+20 Pod e +3 Mult por cada carta Incolor na Arena e na mão.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 3,
+    "per": "played",
+    "filter": {
+     "colorless": true
+    },
+    "trigger": "on_attack"
+   },
+   {
+    "action": "power_add",
+    "value": 20,
+    "per": "played",
+    "filter": {
+     "colorless": true
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c255",
+  "num": 255,
+  "name": "Campeão Gravado",
+  "deck": 17,
+  "colors": [],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 35,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "×1.5 Mult e imune a todas as regras de Boss.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_mul",
+    "value": 1.5
+   },
+   {
+    "trigger": "on_play",
+    "action": "silence_enemy",
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "c256",
+  "num": 256,
+  "name": "Balista Ambulante",
+  "deck": 17,
+  "colors": [],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 25,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "Dispara +4 Mult por cada slot de Artefacto preenchido no topo do ecrã!",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 4,
+    "per": "relics",
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c257",
+  "num": 257,
+  "name": "Motor de Espirais",
+  "deck": 17,
+  "colors": [],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 65,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "×2 Mult; se for descartado, deixa +30 Pod passivo no Cemitério.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 2.0,
+    "trigger": "on_attack"
+   }
+  ],
+  "approx": true,
+  "approx_notes": [
+   "se for descartado, deixa +30 Pod passivo no Cemitério"
+  ]
+ },
+ {
+  "id": "c258",
+  "num": 258,
+  "name": "Esfera Cromática",
+  "deck": 17,
+  "colors": [],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 1,
+  "power": 15,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 4,
+  "text": "Compra 1 carta e dá +5 Mult.",
+  "effects": [
+   {
+    "action": "draw",
+    "value": 1.0,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "mult_add",
+    "value": 5,
+    "trigger": "on_cast"
+   }
+  ],
+  "flashback": true
+ },
+ {
+  "id": "c259",
+  "num": 259,
+  "name": "Mapa de Expedição",
+  "deck": 17,
+  "colors": [],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 1,
+  "power": 10,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 4,
+  "text": "Puxa 1 Terreno de Urza (LD) diretamente do Grimório para a tua mão!",
+  "effects": [
+   {
+    "action": "tutor_land",
+    "value": 1,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c260",
+  "num": 260,
+  "name": "Pedra do Esquecimento",
+  "deck": 17,
+  "colors": [],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 3,
+  "power": 30,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 6,
+  "text": "×1.8 Mult.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.8,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c261",
+  "num": 261,
+  "name": "Platina Emperion",
+  "deck": 17,
+  "colors": [],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 60,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "+10 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 10,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c262",
+  "num": 262,
+  "name": "Colosso de Blightsteel",
+  "deck": 17,
+  "colors": [],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 90,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "×2 Mult se tiveres pelo menos 2 Terrenos na mão!",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_mul",
+    "value": 2.0,
+    "cond": {
+     "count": {
+      "of": "land_hand",
+      "min": 2
+     }
+    }
+   }
+  ]
+ },
+ {
+  "id": "c263",
+  "num": 263,
+  "name": "Supervisor de Aço",
+  "deck": 17,
+  "colors": [],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 20,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "Dá +10 Pod permanente a todas as cartas Incolores na Arena.",
+  "effects": [
+   {
+    "action": "grow_board",
+    "value": 10,
+    "trigger": "on_play"
+   }
+  ]
+ },
+ {
+  "id": "c264",
+  "num": 264,
+  "name": "Peste deSinal",
+  "deck": 17,
+  "colors": [],
+  "type": "creature",
+  "subtype": "",
+  "cost": 1,
+  "power": 15,
+  "toughness": 2,
+  "rarity": "common",
+  "price": 4,
+  "text": "+4 Mult a todas as cartas atacantes.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 4,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c265",
+  "num": 265,
+  "name": "Memnite",
+  "deck": 17,
+  "colors": [],
+  "type": "creature",
+  "subtype": "",
+  "cost": 1,
+  "power": 15,
+  "toughness": 2,
+  "rarity": "common",
+  "price": 4,
+  "text": "+5 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 5,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c266",
+  "num": 266,
+  "name": "Galvanoplastia Craniana",
+  "deck": 17,
+  "colors": [],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 2,
+  "power": 20,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "Dá +5 Mult por cada Artefacto no topo e cada carta Incolor na Arena.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 5,
+    "per": "relics",
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c267",
+  "num": 267,
+  "name": "Forja Mística",
+  "deck": 17,
+  "colors": [],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 4,
+  "power": 35,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "Compra 2 cartas se a tua mão só tiver cartas Incolores; +8 Mult.",
+  "effects": [
+   {
+    "action": "draw",
+    "value": 2.0,
+    "cond": {
+     "hand_all_colorless": true
+    },
+    "trigger": "on_cast"
+   },
+   {
+    "action": "mult_add",
+    "value": 8,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c268",
+  "num": 268,
+  "name": "Golem de Lodestone",
+  "deck": 17,
+  "colors": [],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 50,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "+8 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 8,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c269",
+  "num": 269,
+  "name": "Tudo é Pó",
+  "deck": 17,
+  "colors": [],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 5,
+  "power": 40,
+  "toughness": 0,
+  "rarity": "rare",
+  "price": 10,
+  "text": "×1.8 Mult.",
+  "effects": [
+   {
+    "trigger": "on_cast",
+    "action": "mult_mul",
+    "value": 1.8
+   }
+  ]
+ },
+ {
+  "id": "c270",
+  "num": 270,
+  "name": "Mina de Urza",
+  "deck": 17,
+  "colors": [],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] +30 Pod; se tiveres Central e Torre na mão, dá ×1.5 Mult!",
+  "effects": [
+   {
+    "trigger": "in_hand",
+    "action": "power_add",
+    "value": 30
+   },
+   {
+    "trigger": "in_hand",
+    "action": "mult_mul",
+    "value": 1.5,
+    "cond": {
+     "hand_has": [
+      "c271",
+      "c272"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "c271",
+  "num": 271,
+  "name": "Central Elétrica de Urza",
+  "deck": 17,
+  "colors": [],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] +5 Mult; se tiveres Mina e Torre na mão, dá ×1.5 Mult!",
+  "effects": [
+   {
+    "trigger": "in_hand",
+    "action": "mult_add",
+    "value": 5
+   },
+   {
+    "trigger": "in_hand",
+    "action": "mult_mul",
+    "value": 1.5,
+    "cond": {
+     "hand_has": [
+      "c270",
+      "c272"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "c272",
+  "num": 272,
+  "name": "Torre de Urza",
+  "deck": 17,
+  "colors": [],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] ×1.5 Mult; se tiveres Mina e Central na mão, dá ×2 Mult!",
+  "effects": [
+   {
+    "trigger": "in_hand",
+    "action": "mult_mul",
+    "value": 1.5
+   },
+   {
+    "trigger": "in_hand",
+    "action": "mult_mul",
+    "value": 2.0,
+    "cond": {
+     "hand_has": [
+      "c270",
+      "c271"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "c273",
+  "num": 273,
+  "name": "Cidadela de Aço Negro",
+  "deck": 17,
+  "colors": [],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] Conta como Artefacto e dá ×1.5 Mult a cartas Incolores.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.5,
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c274",
+  "num": 274,
+  "name": "Oficina de Mishra",
+  "deck": 17,
+  "colors": [],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] Todas as Criaturas Incolores ganham +40 Pod extra.",
+  "effects": [
+   {
+    "action": "power_add",
+    "value": 40,
+    "per": "attacker",
+    "filter": {
+     "colorless": true
+    },
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c275",
+  "num": 275,
+  "name": "Niv-Mizzet Renascido",
+  "deck": 18,
+  "colors": [
+   "white",
+   "blue",
+   "black",
+   "red",
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 65,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "Conta como qualquer Cor que falte para completar Convergência WUBRG; ×2 Mult!",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 2.0,
+    "trigger": "on_attack"
+   }
+  ],
+  "wild_color": true
+ },
+ {
+  "id": "c276",
+  "num": 276,
+  "name": "Golos, Peregrino Incansável",
+  "deck": 18,
+  "colors": [
+   "white",
+   "blue",
+   "black",
+   "red",
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 50,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "Puxa 1 Terreno do Grimório para a mão; se jogares 5 cores, dá ×2.5 Mult!",
+  "effects": [
+   {
+    "action": "tutor_land",
+    "value": 1,
+    "trigger": "on_play"
+   },
+   {
+    "action": "mult_mul",
+    "value": 2.5,
+    "cond": {
+     "count": {
+      "of": "colors",
+      "min": 5
+     }
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c277",
+  "num": 277,
+  "name": "Kenrith, o Rei Regressado",
+  "deck": 18,
+  "colors": [
+   "white",
+   "blue",
+   "black",
+   "red",
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 55,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "Dá +20 Pod, +5 Mult, +1 🪙 e compra 1 carta ao mesmo tempo!",
+  "effects": [
+   {
+    "action": "draw",
+    "value": 1.0,
+    "trigger": "on_play"
+   },
+   {
+    "action": "gold",
+    "value": 1.0,
+    "trigger": "on_play"
+   },
+   {
+    "action": "mult_add",
+    "value": 5,
+    "trigger": "on_attack"
+   },
+   {
+    "action": "power_add",
+    "value": 20,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c278",
+  "num": 278,
+  "name": "Progenitus, Alma do Mundo",
+  "deck": 18,
+  "colors": [
+   "white",
+   "blue",
+   "black",
+   "red",
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 100,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "Tem proteção absoluta; dá ×3 Mult se jogado numa Convergência WUBRG!",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 3.0,
+    "cond": {
+     "formation": [
+      "wubrg"
+     ]
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c279",
+  "num": 279,
+  "name": "Jodah, Arquimago Eterno",
+  "deck": 18,
+  "colors": [
+   "white",
+   "blue",
+   "black",
+   "red",
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 40,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "Transforma qualquer mão de 5 cartas numa Convergência WUBRG automática!",
+  "effects": [],
+  "force_formation": "wubrg"
+ },
+ {
+  "id": "c280",
+  "num": 280,
+  "name": "Morophon, o Sem-Forma",
+  "deck": 18,
+  "colors": [
+   "white",
+   "blue",
+   "black",
+   "red",
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 50,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "Conta como todas as 5 Cores e todos os Tipos; ×2 Mult.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 2.0,
+    "trigger": "on_attack"
+   }
+  ],
+  "wild_color": true
+ },
+ {
+  "id": "c281",
+  "num": 281,
+  "name": "Esika, Deusa da Árvore",
+  "deck": 18,
+  "colors": [
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 35,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "+4 Mult por cada Cor diferente presente na Arena.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 4,
+    "per": "colors",
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c282",
+  "num": 282,
+  "name": "Ponte Prismática",
+  "deck": 18,
+  "colors": [
+   "white",
+   "blue",
+   "black",
+   "red",
+   "green"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 4,
+  "power": 40,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "Puxa a maior Criatura do teu Grimório e ativa-a grátis; ×1.8 Mult.",
+  "effects": [
+   {
+    "action": "cascade_library",
+    "value": "strongest",
+    "trigger": "on_cast"
+   },
+   {
+    "action": "mult_mul",
+    "value": 1.8,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c283",
+  "num": 283,
+  "name": "Cobra de Lótus",
+  "deck": 18,
+  "colors": [
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 25,
+  "toughness": 3,
+  "rarity": "common",
+  "price": 5,
+  "text": "Ganha +2 🪙 e dá +6 Mult se tiveres um Terreno na mão.",
+  "effects": [
+   {
+    "action": "gold",
+    "value": 2.0,
+    "cond": {
+     "count": {
+      "of": "land_hand",
+      "min": 1
+     }
+    },
+    "trigger": "on_play"
+   },
+   {
+    "action": "mult_add",
+    "value": 6,
+    "cond": {
+     "count": {
+      "of": "land_hand",
+      "min": 1
+     }
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c284",
+  "num": 284,
+  "name": "Chamas Tribais",
+  "deck": 18,
+  "colors": [
+   "red"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 2,
+  "power": 20,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 5,
+  "text": "Ganha +3 Mult por cada Cor diferente jogada nesta mão (até +15 Mult).",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 3,
+    "per": "colors",
+    "cap": 15,
+    "trigger": "on_cast"
+   },
+   {
+    "action": "mult_add",
+    "value": 15,
+    "per": "colors",
+    "cap": 15,
+    "trigger": "on_cast"
+   }
+  ],
+  "flashback": true
+ },
+ {
+  "id": "c285",
+  "num": 285,
+  "name": "Cavaleiro do Relicário Planar",
+  "deck": 18,
+  "colors": [
+   "white",
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 35,
+  "toughness": 4,
+  "rarity": "common",
+  "price": 6,
+  "text": "+6 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 6,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c286",
+  "num": 286,
+  "name": "Trazer à Luz",
+  "deck": 18,
+  "colors": [
+   "green",
+   "blue"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 4,
+  "power": 30,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "Copia a habilidade de qualquer carta na Arena; +6 Mult.",
+  "effects": [
+   {
+    "action": "retrigger",
+    "value": "best",
+    "trigger": "on_cast"
+   },
+   {
+    "action": "mult_add",
+    "value": 6,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c287",
+  "num": 287,
+  "name": "Omnath, Locus da Criação",
+  "deck": 18,
+  "colors": [
+   "white",
+   "blue",
+   "black",
+   "red",
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 45,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "+40 Pod, +8 Mult e +2 🪙 se houver 4 ou mais cores na jogada.",
+  "effects": [
+   {
+    "action": "gold",
+    "value": 2.0,
+    "cond": {
+     "count": {
+      "of": "colors",
+      "min": 4
+     }
+    },
+    "trigger": "on_play"
+   },
+   {
+    "action": "mult_add",
+    "value": 8,
+    "cond": {
+     "count": {
+      "of": "colors",
+      "min": 4
+     }
+    },
+    "trigger": "on_attack"
+   },
+   {
+    "action": "power_add",
+    "value": 40,
+    "cond": {
+     "count": {
+      "of": "colors",
+      "min": 4
+     }
+    },
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c288",
+  "num": 288,
+  "name": "Anjo da Legião",
+  "deck": 18,
+  "colors": [
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 4,
+  "power": 40,
+  "toughness": 5,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "+6 Mult e compra 1 carta.",
+  "effects": [
+   {
+    "action": "draw",
+    "value": 1.0,
+    "trigger": "on_play"
+   },
+   {
+    "action": "mult_add",
+    "value": 6,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c289",
+  "num": 289,
+  "name": "Vórtice Maelstrom",
+  "deck": 18,
+  "colors": [
+   "blue",
+   "red",
+   "green"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 3,
+  "power": 35,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 6,
+  "text": "Ativa em cascata 1 carta extra do topo do Grimório!",
+  "effects": [
+   {
+    "action": "cascade_library",
+    "value": "top",
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c290",
+  "num": 290,
+  "name": "Senhor Dragão Ojutai",
+  "deck": 18,
+  "colors": [
+   "white",
+   "blue"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 50,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "Compra 1 carta e dá ×1.6 Mult.",
+  "effects": [
+   {
+    "action": "draw",
+    "value": 1.0,
+    "trigger": "on_play"
+   },
+   {
+    "action": "mult_mul",
+    "value": 1.6,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c291",
+  "num": 291,
+  "name": "Senhor Dragão Silumgar",
+  "deck": 18,
+  "colors": [
+   "blue",
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 50,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "Rouba 10% do HP do Boss como Poder Base extra!",
+  "effects": [
+   {
+    "action": "power_pct_enemy",
+    "value": 10.0,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c292",
+  "num": 292,
+  "name": "Senhor Dragão Kolaghan",
+  "deck": 18,
+  "colors": [
+   "black",
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 55,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "+10 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 10,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c293",
+  "num": 293,
+  "name": "Senhor Dragão Dromoka",
+  "deck": 18,
+  "colors": [
+   "green",
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 5,
+  "power": 55,
+  "toughness": 6,
+  "rarity": "rare",
+  "price": 10,
+  "text": "Impede que o Boss anule efeitos neste turno; ×1.6 Mult.",
+  "effects": [
+   {
+    "action": "silence_enemy",
+    "value": 1,
+    "trigger": "on_play"
+   },
+   {
+    "action": "mult_mul",
+    "value": 1.6,
+    "trigger": "on_attack"
+   }
+  ]
+ },
+ {
+  "id": "c294",
+  "num": 294,
+  "name": "Confluência Mística",
+  "deck": 18,
+  "colors": [
+   "blue"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 4,
+  "power": 30,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 7,
+  "text": "+8 Mult.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 8,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c295",
+  "num": 295,
+  "name": "Último Recurso Planar",
+  "deck": 18,
+  "colors": [
+   "black"
+  ],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 3,
+  "power": 30,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 6,
+  "text": "×1.8 Mult.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.8,
+    "trigger": "on_cast"
+   }
+  ]
+ },
+ {
+  "id": "c296",
+  "num": 296,
+  "name": "Fenda de Mana",
+  "deck": 18,
+  "colors": [
+   "red"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 1,
+  "power": 20,
+  "toughness": 0,
+  "rarity": "common",
+  "price": 4,
+  "text": "Muda a cor da carta à direita para a cor que faltar para WUBRG!",
+  "effects": []
+ },
+ {
+  "id": "c297",
+  "num": 297,
+  "name": "Jardim de Lótus",
+  "deck": 18,
+  "colors": [],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] Conta como qualquer Cor que falte na Arena e dá ×1.5 Mult.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.5,
+    "trigger": "in_hand"
+   }
+  ],
+  "wild_color": true
+ },
+ {
+  "id": "c298",
+  "num": 298,
+  "name": "Cidade de Bronze",
+  "deck": 18,
+  "colors": [],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] ×1.6 Mult se a Arena tiver 3 ou mais cores diferentes.",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 1.6,
+    "cond": {
+     "count": {
+      "of": "colors",
+      "min": 3
+     }
+    },
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c299",
+  "num": 299,
+  "name": "Confluência de Mana",
+  "deck": 18,
+  "colors": [],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] +3 Mult por cada Cor diferente jogada na Arena.",
+  "effects": [
+   {
+    "action": "mult_add",
+    "value": 3,
+    "per": "colors",
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c300",
+  "num": 300,
+  "name": "Árvore do Mundo",
+  "deck": 18,
+  "colors": [],
+  "type": "land",
+  "subtype": "",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "uncommon",
+  "price": 5,
+  "text": "[Na Mão] Se atacares com Convergência WUBRG, duplica o Dano Final (×2)!",
+  "effects": [
+   {
+    "action": "mult_mul",
+    "value": 2.0,
+    "cond": {
+     "formation": [
+      "wubrg"
+     ]
+    },
+    "trigger": "in_hand"
+   }
+  ]
+ },
+ {
+  "id": "c301",
+  "num": 301,
+  "name": "Candidato Infiltrado",
+  "deck": 0,
+  "colors": [
+   "black"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 20,
+  "toughness": 3,
+  "rarity": "rare",
+  "price": 7,
+  "text": "Missão: canaliza 3 cartas com esta na mão ou na Arena. Vira em Agente Duplo: 50 Pod, ×3 Mult; as criaturas à direita ganham +15 Pod.",
+  "effects": [],
+  "mission": {
+   "trigger": "channel",
+   "count": 3
+  },
+  "transformed": {
+   "name": "Agente Duplo",
+   "power": 50,
+   "toughness": 4,
+   "text": "×3 Mult. Ao virar, as criaturas à sua direita ganham +15 Pod.",
+   "effects": [
+    {
+     "trigger": "on_attack",
+     "action": "mult_mul",
+     "value": 3.0
+    },
+    {
+     "trigger": "on_transform",
+     "action": "buff_right",
+     "value": 15
+    }
+   ]
+  }
+ },
+ {
+  "id": "c302",
+  "num": 302,
+  "name": "Aprendiz de Piromante",
+  "deck": 0,
+  "colors": [
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 1,
+  "power": 10,
+  "toughness": 2,
+  "rarity": "rare",
+  "price": 6,
+  "text": "Missão: lança 3 feitiços com esta na mão ou na Arena. Vira em Mestre das Chamas: 35 Pod, +3 Mult por feitiço lançado neste turno.",
+  "effects": [],
+  "mission": {
+   "trigger": "spells",
+   "count": 3
+  },
+  "transformed": {
+   "name": "Mestre das Chamas",
+   "power": 35,
+   "toughness": 3,
+   "text": "+3 Mult por feitiço lançado neste turno.",
+   "effects": [
+    {
+     "trigger": "on_attack",
+     "action": "mult_add",
+     "value": 3,
+     "per": "spell"
+    }
+   ]
+  }
+ },
+ {
+  "id": "c303",
+  "num": 303,
+  "name": "Lobo Solitário",
+  "deck": 0,
+  "colors": [
+   "green"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 20,
+  "toughness": 3,
+  "rarity": "rare",
+  "price": 7,
+  "text": "Missão: joga 3 outras criaturas com esta na mão ou na Arena. Vira em Alfa da Matilha: 45 Pod, +10 Pod por criatura atacante e ×1.5 Mult.",
+  "effects": [],
+  "mission": {
+   "trigger": "creatures",
+   "count": 3
+  },
+  "transformed": {
+   "name": "Alfa da Matilha",
+   "power": 45,
+   "toughness": 5,
+   "text": "+10 Pod por criatura atacante; ×1.5 Mult.",
+   "effects": [
+    {
+     "trigger": "on_attack",
+     "action": "power_add",
+     "value": 10,
+     "per": "attacker"
+    },
+    {
+     "trigger": "on_attack",
+     "action": "mult_mul",
+     "value": 1.5
+    }
+   ]
+  }
+ },
+ {
+  "id": "c304",
+  "num": 304,
+  "name": "Noviço de Thraben",
+  "deck": 0,
+  "colors": [
+   "white"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 1,
+  "power": 12,
+  "toughness": 2,
+  "rarity": "rare",
+  "price": 6,
+  "text": "Missão: sobrevive a 2 ataques na Arena. Vira em Inquisidor Veterano: 40 Pod, +5 Mult e reativa a criatura à esquerda.",
+  "effects": [],
+  "mission": {
+   "trigger": "attacks",
+   "count": 2
+  },
+  "transformed": {
+   "name": "Inquisidor Veterano",
+   "power": 40,
+   "toughness": 6,
+   "text": "+5 Mult; reativa a criatura à sua esquerda.",
+   "effects": [
+    {
+     "trigger": "on_attack",
+     "action": "mult_add",
+     "value": 5
+    },
+    {
+     "trigger": "on_attack",
+     "action": "retrigger",
+     "value": "left"
+    }
+   ]
+  }
+ },
+ {
+  "id": "c305",
+  "num": 305,
+  "name": "Escriba das Marés",
+  "deck": 0,
+  "colors": [
+   "blue"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 2,
+  "power": 15,
+  "toughness": 3,
+  "rarity": "rare",
+  "price": 7,
+  "text": "Missão: fica 2 turnos na mão. Vira em Oráculo das Marés: 30 Pod, ×2 Mult com 4+ cartas na mão; compra 1 ao virar.",
+  "effects": [],
+  "mission": {
+   "trigger": "turns_in_hand",
+   "count": 2
+  },
+  "transformed": {
+   "name": "Oráculo das Marés",
+   "power": 30,
+   "toughness": 3,
+   "text": "×2 Mult se tiveres 4+ cartas na mão. Ao virar, compra 1 carta.",
+   "effects": [
+    {
+     "trigger": "on_attack",
+     "action": "mult_mul",
+     "value": 2.0,
+     "cond": {
+      "hand_min": 4
+     }
+    },
+    {
+     "trigger": "on_transform",
+     "action": "draw",
+     "value": 1
+    }
+   ]
+  }
+ },
+ {
+  "id": "c306",
+  "num": 306,
+  "name": "Relicário Selado",
+  "deck": 0,
+  "colors": [],
+  "type": "spell",
+  "subtype": "sorcery",
+  "cost": 1,
+  "power": 0,
+  "toughness": 0,
+  "rarity": "rare",
+  "price": 6,
+  "text": "Missão: tem 10 ou mais ouro com esta na mão. Vira em Relicário Aberto: 40 Pod, +6 Mult e +2 ouro.",
+  "effects": [],
+  "mission": {
+   "trigger": "gold",
+   "count": 10
+  },
+  "transformed": {
+   "name": "Relicário Aberto",
+   "power": 40,
+   "toughness": 0,
+   "text": "+6 Mult; +2 ouro.",
+   "effects": [
+    {
+     "trigger": "on_cast",
+     "action": "mult_add",
+     "value": 6
+    },
+    {
+     "trigger": "on_cast",
+     "action": "gold",
+     "value": 2
+    }
+   ]
+  }
+ },
+ {
+  "id": "c307",
+  "num": 307,
+  "name": "Ovo Dracónico",
+  "deck": 0,
+  "colors": [
+   "red"
+  ],
+  "type": "creature",
+  "subtype": "",
+  "cost": 3,
+  "power": 5,
+  "toughness": 4,
+  "rarity": "rare",
+  "price": 8,
+  "text": "Missão: sobrevive a 3 ataques na Arena. Vira em Dragão Nascente: 80 Pod e ×2 Mult.",
+  "effects": [],
+  "mission": {
+   "trigger": "attacks",
+   "count": 3
+  },
+  "transformed": {
+   "name": "Dragão Nascente",
+   "power": 80,
+   "toughness": 8,
+   "text": "×2 Mult.",
+   "effects": [
+    {
+     "trigger": "on_attack",
+     "action": "mult_mul",
+     "value": 2.0
+    }
+   ]
+  }
+ },
+ {
+  "id": "c308",
+  "num": 308,
+  "name": "Cultista do Vazio",
+  "deck": 0,
+  "colors": [
+   "black"
+  ],
+  "type": "spell",
+  "subtype": "instant",
+  "cost": 2,
+  "power": 10,
+  "toughness": 0,
+  "rarity": "rare",
+  "price": 7,
+  "text": "Missão: canaliza 2 cartas com esta na mão. Vira em Rito do Vazio: 20 Pod, ×2.5 Mult e compra 1 carta.",
+  "effects": [],
+  "mission": {
+   "trigger": "channel",
+   "count": 2
+  },
+  "transformed": {
+   "name": "Rito do Vazio",
+   "power": 20,
+   "toughness": 0,
+   "text": "×2.5 Mult; compra 1 carta.",
+   "effects": [
+    {
+     "trigger": "on_cast",
+     "action": "mult_mul",
+     "value": 2.5
+    },
+    {
+     "trigger": "on_cast",
+     "action": "draw",
+     "value": 1
+    }
+   ]
+  }
+ }
+]

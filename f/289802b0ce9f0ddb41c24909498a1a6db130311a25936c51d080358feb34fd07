@@ -1,0 +1,296 @@
+[
+ {
+  "id": "slime",
+  "name": "Lodo",
+  "attack": 1,
+  "min_ante": 1,
+  "acts": [
+   1
+  ],
+  "text": "Sem habilidades. Só quer ser deixado em paz."
+ },
+ {
+  "id": "bandit",
+  "name": "Bandido",
+  "attack": 2,
+  "min_ante": 1,
+  "acts": [
+   1,
+   2
+  ],
+  "text": "Fim de cada turno: rouba 1 ouro.",
+  "abilities": [
+   {
+    "trigger": "turn_end",
+    "action": "steal_gold",
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "necromancer",
+  "name": "Necromante",
+  "attack": 1,
+  "min_ante": 2,
+  "acts": [
+   1,
+   2,
+   3
+  ],
+  "text": "Fim de cada turno: cura-se 3.",
+  "abilities": [
+   {
+    "trigger": "turn_end",
+    "action": "heal_self",
+    "value": 3
+   }
+  ]
+ },
+ {
+  "id": "pyromancer",
+  "name": "Goblin Piromante",
+  "attack": 2,
+  "min_ante": 2,
+  "acts": [
+   1,
+   2
+  ],
+  "text": "A cada 2 turnos: 1 de dano a todas as tuas criaturas.",
+  "abilities": [
+   {
+    "trigger": "every_n_turns",
+    "n": 2,
+    "action": "damage_all_creatures",
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "golem",
+  "name": "Golem de Pedra",
+  "attack": 3,
+  "min_ante": 3,
+  "acts": [
+   1,
+   2,
+   3
+  ],
+  "text": "A cada 3 turnos: destrói a tua criatura mais forte.",
+  "abilities": [
+   {
+    "trigger": "every_n_turns",
+    "n": 3,
+    "action": "destroy_strongest"
+   }
+  ]
+ },
+ {
+  "id": "spy",
+  "name": "Espião Dimir",
+  "attack": 2,
+  "min_ante": 3,
+  "acts": [
+   2,
+   3
+  ],
+  "text": "Fim de cada turno: descarta-te uma carta ao acaso.",
+  "abilities": [
+   {
+    "trigger": "turn_end",
+    "action": "discard_random",
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "usurer",
+  "name": "Agiota Orzhov",
+  "attack": 1,
+  "min_ante": 4,
+  "acts": [
+   2,
+   3
+  ],
+  "text": "Fim de cada turno: rouba 2 ouro.",
+  "abilities": [
+   {
+    "trigger": "turn_end",
+    "action": "steal_gold",
+    "value": 2
+   }
+  ]
+ },
+ {
+  "id": "hydra",
+  "name": "Hidra",
+  "attack": 2,
+  "min_ante": 4,
+  "acts": [
+   1,
+   2,
+   3
+  ],
+  "text": "A cada 2 turnos: 1 de dano a todas as tuas criaturas.",
+  "abilities": [
+   {
+    "trigger": "every_n_turns",
+    "n": 2,
+    "action": "damage_all_creatures",
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "berserker",
+  "name": "Berserker Gruul",
+  "attack": 4,
+  "min_ante": 5,
+  "acts": [
+   2,
+   3
+  ],
+  "text": "Sem habilidades — mas bate com 4."
+ },
+ {
+  "id": "dragon",
+  "name": "Dragão Jovem",
+  "attack": 4,
+  "min_ante": 5,
+  "acts": [
+   2,
+   3
+  ],
+  "text": "A cada 3 turnos: 2 de dano a todas as tuas criaturas.",
+  "abilities": [
+   {
+    "trigger": "every_n_turns",
+    "n": 3,
+    "action": "damage_all_creatures",
+    "value": 2
+   }
+  ]
+ },
+ {
+  "id": "sphinx",
+  "name": "Esfinge",
+  "attack": 3,
+  "min_ante": 6,
+  "acts": [
+   3
+  ],
+  "text": "A cada 2 turnos: cura-se 4.",
+  "abilities": [
+   {
+    "trigger": "every_n_turns",
+    "n": 2,
+    "action": "heal_self",
+    "value": 4
+   }
+  ]
+ },
+ {
+  "id": "lich",
+  "name": "Lich",
+  "attack": 3,
+  "min_ante": 6,
+  "acts": [
+   2,
+   3
+  ],
+  "text": "Fim de cada turno: descarta uma carta ao acaso e cura-se 2.",
+  "abilities": [
+   {
+    "trigger": "turn_end",
+    "action": "discard_random",
+    "value": 1
+   },
+   {
+    "trigger": "turn_end",
+    "action": "heal_self",
+    "value": 2
+   }
+  ]
+ },
+ {
+  "id": "iron_titan",
+  "name": "Titã de Ferro",
+  "attack": 5,
+  "min_ante": 7,
+  "acts": [
+   3
+  ],
+  "text": "A cada 3 turnos: destrói a tua criatura mais forte.",
+  "abilities": [
+   {
+    "trigger": "every_n_turns",
+    "n": 3,
+    "action": "destroy_strongest"
+   }
+  ]
+ },
+ {
+  "id": "boss_gag",
+  "name": "Juiz da Mordaça",
+  "attack": 3,
+  "min_ante": 4,
+  "boss": true,
+  "hp_mult": 0.85,
+  "text": "BOSS · Mordaça: −1 canalização nesta batalha.",
+  "rule": {
+   "discards_minus": 1
+  },
+  "rule2": {
+   "hand_size": 5
+  },
+  "rule2_text": "Ascensão: mão de 5."
+ },
+ {
+  "id": "boss_toll",
+  "name": "Cobrador de Tarifas",
+  "attack": 2,
+  "min_ante": 4,
+  "boss": true,
+  "hp_mult": 0.85,
+  "text": "BOSS · Tarifa: as criaturas custam +1.",
+  "rule": {
+   "creature_cost_plus": 1
+  },
+  "rule2": {
+   "discards_minus": 1
+  },
+  "rule2_text": "Ascensão: −1 canalização."
+ },
+ {
+  "id": "boss_weight",
+  "name": "Guardião do Peso",
+  "attack": 3,
+  "min_ante": 4,
+  "boss": true,
+  "hp_mult": 0.85,
+  "text": "BOSS · Peso: a mão repõe-se só até 5.",
+  "rule": {
+   "hand_size": 5
+  },
+  "rule2": {
+   "creature_cost_plus": 1
+  },
+  "rule2_text": "Ascensão: criaturas custam +1."
+ },
+ {
+  "id": "boss_zero",
+  "name": "O Soma-Zero",
+  "attack": 4,
+  "min_ante": 8,
+  "boss": true,
+  "final": true,
+  "hp_mult": 1.0,
+  "text": "BOSS FINAL · Caos: as formações não contam.",
+  "rule": {
+   "no_formations": true
+  },
+  "rule2": {
+   "relics_off": true
+  },
+  "rule2_text": "Ascensão: relíquias desligadas."
+ }
+]

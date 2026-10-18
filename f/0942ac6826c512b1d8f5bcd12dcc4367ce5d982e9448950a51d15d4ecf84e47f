@@ -1,0 +1,58 @@
+[
+ {
+  "id": "pair",
+  "name": "Pacto Dual",
+  "mult_add": 1,
+  "text": "2 criaturas com o mesmo custo: +1 Mult.",
+  "level_mult": 1
+ },
+ {
+  "id": "trips",
+  "name": "Tríade de Custo",
+  "mult_add": 3,
+  "text": "3 criaturas com o mesmo custo: +3 Mult.",
+  "level_mult": 1.5
+ },
+ {
+  "id": "band",
+  "name": "Bando Tribal",
+  "mult_add": 2,
+  "text": "3+ criaturas a atacar: +2 Mult.",
+  "level_mult": 1
+ },
+ {
+  "id": "storm",
+  "name": "Tempestade Arcana",
+  "mult_add": 3,
+  "text": "3+ feitiços lançados neste turno: +3 Mult.",
+  "level_mult": 1.5
+ },
+ {
+  "id": "curve",
+  "name": "Curva de Mana",
+  "mult_add": 6,
+  "text": "Criaturas com custos 1-2-3-4-5: +6 Mult.",
+  "level_mult": 2
+ },
+ {
+  "id": "devotion",
+  "name": "Devoção Pura",
+  "mult_add": 4,
+  "text": "4+ criaturas da mesma cor: +4 Mult.",
+  "level_mult": 2
+ },
+ {
+  "id": "horde",
+  "name": "Horda",
+  "mult_add": 2,
+  "text": "5 criaturas a atacar: +2 Mult.",
+  "level_mult": 1
+ },
+ {
+  "id": "wubrg",
+  "name": "Convergência WUBRG",
+  "mult_add": 12,
+  "text": "5 criaturas com as 5 cores: +12 Mult.",
+  "level_mult": 4
+ }
+]

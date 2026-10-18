@@ -1,0 +1,227 @@
+[
+ {
+  "id": "first_win",
+  "name": "Primeira Vitória",
+  "text": "Vence uma run (8 antes).",
+  "cond": {
+   "stat": "wins",
+   "min": 1
+  }
+ },
+ {
+  "id": "wins_5",
+  "name": "Veterano",
+  "text": "Vence 5 runs.",
+  "cond": {
+   "stat": "wins",
+   "min": 5
+  }
+ },
+ {
+  "id": "attack_100k",
+  "name": "Cem Mil",
+  "text": "Um ataque com 100 000 de dano.",
+  "cond": {
+   "stat": "best_attack",
+   "min": 100000
+  }
+ },
+ {
+  "id": "attack_1m",
+  "name": "Um Milhão",
+  "text": "Um ataque com 1 000 000 de dano.",
+  "cond": {
+   "stat": "best_attack",
+   "min": 1000000
+  }
+ },
+ {
+  "id": "boss_first",
+  "name": "Caçador de Bosses",
+  "text": "Derrota o teu primeiro boss.",
+  "cond": {
+   "stat": "bosses",
+   "min": 1
+  }
+ },
+ {
+  "id": "bosses_10",
+  "name": "Flagelo dos Tronos",
+  "text": "Derrota 10 bosses.",
+  "cond": {
+   "stat": "bosses",
+   "min": 10
+  }
+ },
+ {
+  "id": "enemies_50",
+  "name": "Meio Cento",
+  "text": "Derrota 50 inimigos.",
+  "cond": {
+   "stat": "enemies",
+   "min": 50
+  }
+ },
+ {
+  "id": "ante_12",
+  "name": "Para Lá do Fim",
+  "text": "Chega ao ante 12 no modo infinito.",
+  "cond": {
+   "stat": "best_ante",
+   "min": 12
+  }
+ },
+ {
+  "id": "ante_16",
+  "name": "Sem Fundo",
+  "text": "Chega ao ante 16 no modo infinito.",
+  "cond": {
+   "stat": "best_ante",
+   "min": 16
+  }
+ },
+ {
+  "id": "decks_5",
+  "name": "Explorador",
+  "text": "Joga com 5 baralhos diferentes.",
+  "cond": {
+   "stat": "decks_played",
+   "min": 5
+  }
+ },
+ {
+  "id": "decks_18",
+  "name": "Colecionador",
+  "text": "Joga com os 18 baralhos.",
+  "cond": {
+   "stat": "decks_played",
+   "min": 18
+  }
+ },
+ {
+  "id": "wins_5star",
+  "name": "Mestre do Plano",
+  "text": "Vence com um baralho de 5 estrelas.",
+  "cond": {
+   "stat": "wins_5star",
+   "min": 1
+  }
+ },
+ {
+  "id": "no_channel",
+  "name": "Mãos Limpas",
+  "text": "Vence uma run sem canalizar uma única carta.",
+  "cond": {
+   "stat": "wins_no_channel",
+   "min": 1
+  }
+ },
+ {
+  "id": "full_life",
+  "name": "Intocável",
+  "text": "Vence uma run com a vida cheia no fim.",
+  "cond": {
+   "stat": "wins_full_life",
+   "min": 1
+  }
+ },
+ {
+  "id": "hard_win",
+  "name": "Sem Rede",
+  "text": "Vence uma run no Difícil.",
+  "cond": {
+   "stat": "wins_hard",
+   "min": 1
+  }
+ },
+ {
+  "id": "channels_100",
+  "name": "Canalizador",
+  "text": "Canaliza 100 cartas.",
+  "cond": {
+   "stat": "channels",
+   "min": 100
+  }
+ },
+ {
+  "id": "cards_1000",
+  "name": "Mil Cartas",
+  "text": "Joga 1000 cartas.",
+  "cond": {
+   "stat": "cards_played",
+   "min": 1000
+  }
+ },
+ {
+  "id": "events_10",
+  "name": "Viajante",
+  "text": "Passa por 10 eventos.",
+  "cond": {
+   "stat": "events",
+   "min": 10
+  }
+ },
+ {
+  "id": "two_faces",
+  "name": "Duas Caras",
+  "text": "Transforma uma carta de dupla face.",
+  "cond": {
+   "stat": "transforms",
+   "min": 1
+  }
+ },
+ {
+  "id": "flashback_5",
+  "name": "Recapitular",
+  "text": "Lança 5 feitiços a partir do cemitério.",
+  "cond": {
+   "stat": "flashbacks",
+   "min": 5
+  }
+ },
+ {
+  "id": "stake_2",
+  "name": "Selo Planar",
+  "text": "Vence uma run com o Selo Planar 2 ou superior.",
+  "cond": {
+   "stat": "best_stake",
+   "min": 2
+  }
+ },
+ {
+  "id": "stake_8",
+  "name": "Ascensão Mítica",
+  "text": "Vence uma run com o Selo Planar 8.",
+  "cond": {
+   "stat": "best_stake",
+   "min": 8
+  }
+ },
+ {
+  "id": "puzzles_5",
+  "name": "Mago Enigmático",
+  "text": "Resolve os 5 quebra-cabeças.",
+  "cond": {
+   "stat": "puzzles_solved",
+   "min": 5
+  }
+ },
+ {
+  "id": "draft_win",
+  "name": "Campeão da Arena",
+  "text": "Vence uma run de Arena Draft.",
+  "cond": {
+   "stat": "draft_wins",
+   "min": 1
+  }
+ },
+ {
+  "id": "loyal",
+  "name": "Lealdade",
+  "text": "Usa a habilidade −6 de um planeswalker.",
+  "cond": {
+   "stat": "pw_ultimates",
+   "min": 1
+  }
+ }
+]

@@ -1,0 +1,37 @@
+[
+ {
+  "id": "fury",
+  "name": "Selo da Fúria",
+  "color": "red",
+  "price": 6,
+  "text": "Reativa esta carta uma vez extra em cada ataque."
+ },
+ {
+  "id": "wisdom",
+  "name": "Selo da Sabedoria",
+  "color": "blue",
+  "price": 6,
+  "text": "Se ficar na mão no fim do turno, uma formação ao acaso sobe um nível (mais Mult, para o resto da run)."
+ },
+ {
+  "id": "phyrexian",
+  "name": "Selo Phyrexiano",
+  "color": "black",
+  "price": 6,
+  "text": "×2.5 Mult, mas perde 10 Poder permanente em cada ataque; a 0 Poder é exilada da run."
+ },
+ {
+  "id": "vitality",
+  "name": "Selo da Vitalidade",
+  "color": "green",
+  "price": 6,
+  "text": "Ao ser jogada, +15 Poder permanente à criatura à sua esquerda na Arena."
+ },
+ {
+  "id": "tithe",
+  "name": "Selo do Dízimo",
+  "color": "white",
+  "price": 6,
+  "text": "+3 ouro sempre que é jogada."
+ }
+]

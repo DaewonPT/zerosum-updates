@@ -1,0 +1,312 @@
+[
+ {
+  "id": "fountain",
+  "acts": [
+   1,
+   2,
+   3
+  ],
+  "title": "A Fonte Encantada",
+  "text": "Entre duas batalhas, uma fonte de água clara. Dizem que cura tudo — menos a curiosidade.",
+  "options": [
+   {
+    "label": "Beber",
+    "text": "Cura toda a vida.",
+    "effects": {
+     "heal": "full"
+    }
+   },
+   {
+    "label": "Encher o cantil e vender",
+    "text": "+6 ouro.",
+    "effects": {
+     "gold": 6
+    }
+   },
+   {
+    "label": "Seguir caminho",
+    "text": "Nada acontece.",
+    "effects": {}
+   }
+  ]
+ },
+ {
+  "id": "altar",
+  "acts": [
+   1,
+   2,
+   3
+  ],
+  "title": "O Altar Sombrio",
+  "text": "Um altar de pedra negra pede um sacrifício. Promete poder em troca.",
+  "options": [
+   {
+    "label": "Sacrificar vida",
+    "text": "−5 vida máxima; recebes uma relíquia ao acaso.",
+    "effects": {
+     "max_hp": -5,
+     "relic": "random"
+    }
+   },
+   {
+    "label": "Oferecer uma carta",
+    "text": "Remove uma carta do baralho; +8 ouro.",
+    "effects": {
+     "remove_cards": 1,
+     "gold": 8
+    }
+   },
+   {
+    "label": "Ignorar",
+    "text": "Nada acontece.",
+    "effects": {}
+   }
+  ]
+ },
+ {
+  "id": "black_market",
+  "acts": [
+   1,
+   2,
+   3
+  ],
+  "title": "O Mercador Negro",
+  "text": "Um vendedor encapuzado abre o casaco. As cartas lá dentro não se vendem em lado nenhum.",
+  "options": [
+   {
+    "label": "Carta rara (8 ouro)",
+    "text": "Recebes uma carta rara das tuas cores.",
+    "effects": {
+     "gold": -8,
+     "card": "rare"
+    }
+   },
+   {
+    "label": "Relíquia (12 ouro)",
+    "text": "Recebes uma relíquia ao acaso.",
+    "effects": {
+     "gold": -12,
+     "relic": "random"
+    }
+   },
+   {
+    "label": "Sair",
+    "text": "Nada acontece.",
+    "effects": {}
+   }
+  ]
+ },
+ {
+  "id": "smith",
+  "acts": [
+   1,
+   2,
+   3
+  ],
+  "title": "O Ferreiro Itinerante",
+  "text": "Uma bigorna à beira da estrada. O ferreiro não fala; aponta para o teu baralho.",
+  "options": [
+   {
+    "label": "Afiar",
+    "text": "+10 Poder permanente a uma carta ao acaso.",
+    "effects": {
+     "grow_random": 10
+    }
+   },
+   {
+    "label": "Temperar (4 ouro)",
+    "text": "+0,5 Mult permanente a uma carta ao acaso.",
+    "effects": {
+     "gold": -4,
+     "mult_random": 0.5
+    }
+   },
+   {
+    "label": "Sair",
+    "text": "Nada acontece.",
+    "effects": {}
+   }
+  ]
+ },
+ {
+  "id": "library",
+  "acts": [
+   1,
+   2,
+   3
+  ],
+  "title": "A Biblioteca em Ruínas",
+  "text": "Prateleiras caídas, pergaminhos a apodrecer. Ainda há coisas que valem a pena — e outras de que te queres livrar.",
+  "options": [
+   {
+    "label": "Queimar o que não serve",
+    "text": "Remove até 2 cartas do baralho.",
+    "effects": {
+     "remove_cards": 2
+    }
+   },
+   {
+    "label": "Vasculhar",
+    "text": "Recebes uma carta ao acaso das tuas cores.",
+    "effects": {
+     "card": "random"
+    }
+   },
+   {
+    "label": "Sair",
+    "text": "Nada acontece.",
+    "effects": {}
+   }
+  ]
+ },
+ {
+  "id": "oath",
+  "acts": [
+   2,
+   3
+  ],
+  "title": "O Juramento",
+  "text": "Uma guilda oferece-te um lugar. O preço paga-se em sangue — e o retorno também.",
+  "options": [
+   {
+    "label": "Jurar",
+    "text": "−4 vida agora; +6 vida máxima.",
+    "effects": {
+     "heal": -4,
+     "max_hp": 6
+    }
+   },
+   {
+    "label": "Recusar com classe",
+    "text": "+4 ouro.",
+    "effects": {
+     "gold": 4
+    }
+   },
+   {
+    "label": "Sair",
+    "text": "Nada acontece.",
+    "effects": {}
+   }
+  ]
+ },
+ {
+  "id": "crossroads",
+  "acts": [
+   3
+  ],
+  "title": "A Encruzilhada",
+  "text": "Três caminhos; só um não está minado. O Plano está a acabar e ninguém volta para trás.",
+  "options": [
+   {
+    "label": "O caminho minado",
+    "text": "−6 vida; recebes uma relíquia ao acaso.",
+    "effects": {
+     "heal": -6,
+     "relic": "random"
+    }
+   },
+   {
+    "label": "O caminho longo",
+    "text": "Cura 8.",
+    "effects": {
+     "heal": 8
+    }
+   },
+   {
+    "label": "O caminho curto",
+    "text": "+10 ouro.",
+    "effects": {
+     "gold": 10
+    }
+   }
+  ]
+ },
+ {
+  "id": "node_rest",
+  "node": "rest",
+  "acts": [],
+  "title": "Acampamento",
+  "text": "Uma clareira segura entre duas batalhas. A fogueira estala; há tempo para uma coisa só.",
+  "options": [
+   {
+    "label": "Descansar",
+    "text": "Cura 8 de vida.",
+    "effects": {
+     "heal": 8
+    }
+   },
+   {
+    "label": "Treinar",
+    "text": "Uma carta ao acaso ganha +12 Poder permanente.",
+    "effects": {
+     "grow_random": 12
+    }
+   },
+   {
+    "label": "Meditar",
+    "text": "Vida máxima +3.",
+    "effects": {
+     "max_hp": 3
+    }
+   }
+  ]
+ },
+ {
+  "id": "node_spring",
+  "node": "spring",
+  "acts": [],
+  "title": "Fonte de Mana",
+  "text": "Uma nascente que brilha com a cor do teu reino. Quem nela mergulha cartas, muda-lhes a cor — e as Devoções Puras ficam mais perto.",
+  "options": [
+   {
+    "label": "Mergulhar cartas",
+    "text": "Até 3 cartas passam à cor principal do baralho.",
+    "effects": {
+     "recolor": 3
+    }
+   },
+   {
+    "label": "Beber",
+    "text": "Cura 5 de vida.",
+    "effects": {
+     "heal": 5
+    }
+   },
+   {
+    "label": "Seguir caminho",
+    "text": "Nada acontece.",
+    "effects": {}
+   }
+  ]
+ },
+ {
+  "id": "node_altar",
+  "node": "altar",
+  "acts": [],
+  "title": "Altar de Phyrexia",
+  "text": "Óleo negro escorre pelas pedras. O altar aceita uma carta — e dá a sua habilidade a outra.",
+  "options": [
+   {
+    "label": "Fundir",
+    "text": "Sacrifica 1 carta; outra herda a habilidade dela.",
+    "effects": {
+     "fuse": 1
+    }
+   },
+   {
+    "label": "Oferenda",
+    "text": "Sacrifica 1 carta: +8 ouro.",
+    "effects": {
+     "remove_cards": 1,
+     "gold": 8
+    }
+   },
+   {
+    "label": "Ignorar",
+    "text": "Nada acontece.",
+    "effects": {}
+   }
+  ]
+ }
+]

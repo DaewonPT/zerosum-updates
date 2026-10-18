@@ -1,0 +1,101 @@
+[
+ {
+  "id": "p1",
+  "name": "Primeiro Passo",
+  "text": "Três de mana, cinco cartas vermelhas. O Goblin gosta de ir primeiro.",
+  "enemy_name": "Espantalho de Treino",
+  "enemy_text": "Não ataca. Só quer ver o teu melhor golpe.",
+  "hp": 1650,
+  "mana": 3,
+  "hand": [
+   "c001",
+   "c002",
+   "c007",
+   "c003",
+   "c004"
+  ],
+  "board": [],
+  "graveyard": []
+ },
+ {
+  "id": "p2",
+  "name": "Ordem Importa",
+  "text": "O Campeão já está na Arena. A ordem em que jogas as criaturas muda tudo.",
+  "enemy_name": "Juiz da Fila",
+  "enemy_text": "Não ataca. Conta quem está à esquerda de quem.",
+  "hp": 5920,
+  "mana": 5,
+  "hand": [
+   "c040",
+   "c044",
+   "c047",
+   "c042",
+   "c045"
+  ],
+  "board": [
+   "c039"
+  ],
+  "graveyard": []
+ },
+ {
+  "id": "p3",
+  "name": "Recapitular",
+  "text": "Dois feitiços no cemitério ainda têm uma palavra a dizer. Sem canalizações.",
+  "enemy_name": "Eco do Vazio",
+  "enemy_text": "Não ataca. Lembra-se do que já lançaste.",
+  "hp": 1395,
+  "mana": 4,
+  "hand": [
+   "c019",
+   "c020",
+   "c025"
+  ],
+  "board": [],
+  "graveyard": [
+   "c018",
+   "c021"
+  ]
+ },
+ {
+  "id": "p4",
+  "name": "Tempestade",
+  "text": "O Djinn espera por feitiços. A Fenda Temporal só brilha com 4 feitiços no mesmo turno.",
+  "enemy_name": "Esfinge Paciente",
+  "enemy_text": "Não ataca. Conta os feitiços deste turno.",
+  "hp": 22770,
+  "mana": 7,
+  "hand": [
+   "c009",
+   "c016",
+   "c013",
+   "c011",
+   "c006"
+  ],
+  "board": [
+   "c015"
+  ],
+  "graveyard": []
+ },
+ {
+  "id": "p5",
+  "name": "Devoção",
+  "text": "Quatro verdes na Arena fazem Devoção Pura. Quem cresce antes, ataca maior.",
+  "enemy_name": "Velho Carvalho",
+  "enemy_text": "Não ataca. Já viu muitas florestas crescer.",
+  "hp": 8676,
+  "mana": 6,
+  "hand": [
+   "c034",
+   "c035",
+   "c036",
+   "c033",
+   "c037"
+  ],
+  "board": [
+   "c028",
+   "c032",
+   "c030"
+  ],
+  "graveyard": []
+ }
+]

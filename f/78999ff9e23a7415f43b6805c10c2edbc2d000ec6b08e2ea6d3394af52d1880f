@@ -1,0 +1,569 @@
+[
+ {
+  "id": "relic_drum",
+  "name": "Tambor de Guerra",
+  "price": 5,
+  "rarity": "common",
+  "text": "Ataque: +30 Poder por criatura atacante.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "power_add",
+    "value": 30,
+    "per": "attacker"
+   }
+  ]
+ },
+ {
+  "id": "relic_ruby",
+  "name": "Mox de Rubi",
+  "price": 7,
+  "rarity": "common",
+  "text": "Ataque: +3 Mult por criatura vermelha atacante.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_add",
+    "value": 3,
+    "per": "attacker",
+    "filter": {
+     "color": "red"
+    }
+   }
+  ]
+ },
+ {
+  "id": "relic_sapphire",
+  "name": "Mox de Safira",
+  "price": 7,
+  "rarity": "common",
+  "text": "Ataque: +3 Mult por criatura azul atacante.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_add",
+    "value": 3,
+    "per": "attacker",
+    "filter": {
+     "color": "blue"
+    }
+   }
+  ]
+ },
+ {
+  "id": "relic_jet",
+  "name": "Mox de Azeviche",
+  "price": 7,
+  "rarity": "common",
+  "text": "Ataque: +3 Mult por criatura preta atacante.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_add",
+    "value": 3,
+    "per": "attacker",
+    "filter": {
+     "color": "black"
+    }
+   }
+  ]
+ },
+ {
+  "id": "relic_seed",
+  "name": "Mox de Esmeralda",
+  "price": 7,
+  "rarity": "common",
+  "text": "Ataque: +3 Mult por criatura verde atacante.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_add",
+    "value": 3,
+    "per": "attacker",
+    "filter": {
+     "color": "green"
+    }
+   }
+  ]
+ },
+ {
+  "id": "relic_seal",
+  "name": "Mox de Pérola",
+  "price": 7,
+  "rarity": "common",
+  "text": "Ataque: +3 Mult por criatura branca atacante.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_add",
+    "value": 3,
+    "per": "attacker",
+    "filter": {
+     "color": "white"
+    }
+   }
+  ]
+ },
+ {
+  "id": "relic_gear",
+  "name": "Engrenagem",
+  "price": 7,
+  "rarity": "common",
+  "text": "Ataque: +3 Mult por criatura incolor atacante.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_add",
+    "value": 3,
+    "per": "attacker",
+    "filter": {
+     "colorless": true
+    }
+   }
+  ]
+ },
+ {
+  "id": "relic_grimoire",
+  "name": "Grimório Negro",
+  "price": 6,
+  "rarity": "uncommon",
+  "text": "Ataque: +2 Mult por carta no cemitério.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_add",
+    "value": 2,
+    "per": "graveyard"
+   }
+  ]
+ },
+ {
+  "id": "relic_lens",
+  "name": "Lente Arcana",
+  "price": 6,
+  "rarity": "uncommon",
+  "text": "Ataque: +5 Mult por feitiço lançado este turno.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_add",
+    "value": 5,
+    "per": "spell"
+   }
+  ]
+ },
+ {
+  "id": "relic_hourglass",
+  "name": "Ampulheta",
+  "price": 6,
+  "rarity": "uncommon",
+  "text": "Ataque: +4 Mult por carta na mão.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_add",
+    "value": 4,
+    "per": "hand"
+   }
+  ]
+ },
+ {
+  "id": "relic_purse",
+  "name": "Bolsa Encantada",
+  "price": 5,
+  "rarity": "common",
+  "text": "Início de cada turno: +1 ouro.",
+  "effects": [
+   {
+    "trigger": "turn_start",
+    "action": "gold",
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "relic_tectonic",
+  "name": "Placa Tectónica",
+  "price": 5,
+  "rarity": "uncommon",
+  "text": "Ataque: +40 Poder por terreno na mão.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "power_add",
+    "value": 40,
+    "per": "land_hand"
+   }
+  ]
+ },
+ {
+  "id": "relic_banner",
+  "name": "Estandarte Real",
+  "price": 8,
+  "rarity": "rare",
+  "text": "Ataque: ×2 Mult.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_mul",
+    "value": 2
+   }
+  ]
+ },
+ {
+  "id": "relic_lotus",
+  "name": "Pétala de Lótus",
+  "price": 10,
+  "rarity": "rare",
+  "text": "Ataque com 4+ criaturas: ×3 Mult.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_mul",
+    "value": 3,
+    "cond": {
+     "count": {
+      "of": "attacker",
+      "min": 4
+     }
+    }
+   }
+  ]
+ },
+ {
+  "id": "relic_mirror",
+  "name": "Espelho Rachado",
+  "price": 9,
+  "rarity": "rare",
+  "text": "Ataque: a primeira criatura ativa duas vezes.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "retrigger",
+    "value": "first"
+   }
+  ]
+ },
+ {
+  "id": "relic_crown",
+  "name": "Coroa das Formações",
+  "price": 9,
+  "rarity": "rare",
+  "text": "Ataque: ×1.4 Mult por cada formação ativa.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_mul",
+    "value": 1.4,
+    "per": "formations"
+   }
+  ]
+ },
+ {
+  "id": "relic_echo",
+  "name": "Eco Arcano",
+  "price": 9,
+  "rarity": "uncommon",
+  "text": "Ataque: o último feitiço deste turno ativa outra vez.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "retrigger",
+    "value": "last_spell"
+   }
+  ]
+ },
+ {
+  "id": "relic_anvil",
+  "name": "Bigorna",
+  "price": 6,
+  "rarity": "common",
+  "text": "Ataque: +10 Poder por carta no cemitério.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "power_add",
+    "value": 10,
+    "per": "graveyard"
+   }
+  ]
+ },
+ {
+  "id": "relic_blood_seal",
+  "name": "Selo de Sangue",
+  "price": 7,
+  "rarity": "uncommon",
+  "text": "Ataque: +2 Mult por canalização usada nesta batalha.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_add",
+    "value": 2,
+    "per": "discards_used"
+   }
+  ]
+ },
+ {
+  "id": "relic_dark_hourglass",
+  "name": "Ampulheta Negra",
+  "price": 7,
+  "rarity": "uncommon",
+  "text": "Ataque: +2 Mult por carta comprada por efeitos neste turno.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_add",
+    "value": 2,
+    "per": "drawn_this_turn"
+   }
+  ]
+ },
+ {
+  "id": "relic_jade_idol",
+  "name": "Ídolo de Jade",
+  "price": 5,
+  "rarity": "common",
+  "text": "Ataque: +60 Poder se tiveres 4 ou mais cartas na mão.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "power_add",
+    "value": 60,
+    "cond": {
+     "hand_min": 4
+    }
+   }
+  ]
+ },
+ {
+  "id": "relic_master_key",
+  "name": "Chave Mestra",
+  "price": 9,
+  "rarity": "rare",
+  "text": "Ataque: +3 Mult por cada formação ativa.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_add",
+    "value": 3,
+    "per": "formations"
+   }
+  ]
+ },
+ {
+  "id": "relic_candle",
+  "name": "Candeeiro Eterno",
+  "price": 5,
+  "rarity": "common",
+  "text": "Início de cada batalha: +1 canalização.",
+  "effects": [
+   {
+    "trigger": "battle_start",
+    "action": "discard_plus",
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "relic_boots",
+  "name": "Botas de Sete Léguas",
+  "price": 7,
+  "rarity": "uncommon",
+  "text": "Início de cada turno: compra 1 carta.",
+  "effects": [
+   {
+    "trigger": "turn_start",
+    "action": "draw",
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "relic_totem",
+  "name": "Totem Tribal",
+  "price": 5,
+  "rarity": "common",
+  "text": "Ataque: +25 Poder por criatura de custo 1 atacante.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "power_add",
+    "value": 25,
+    "per": "attacker",
+    "filter": {
+     "cost": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "relic_chalice",
+  "name": "Cálice de Ouro",
+  "price": 5,
+  "rarity": "common",
+  "text": "Ataque: +1 ouro por cada formação ativa.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "gold",
+    "value": 1,
+    "per": "formations"
+   }
+  ]
+ },
+ {
+  "id": "relic_bolas_eye",
+  "name": "Olho de Bolas",
+  "price": 9,
+  "rarity": "rare",
+  "text": "Ataque: ×2 Mult se o inimigo estiver abaixo de metade da vida.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_mul",
+    "value": 2,
+    "cond": {
+     "enemy_hp_below_pct": 50
+    }
+   }
+  ]
+ },
+ {
+  "id": "relic_anchor",
+  "name": "Âncora Afundada",
+  "price": 5,
+  "rarity": "common",
+  "text": "Ataque: +20 Poder por terreno no cemitério.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "power_add",
+    "value": 20,
+    "per": "graveyard",
+    "filter": {
+     "type": "land"
+    }
+   }
+  ]
+ },
+ {
+  "id": "relic_whetstone",
+  "name": "Pedra de Amolar",
+  "price": 8,
+  "rarity": "uncommon",
+  "text": "Ataque: a última criatura ativa duas vezes.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "retrigger",
+    "value": "last_creature"
+   }
+  ]
+ },
+ {
+  "id": "relic_ember_heart",
+  "name": "Coração de Cinzas",
+  "price": 10,
+  "rarity": "rare",
+  "text": "Ataque: todos os feitiços deste turno ativam outra vez.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "retrigger",
+    "value": "spells"
+   }
+  ]
+ },
+ {
+  "id": "relic_marked_deck",
+  "name": "Baralho Marcado",
+  "price": 5,
+  "rarity": "common",
+  "text": "Ataque: +3 Mult por carta de custo 1 na mão.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_add",
+    "value": 3,
+    "per": "hand",
+    "filter": {
+     "cost": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "relic_eclipse_crown",
+  "name": "Coroa do Eclipse",
+  "price": 18,
+  "rarity": "rare",
+  "legendary": true,
+  "text": "Ataque: ×3 Mult.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "mult_mul",
+    "value": 3.0
+   }
+  ]
+ },
+ {
+  "id": "relic_prism",
+  "name": "Prisma das Formações",
+  "price": 16,
+  "rarity": "rare",
+  "legendary": true,
+  "text": "Ataque: as formações disparam duas vezes.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "retrigger",
+    "value": "formations"
+   }
+  ]
+ },
+ {
+  "id": "relic_eternal_hourglass",
+  "name": "Ampulheta Eterna",
+  "price": 18,
+  "rarity": "rare",
+  "legendary": true,
+  "text": "Início de cada batalha: +1 turno.",
+  "effects": [
+   {
+    "trigger": "battle_start",
+    "action": "bonus_turn",
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "relic_double_tithe",
+  "name": "Dízimo Dobrado",
+  "price": 12,
+  "rarity": "rare",
+  "legendary": true,
+  "text": "Juros a dobrar ao entrar na loja (máx. 10).",
+  "effects": [
+   {
+    "trigger": "passive",
+    "action": "double_interest"
+   }
+  ]
+ },
+ {
+  "id": "relic_blind_eye",
+  "name": "Olho do Mercador Cego",
+  "price": 14,
+  "rarity": "rare",
+  "legendary": true,
+  "text": "Ataque: reativa todas as outras relíquias.",
+  "effects": [
+   {
+    "trigger": "on_attack",
+    "action": "retrigger",
+    "value": "relics"
+   }
+  ]
+ }
+]

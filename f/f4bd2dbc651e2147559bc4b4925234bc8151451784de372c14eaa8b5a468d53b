@@ -1,0 +1,113 @@
+[
+ {
+  "id": "act1",
+  "title": "Livro I — Os Cinco Reinos",
+  "intro": "O Plano está a esvaziar-se. Cada vitória de um Convocador é a derrota de outro — a soma é sempre zero. Começas com os cinco baralhos puros dos reinos antigos, um por cor.",
+  "chapters": [
+   {
+    "deck_id": "deck01",
+    "title": "A Centelha",
+    "story": "As Montanhas de Mogg ardem há três luas. Os goblins não querem vencer — querem que tudo arda ao mesmo tempo. Oito cartas, todas de custo 1: a mão que vês no primeiro turno é a que vais jogar até ao fim."
+   },
+   {
+    "deck_id": "deck02",
+    "title": "O Paradoxo",
+    "story": "Em Halimar, o tempo dobra-se como papel. Os cronomantes compram cartas que ainda não existem e lançam mágicas por cima umas das outras. Pequeno baralho, grandes cantrips: cada feitiço prepara o seguinte."
+   },
+   {
+    "deck_id": "deck03",
+    "title": "O Pacto",
+    "story": "No fundo do Abismo há um contrato com o teu nome. Cada carta que canalizas é um pagamento; a mão vazia é a assinatura. Aprende a descartar sem medo — é aí que o Mult explode."
+   },
+   {
+    "deck_id": "deck04",
+    "title": "A Semente",
+    "story": "Pendelhaven cresce um palmo por dia. Os elfos não são fortes — ainda. Cada vez que jogas uma criatura verde ela fica mais forte para sempre, e a run inteira é uma floresta a engrossar."
+   },
+   {
+    "deck_id": "deck05",
+    "title": "A Falange",
+    "story": "Benalia marcha em linha. Sozinho, um soldado é um soldado; quatro em simultâneo são um Bando Tribal, e o Marechal multiplica tudo. Enche o tabuleiro e deixa o enxame falar."
+   }
+  ]
+ },
+ {
+  "id": "act2",
+  "title": "Livro II — As Guildas",
+  "intro": "Os reinos puros caíram uns sobre os outros e das ruínas nasceram as Guildas: duas cores, uma ideia fixa. Cada guilda joga um jogo diferente — descobre qual é o teu.",
+  "chapters": [
+   {
+    "deck_id": "deck06",
+    "title": "O Senado",
+    "story": "Azorius legisla até o inimigo desistir. Joga pouco, retém muito: as cartas que ficam na mão valem mais do que as que jogas."
+   },
+   {
+    "deck_id": "deck07",
+    "title": "A Cabala",
+    "story": "Dimir não luta de frente. Envia o teu próprio grimório para o cemitério e deixa que os mortos façam as contas por ti."
+   },
+   {
+    "deck_id": "deck08",
+    "title": "O Carnaval",
+    "story": "Rakdos destrói as próprias cartas para rir. Com a mão vazia — hellbent — tudo o que resta bate o dobro."
+   },
+   {
+    "deck_id": "deck09",
+    "title": "O Clã",
+    "story": "Gruul não conhece custos baixos. Espera pelos turnos tardios, pousa o Dragão da Cratera e o Titã do Inferno, e faz a tríade de custo 5 tremer o Plano."
+   },
+   {
+    "deck_id": "deck10",
+    "title": "O Conclave",
+    "story": "Selesnya canta em pares. Duas criaturas com o mesmo custo são um Pacto Dual; a Voz do Ressurgimento transforma o par numa explosão."
+   },
+   {
+    "deck_id": "deck11",
+    "title": "O Sindicato",
+    "story": "Orzhov cobra dízimo a quem perde. Acumula ouro em pleno combate e converte-o em Mult — a Dívida aos Imortais paga-se com juros."
+   },
+   {
+    "deck_id": "deck12",
+    "title": "A Liga",
+    "story": "Izzet é o baralho mais difícil das guildas: só ganha quem encadeia três feitiços no mesmo turno. Tempestade Arcana, Niv-Mizzet a contar cada um — ou nada."
+   },
+   {
+    "deck_id": "deck13",
+    "title": "O Enxame",
+    "story": "Golgari recicla tudo. Canalizar não é perder cartas, é plantar: Jarad e Hogaak crescem com o cemitério."
+   },
+   {
+    "deck_id": "deck14",
+    "title": "A Legião",
+    "story": "Boros é posição. A primeira criatura é o comandante, a quinta o flanco, e Aurélia reativa a linha inteira. A ordem em que jogas é a estratégia."
+   },
+   {
+    "deck_id": "deck15",
+    "title": "A Biomancia",
+    "story": "Simic muta a própria curva. Krasis e Mutação Genética contam como o custo que falta — a Curva de Mana 1-2-3-4-5 deixa de ser sorte."
+   }
+  ]
+ },
+ {
+  "id": "act3",
+  "title": "Livro III — Os Tronos",
+  "intro": "Acima das Guildas sentam-se os que já nem cor têm: Bolas, Urza e a própria Convergência. São os baralhos mais difíceis do jogo e os únicos que chegam ao fim do Plano.",
+  "chapters": [
+   {
+    "deck_id": "deck16",
+    "title": "O Trono de Grixis",
+    "story": "Três cores e uma maldição. Nicol Bolas triplica tudo quando a mão tem azul, preto e vermelho, e as maldições pesam mais num inimigo ferido."
+   },
+   {
+    "deck_id": "deck17",
+    "title": "A Forja de Urza",
+    "story": "Nem cor nem alma: máquinas e os três terrenos de Urza. Guarda a Mina, a Central e a Torre na mão e nunca as jogues — juntas, são o multiplicador mais alto do jogo."
+   },
+   {
+    "deck_id": "deck18",
+    "title": "A Convergência",
+    "story": "Vinte e seis cartas, cinco cores, uma formação impossível: Convergência WUBRG. Jodah faz qualquer mão de cinco cartas convergir; Progenitus triplica. Se chegares ao fim com este, o Plano é teu."
+   }
+  ]
+ }
+]
